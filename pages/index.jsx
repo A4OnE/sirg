@@ -45,6 +45,7 @@ export default function Home() {
                 More About Us
               </button>
             </Link>
+            <ProjectsHomeCard/>
           </div>
         </div>
         {/* about us section ends  */}
