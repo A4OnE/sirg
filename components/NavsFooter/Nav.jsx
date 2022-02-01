@@ -7,7 +7,7 @@ function Nav() {
   const [mobileNav, setMobileNav] = useState(false);
   return (
     <div className="bg-blue-800 h-full">
-      <div className=" container mx-auto p-4 lg:p-8 text-white flex items-center justify-between">
+      <div className=" container mx-auto px-4 lg:px-8  text-white flex items-center justify-between">
         <FaBars
           className="text-xl block lg:hidden"
           onClick={() => {

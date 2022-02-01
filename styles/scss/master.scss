@@ -1,0 +1,17 @@
+@import "./utils.scss";
+
+.slick-prev {
+  z-index: 1;
+  background-color: $GrayD !important;
+  height: 30px;
+  width: 30px;
+  padding: 3px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.02);
+}
+.slick-next {
+  z-index: 1;
+  background-color: $GrayD !important;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.02);
+}
