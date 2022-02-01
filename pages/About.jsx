@@ -1,9 +1,20 @@
 import Head from "next/head";
 import Link from "next/link";
 import PageTemplate from "../components/Templates/PageTemplate";
-import React from "react";
+import React, { useState } from "react";
 
 function About() {
+  const [Data, setData] = useState([
+    {
+
+      title:'Our Vision',
+      description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without  relying on meaningful content"
+    },
+    {
+      title:'Our Mission',
+      description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without  relying on meaningful content"
+    }
+  ])
   return (
     <div>
       <Head>
@@ -14,7 +25,7 @@ function About() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PageTemplate>
+      {/* <PageTemplate> */}
         {/* About us introduction */}
         <div className="h-fit flex w-full mt-5 ">
           <div className="flex-1 h-96">
@@ -45,8 +56,19 @@ function About() {
           </div>
         </div>
 
-        {/*  */}
-      </PageTemplate>
+        {/* our Vesion  and our mission */}
+        <div className=" w-full h-fit mt-20">
+          {
+            Data.map((val,i)=>{
+              return <div key={i} className={`w
+             m-4 ${i===1?'ml-52 mt-14':'ml-10'} ` }>
+                <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9">{val.title}</p>
+                <div className="text-base leading-6 w-fit">{val.description}</div>
+              </div>
+            })
+          }
+        </div>
+      {/* </PageTemplate> */}
     </div>
   );
 }
