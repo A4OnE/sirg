@@ -1,19 +1,11 @@
 import React from "react";
 
-function ServiHomeCard() {
-  const data = [
-    {
-      image: "",
-      title: "Service One",
-      description: "this is the first service we offer ...",
-    },
-  ];
-
+function ServiHomeCard({ img, title, description }) {
   return (
     <div className="text-center">
-      <img src={data[0].image} alt="" srcset="" />
-      <h1 className="font-normal">{data[0].title}</h1>
-      <p className="my-4">{data[0].description}</p>
+      <img src={img} alt="" srcset="" />
+      <h1 className="font-normal">{title}</h1>
+      <p className="m-4 line-clamp-2 text-gray-600">{description}</p>
     </div>
   );
 }
