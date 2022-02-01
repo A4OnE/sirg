@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import ProjectsHomeCard from "../components/Cards/ProjectsHomeCard";
+import ServiHomeCard from "../components/Cards/ServiHomeCard";
 import HomeSlider from "../components/Sliders/HomeSlider";
 import PageTemplate from "../components/Templates/PageTemplate";
 import background from "../images/aboutbg.png";
@@ -49,6 +50,9 @@ export default function Home() {
         </div>
         {/* about us section ends  */}
       </PageTemplate>
+
+      {/* Service section starts here */}
+      <ServiHomeCard />
     </div>
   );
 }
