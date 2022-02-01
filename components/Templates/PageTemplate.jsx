@@ -6,12 +6,13 @@ function PageTemplate(props) {
   return (
     <div>
       <Nav />
-      <div className="container 
+      <div
+        className="container mx-auto 
        px-4 lg:px-8
-       ">
+       "
+      >
         {props.children}
-        </div>
-      <div className="container mx-auto px-4 lg:px-8">{props.children}</div>
+      </div>
       <Footer />
     </div>
   );
