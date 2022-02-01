@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import ProjectsHomeCard from "../components/Cards/ProjectsHomeCard";
+import ServiHomeCard from "../components/Cards/ServiHomeCard";
+import HomePageSeviceSection from "../components/Sections/HomePageSeviceSection";
 import HomeSlider from "../components/Sliders/HomeSlider";
 import PageTemplate from "../components/Templates/PageTemplate";
 import background from "../images/aboutbg.png";
@@ -49,6 +51,20 @@ export default function Home() {
           </div>
         </div>
         {/* about us section ends  */}
+        {/* Service section starts here */}
+        <div className="text-center py-10">
+          <h1 className="text-normal">What do we Do ?</h1>
+          <p className="">Services we offer to our custormers</p>
+          <div className="my-8">
+            <Link href={"/Services"}>
+              <button className="btn-outline-primary rounded-full">
+                View All
+              </button>
+            </Link>
+          </div>
+        </div>
+        <HomePageSeviceSection />
+        {/* service section ends here  */}
       </PageTemplate>
     </div>
   );
