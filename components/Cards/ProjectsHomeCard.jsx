@@ -24,7 +24,7 @@ export class ProjectsHomeCard extends Component {
             title: "our projects",
             progress: 30,
             description:
-              " publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text",
+              "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text",
           },
         ],
       },
@@ -74,7 +74,7 @@ export class ProjectsHomeCard extends Component {
                     {val.title}
                   </div>
                   {val.progress}
-                  <div className="h-40 mt-1 w-full text-left overflow-scroll text-sm">
+                  <div className="h-40 mt-1 w-full text-left  overflow-y-auto text-sm">
                     {val.description}
                   </div>
                 </div>
