@@ -1,0 +1,62 @@
+import React, { Component } from "react";
+
+export class OurClients extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      head: [{ title: "We have worked with...", data: "our clients" }],
+      body: [
+        { name: "gofundme", icon: "", width: "20%" },
+        { name: "TATA", icon: "", width: "10%" },
+        { name: "eventbrite", width: "20%" },
+        { name: "box", width: "10%" },
+        { name: "Nordea", width: "20%" },
+        {
+          name: "SurveyMonkey",
+          icon: "",
+          width: "20%",
+          fontWeight: "font-normal",
+        },
+      ],
+    };
+  }
+  render() {
+    return (
+      <div
+        className="h-96  w-full  flex   flex-col justify-center  items-center 
+      "
+      >
+        {this.state.head.map((val, i) => {
+          return (
+            <div
+              key={i}
+              className=" w-3/5 h-fit  flex flex-col justify-end items-center     "
+            >
+              <div className="text-3xl text-blue-600 font-medium ">
+                {" "}
+                {val.title}
+              </div>
+              <div className="text-gray-500 mt-3 capitalize text-xl">{val.data}</div>
+            </div>
+          );
+        })}
+        <div className="flex  flex-row  flex-wrap h-48 m-5  justify-evenly items-center">
+          {this.state.body.map((val, i) => {
+            return (
+              <div
+                key={i}
+                width={val.width}
+                className={`text-4xl ml-5 text-gray-600 w-fit 
+                p-1 ${i === 5 ? "font-medium" : "font-bold"}`}
+              >
+                {val.name}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default OurClients;
