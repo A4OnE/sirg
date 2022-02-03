@@ -3,6 +3,11 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import PageTemplate from "../components/Templates/PageTemplate";
+<<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import OurClients from "../components/Ourclients/OurClients";
+>>>>>>> 9140ad7337e70af05afa3197da190cfa5abbab14
 
 function About() {
   const [Data, setData] = useState([
@@ -70,6 +75,7 @@ function About() {
           }
         </div>
       {/* </PageTemplate> */}
+      <OurClients/>
     </div>
   );
 }
