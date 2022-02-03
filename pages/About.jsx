@@ -7,10 +7,7 @@ import PageTemplate from "../components/Templates/PageTemplate";
 =======
 import React, { useState } from "react";
 import OurClients from "../components/Ourclients/OurClients";
-<<<<<<< HEAD
-=======
 >>>>>>> 9140ad7337e70af05afa3197da190cfa5abbab14
->>>>>>> f45d4314fb04fdd3679edcd54dc2ec7cea508b93
 
 function About() {
   const [Data, setData] = useState([
