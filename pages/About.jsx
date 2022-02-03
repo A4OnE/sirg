@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import PageTemplate from "../components/Templates/PageTemplate";
+
 import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
 import OurClients from "../components/Ourclients/OurClients";
 
