@@ -1,8 +1,13 @@
+import React, { useState } from "react";
+
 import Head from "next/head";
 import Link from "next/link";
 import PageTemplate from "../components/Templates/PageTemplate";
+<<<<<<< HEAD
+=======
 import React, { useState } from "react";
 import OurClients from "../components/Ourclients/OurClients";
+>>>>>>> 9140ad7337e70af05afa3197da190cfa5abbab14
 
 function About() {
   const [Data, setData] = useState([
@@ -36,7 +41,7 @@ function About() {
           </div>
           <div className="flex-1 flex flex-col  mt-10">
             <p className="text-base text-gray-400 m-2 mt-0 ">About us</p>
-            <p className="text-xl text-primary font-bold m-2 tracking-wide "> Who we are ?</p>
+            <p className="text-2xl text-primary font-bold m-2 tracking-wide "> Who we are ?</p>
             
             <p className="text-sm w-5/6  m-2 -tracking-tight">
               In publishing and graphic design, Lorem ipsum is a placeholder
