@@ -12,7 +12,7 @@ function About() {
     {
       title: "Our Vision",
       description:
-        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without  relying on meaningful content",
+        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
     },
     {
       title: "Our Mission",
@@ -38,22 +38,6 @@ function About() {
             <p className="text-white ">Video modal</p>
           </div>
         </div>
-        <div className="flex-1 flex flex-col  mt-10">
-          <p className="text-base text-gray-400 m-2 mt-0 ">About us</p>
-          <p className="text-xl text-primary font-bold m-2 tracking-wide ">
-            {" "}
-            Who we are ?
-          </p>
-
-          <p className="text-sm w-5/6  m-2 -tracking-tight">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. In publishing and
-            graphic design, Lorem ipsum is a placeholder text commonly used to
-            demonstrate the visual form of a document or a typeface without
-            relying on meaningful content. In publishing and graphic design,
-          </p>
-       </div>
           <div className="flex-1 flex flex-col  mt-10 ">
             <p className="text-base text-gray-400 m-2 mt-0 ">About us</p>
             <p className="text-2xl text-primary font-bold m-2 tracking-wide "> Who we are ?</p>
