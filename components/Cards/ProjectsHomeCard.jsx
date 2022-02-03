@@ -1,96 +1,64 @@
-import React, { Component } from "react";
-import BackgroundImage from "../../images/aboutbg.png";
-export class ProjectsHomeCard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [
-        {
-          image: BackgroundImage,
-          title: "project one",
-          description:
-            "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a ",
-        },
-        {
-          image: BackgroundImage,
-          title: "project two",
-          description:
-            "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a ",
-        },
-      ],
-      ourProjects: {
-        head: [
-          {
-            title: "our projects",
-            progress: 30,
-            description:
-              "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text",
-          },
-        ],
-      },
-    };
-  }
-  render() {
-    return (
-      <div className="h-96   flex flex-row  bg-gray-100  mt-10   ">
-        <div className=" flex-1 flex flex-row  w-full  justify-center items-center">
-          {this.state.data.map((val, i) => {
-            return (
-              <div key={i} className="h-fit    m-5 flex flex-col items-start 	">
-                <div
-                  src={val.image}
-                  alt="images"
-                  style={{
-                    background: "grey",
-                    backgroundImage: `url(${BackgroundImage})`,
-                    backgroundPosition: "cover",
-                    backgroundSize: "100% 100%",
-                    backgroundRepeat: "no-repeat",
-                    height: "100px",
-                    width: "200px",
-                  }}
-                />
-                <div className="h-fit mt-10 text-lg	capitalize  ">
-                  {" "}
-                  {val.title}
-                </div>
-                <div className="h-fit mt-1 w-full text-left   text-sm">
-                  {" "}
-                  {val.description}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className=" flex-1 h-96 flex justify-center  items-center w -full    ">
-          <div className="h-fit w-fit flex  flex-col   items-start m-5 ">
-            {this.state.ourProjects.head.map((val, i) => {
-              return (
-                <div
-                  key={i}
-                  className="h-fit  w-fit    flex flex-col items-start 	"
-                >
-                  <div className="  text-lg	capitalize font-semibold">
-                    {val.title}
-                  </div>
-                  {val.progress}
-                  <div className="h-40 mt-1 w-full text-left  overflow-y-auto text-sm">
-                    {val.description}
-                  </div>
-                </div>
-              );
-            })}
-            <button
-              className="bg-white   text-blue-800  capitalize  mt-3 btn-outline-primary	
-            flex items-start  rounded-3xl "
-            >
-              view projects
-            </button>
+import Link from "next/link";
+import React from "react";
+
+function ProjectsHomeCard() {
+  const data = [
+    {
+      title: "lksajdfl",
+      description:
+        "      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt enim nulla voluptatem ullam sit reiciendis ipsam placeat? Odit quae veniam ut fugiat expedita blanditiis ab mollitia consectetur, voluptatibus sit",
+    },
+    {
+      title: "lksajdfl",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt enim nulla voluptatem ullam sit reiciendis ipsam placeat? Odit quae veniam ut fugiat expedita blanditiis ab mollitia consectetur, voluptatibus sit",
+    },
+  ];
+  return (
+    <div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 my-24">
+        {/* left section of projects card  */}
+        {data.map((item) => (
+          <div className="flex flex-col">
+            <div className="bg-gray-500 h-44 w-full"></div>
+            <div className="my-4 font-bold">
+              <h2>{item.title}</h2>
+            </div>
+            <div className="my-2 text-gray-600 line-clamp-2">
+              {item.description}
+            </div>
+          </div>
+        ))}
+        {/* left section of projects card ends */}
+        {/* rigt side of our project section  */}
+        <div className="row-start-1 lg:col-start-3">
+          <h1 className="-mt-2">Our Projects </h1>
+          <hr className="my-2 border-4 border-primary w-20 rounded-full" />
+          <div className="my-4 text-gray-600 leading-7 line-clamp-6">
+            <p>
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form of a document or
+              a typeface without relying on meaningful content. In publishing
+              and graphic design, Lorem ipsum is a placeholder text commonly
+              used to demonstrate the visual form of a document or a typeface
+              without relying on meaningful content. In publishing and graphic
+              design, Lorem ipsum is a placeholder text commonly used to
+              demonstrate the visual form of a document or a typeface without
+              relying on meaningful content.
+            </p>
+          </div>
+          <div className="my-4 mt-10">
+            <Link href={"/Projects"}>
+              <button className="btn-outline-primary rounded-full">
+                Our Projects
+              </button>
+            </Link>
           </div>
         </div>
+        {/* ends  */}
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default ProjectsHomeCard;
