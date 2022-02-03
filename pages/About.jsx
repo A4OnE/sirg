@@ -52,10 +52,8 @@ function About() {
             demonstrate the visual form of a document or a typeface without
             relying on meaningful content. In publishing and graphic design,
           </p>
-          <Link href={"##"}>
-            <div
-              className="bg-transparent w-fit p-0.5 px-3 border-2 m-2
-          <div className="flex-1 flex flex-col  mt-10">
+       </div>
+          <div className="flex-1 flex flex-col  mt-10 ">
             <p className="text-base text-gray-400 m-2 mt-0 ">About us</p>
             <p className="text-2xl text-primary font-bold m-2 tracking-wide "> Who we are ?</p>
             
