@@ -1,15 +1,15 @@
 import { IoLocationSharp } from "react-icons/io5";
 import React from "react";
 
-function Event_Card({index}) {
+function Event_Card({ index }) {
   return (
-    <div className={`border border-black rounded-r-lg h-80
-    w-5/12 mt-20 ml-5 bg-stone-500  ${index%2===0?'mr-28':null}
-    flex flex-row  shadow-base shadow-zinc-500 md:w-5/12`}>
-      <div className="h-5/5 w-1/5 bg-stone-500"></div>
+    <div className="flex flex-col lg:flex-row border transition cursor-pointer hover:shadow-lg">
+      {/* left img section  */}
+      <div className=" h-44 w-full lg:h-full lg:w-1/2 bg-stone-500"></div>
 
-      <div className="h-5/5 w-4/5 rounded-r-lg pl-5  bg-white ">
-        <p className="text-2xl font-bold mt-10 ml-1 text-zinc-600">
+      {/* right content section  */}
+      <div className="bg-white p-4 lg:p-8">
+        <p className="text-2xl font-bold text-zinc-600">
           This is the first event title which goes here
         </p>
         <div className="mt-5 mb-8  flex flex-row text-base items-center ">
