@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import PageTemplate from "../components/Templates/PageTemplate";
-import React, { useState } from "react";
 import OurClients from "../components/Ourclients/OurClients";
 function About() {
   const [Data, setData] = useState([

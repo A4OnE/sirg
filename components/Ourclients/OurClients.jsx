@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from "react";
 // import React from "react";
 
@@ -41,7 +41,7 @@ function OurClients() {
       <div className="h-fit lg:w-10/12 md:w-full  flex    flex-wrap flex-col flex-wrap  items-center ">
         <div className="flex  flex-row  flex-wrap h-48 lg:w-6/12 md:w-10/12      justify-center items-end">
           {body.map((val, i) => {
-=======
+
 import React, { Component } from "react";
 
 export class OurClients extends Component {
