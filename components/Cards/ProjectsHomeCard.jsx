@@ -68,7 +68,7 @@ export class ProjectsHomeCard extends Component {
               return (
                 <div
                   key={i}
-                  className="h-fit  w-fit   flex flex-col items-start 	"
+                  className="h-fit  w-fit    flex flex-col items-start 	"
                 >
                   <div className="  text-lg	capitalize font-semibold">
                     {val.title}
