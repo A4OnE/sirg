@@ -1,8 +1,10 @@
+import React, { useState } from "react";
+
 import Head from "next/head";
 import Link from "next/link";
 import PageTemplate from "../components/Templates/PageTemplate";
-import React, { useState } from "react";
 import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
+import OurClients from "../components/Ourclients/OurClients";
 
 function About() {
   const [Data, setData] = useState([
@@ -53,6 +55,21 @@ function About() {
           <Link href={"##"}>
             <div
               className="bg-transparent w-fit p-0.5 px-3 border-2 m-2
+          <div className="flex-1 flex flex-col  mt-10">
+            <p className="text-base text-gray-400 m-2 mt-0 ">About us</p>
+            <p className="text-2xl text-primary font-bold m-2 tracking-wide "> Who we are ?</p>
+            
+            <p className="text-sm w-5/6  m-2 -tracking-tight">
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form of a document or
+              a typeface without relying on meaningful content. In publishing
+              and graphic design, Lorem ipsum is a placeholder text commonly
+              used to demonstrate the visual form of a document or a typeface
+              without relying on meaningful content. In publishing and graphic
+              design,
+            </p>
+            <Link href={"##"} > 
+            <div className="bg-transparent w-fit p-0.5 px-3 border-2 m-2
              border-indigo-600 rounded-3xl text-primary text-sm
              mt-5
               "
@@ -85,6 +102,7 @@ function About() {
 
       {/* Happy Customer Section */}
       <HappyCustomer />
+      <OurClients/>
     </div>
   );
 }
