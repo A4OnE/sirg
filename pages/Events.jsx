@@ -4,6 +4,7 @@ import { EventDummhy } from "../dummyData/event";
 import Event_Card from "../components/events_card/Event_Card";
 import Head from "next/head";
 import PageTemplate from "../components/Templates/PageTemplate";
+import Link from "next/link";
 
 function Events(props) {
   const [EventData, setEventData] = useState(props.data);
