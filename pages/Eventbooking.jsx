@@ -32,7 +32,7 @@ const Eventbooking = () => {
             commonly used to demonstrate the visual form of a document or a
             required item
           </p>
-          <button className="rounded-full bg-white text-primary mt-6 w-cover tracking-wider px-5 py-1 font-bold ml-8 transition hover:animate-bounce">
+          <button className="rounded-full cursor-pointer bg-white text-primary mt-6 w-cover tracking-wider px-5 py-1 font-bold ml-8 transition hover:opacity-70">
             Book Now
           </button>
         </div>
