@@ -4,12 +4,12 @@ import React from "react";
 function ProjectsHomeCard() {
   const data = [
     {
-      title: "lksajdfl",
+      title: "project one",
       description:
         "      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt enim nulla voluptatem ullam sit reiciendis ipsam placeat? Odit quae veniam ut fugiat expedita blanditiis ab mollitia consectetur, voluptatibus sit",
     },
     {
-      title: "lksajdfl",
+      title: "project two",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt enim nulla voluptatem ullam sit reiciendis ipsam placeat? Odit quae veniam ut fugiat expedita blanditiis ab mollitia consectetur, voluptatibus sit",
     },

@@ -36,18 +36,23 @@ export class OurClients extends Component {
                 {" "}
                 {val.title}
               </div>
-              <div className="text-gray-500 mt-3 capitalize text-xl">{val.data}</div>
+              <div className="text-gray-500 mt-3 capitalize text-xl">
+                {val.data}
+              </div>
             </div>
           );
         })}
-        <div className="flex  flex-row  flex-wrap h-48 m-5  justify-evenly items-center">
+        <div className="flex   flex-wrap h-48 m-5  lg:w-5/12 justify-evenly items-center">
           {this.state.body.map((val, i) => {
             return (
               <div
                 key={i}
                 width={val.width}
-                className={`text-4xl ml-5 text-gray-600 w-fit 
-                p-1 ${i === 5 ? "font-medium" : "font-bold"}`}
+                className={` ml-5 text-gray-600 w-fit 
+                p-1
+                ${i === 5 ? "font-medium  " : "font-bold"}
+                ${i === 5 || i === 0 ? "text-3xl" : "text-4xl"}
+                `}
               >
                 {val.name}
               </div>
