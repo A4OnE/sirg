@@ -6,13 +6,14 @@ import PageTemplate from "../components/Templates/PageTemplate";
 
 import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
 import OurClients from "../components/Ourclients/OurClients";
+import EventBooking from "./Eventbooking";
 
 function About() {
   const [Data, setData] = useState([
     {
       title: "Our Vision",
       description:
-        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
+        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
     },
     {
       title: "Our Mission",
@@ -59,10 +60,7 @@ function About() {
 
               <div className="my-4">
                 <Link href={"/Contact"}>
-                  <div
-                    className="btn-outline-primary rounded-full inline t-4
-              "
-                  >
+                  <div className="btn-outline-primary rounded-full inline t-4">
                     Contact us
                   </div>
                 </Link>
@@ -95,7 +93,7 @@ function About() {
         <OurClients />
       </PageTemplate>
       {/* Happy Customer Section */}
-   </div>
+    </div>
   );
 }
 
