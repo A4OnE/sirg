@@ -135,6 +135,10 @@ ol {
 .btn-outline-primary {
   @include btn-outline($primaryColor, $primaryColor);
 }
+.btn-outline-gray {
+  @include btn-outline($GrayD, $GrayD);
+  cursor: pointer;
+}
 
 .card {
   background-color: white;
