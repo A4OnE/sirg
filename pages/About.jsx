@@ -13,7 +13,7 @@ function About() {
     {
       title: "Our Vision",
       description:
-        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
+        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without  relying on meaningful content",
     },
     {
       title: "Our Mission",
@@ -80,7 +80,7 @@ function About() {
                   <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9">
                     {val.title}
                   </p>
-                  <div className={`text-base leading-6 ${i===0?'w-9/12':'w-fit'} `}>
+                  <div className={`text-base leading-6 ${i===0?'w-10/12':'max-w-screen-xl'} `}>
                     {val.description}
                   </div>
                 </div>
@@ -88,7 +88,11 @@ function About() {
             })}
           </div>
         </div>
+        <div className="w-full flex justify-center items-center">
+
         <HappyCustomer />
+        </div>
+
         <OurClients />
       </PageTemplate>
       {/* Happy Customer Section */}
