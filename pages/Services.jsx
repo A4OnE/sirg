@@ -31,17 +31,20 @@ function Services() {
               We provide best services in e-learning field.
             </p>
           </div>
-          <div
-            className="
-                 grid grid-cols-2 gap-8 m-10
-                 md:grid-cols-2 md:gap-16 md:gap-y-8 md:mx-16
-                 lg:grid-cols-3 lg:gap-24 lg:gap-y-12 lg:m-5 lg:mt-10 lg:self-center lg:w-10/12 
+          <div className="container mx-auto px-4 lg:px-8">
+            <div
+              className="
+                 grid grid-cols-1 gap-8 
+                 md:grid-cols-2 md:gap-12 md:mx-16
+                 lg:grid-cols-3 lg:gap-12 
+                 mb-16 
               "
-          >
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
+            >
+              <ServiceCard />
+              <ServiceCard />
+              <ServiceCard />
+              <ServiceCard />
+            </div>
           </div>
         </div>
       </PageTemplate>

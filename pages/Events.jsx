@@ -20,26 +20,31 @@ function Events(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageTemplate>
-        <div className="pb-24">
-          <div className="flex flex-col h-48 justify-center ml-16 bg-red border-b-2 border-black">
-            <div className="text-primary text-4xl font-bold py-7">Events</div>
-            <div className="flex flex-row items-center">
-              <p className="text-3xl">categories</p>
-              <select className="w-3/12 ml-4 p-2 rounded-full h-12 border border-black bg-white ">
-                <option>All</option>
-                <option>All</option>
-                <option>All</option>
-                <option>All</option>
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-primary text-4xl font-bold mt-4 md:mt-7 lg:mt-12 py-7">
+            Events
+          </div>
+
+          {/* event categories section  */}
+          <div className="flex flex-row items-center space-x-8">
+            <p className="text-3xl">categories</p>
+            <div className="border px-4 py-2 border-black rounded-full">
+              <select className="lg:w-80 outline-none">
+                <option className="p-4">All</option>
+                <option className="p-4">All</option>
+                <option className="p-4">All</option>
+                <option className="p-4">All</option>
               </select>
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-8 my-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2  gap-8 ">
-              {EventData.map((val, i) => {
-                console.log(val);
-                return <Event_Card index={i} />;
-              })}
-            </div>
+          <hr className="mt-8 shadow" />
+
+          {/* events card section  */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 lg:gap-10 xl:gap-12  my-12">
+            {EventData.map((val, i) => {
+              console.log(val);
+              return <Event_Card index={i} />;
+            })}
           </div>
         </div>
       </PageTemplate>
