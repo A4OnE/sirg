@@ -74,12 +74,12 @@ const HappyCustomer = () => {
           <div>
             <p className="text-gray-500 font-bold text-xl mt-6 text-center
             md:text-lg
-            lg:text-lg lg:mt-4 lg:text-left md:text-left
+            lg:text-lg lg:mt-4 
             sm:text-base 
             ">
               {data[0].name}
             </p>
-            <p className=" text-center text-xs md:text-lg lg:text-base lg:text-left md:text-left sm:text-xs">{data[0].nametitle}</p>
+            <p className=" text-center text-xs  sm:text-xs">{data[0].nametitle}</p>
           </div>
         </div>
       </div>
