@@ -5,110 +5,64 @@ import { GoDeviceMobile } from "react-icons/go";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineMessage } from "react-icons/ai";
 import PageTemplate from "../components/Templates/PageTemplate";
+import ContactForm from "../components/form/ContactForm";
+import { IoCall } from "react-icons/io5";
+import {BiCurrentLocation} from 'react-icons/bi'
 
 function Contact() {
   return (
     <div>
-            <PageTemplate>
-        <div className=" Box">
+      <PageTemplate>
+        <div className="">
           {/* starting of top part of contact */}
-          <div
-            className="  h-96 bg-blue-800 w-full  grid 
-       items-center "
-          >
-            <div className="text-center">
-              <div
-                className="font-bold text-3xl text-white 
-             w-10/12 uppercase ml-14   "
-              >
-                connect with us
-              </div>
-
-              <div className=" text-white mt-3 text-base   normal">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a text.
-              </div>
+          <div className="bg-primary h-96 lg:h-72 w-full py-10">
+            <div className="text-center text-white">
+            <h1>CONTACT US</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
           </div>
           {/*ending of  top part of contact */}
 
-          {/* form div starts */}
-          <div
-            className="cards  md:w-11/12 lg:w-7/12  sm:w-10/12
-        md:h-96 lg:h-10/12 mb-16
-         bg-white shadow-2xl	
-      grid items-center mx-auto -my-28 p-4  rounded-md"
-          >
-            <div
-              className="
-        grid grid-cols-3 capitalize text-gray-500   
-        font-bold lg:text-xl"
-            >
-              {/* icon wala part in left side starts */}
-              <div className="grid grid-rows-4 w-40   ">
-                <div className="grid grid-cols-2  lg:w-fit   w-28   m-4 ">
-                  <div>
-                    <BsFillFilePersonFill className="h-8 w-8" />
-                  </div>
-                  <div>ssdsdfsdadhd</div>
-                </div>
-                <div className="grid grid-cols-2 lg:w-fit  w-28   m-4  ">
-                  <div>
-                    <GoDeviceMobile className="h-8 w-8" />
-                  </div>
-                  <div>ssdsdfsdadhd</div>
-                </div>
-                <div className="grid grid-cols-2  lg:w-fit   w-28  m-4 ">
-                  <div>
-                    <AiOutlineMail className="h-8 w-8" />
-                  </div>
-                  <div>ssdsdfsdadhd</div>{" "}
-                </div>
-                <div className="grid grid-cols-2  lg:w-fit  w-28   m-4 ">
-                  <div>
-                    <AiOutlineMessage className="h-8 w-8" />
-                  </div>
-                  <div>ssdsdfsdadhd</div>
-                </div>
-              </div>
-              {/* icon wala part in left side ends */}
+          {/* contact section div starts */}
+          <div className="w-full lg:w-3/4 mx-auto -mt-24 bg-white shadow-md">
 
-              <div className="col-span-2  grid   pl-3 grid-rows-1 border-l border-gray-500">
-                <div className="grid  grid-cols-3 w-5/12   m-4 ">
-                  <label className=" col-span-2">full name</label>
-                  <input
-                    type="text"
-                    className="bg-gray-300 rounded-md outline-none lg:h-10  h-8 lg:w-fit w-fit px-2"
-                  />
-                </div>
-                <div className="grid grid-cols-3  w-5/12  m-4 ">
-                  <label className="col-span-2">phone</label>
-                  <input
-                    type="text"
-                    className="bg-gray-300 rounded-md outline-none lg:h-10 h-8 lg:w-fit w-fit px-2"
-                  />
-                </div>
-                <div className="grid grid-cols-3  w-5/12   m-4 ">
-                  <label className="col-span-2 ">email</label>
-                  <input
-                    type="text"
-                    className="bg-gray-300 rounded-md outline-none lg:h-10 h-8 lg:w-fit w-fit px-2"
-                  />
-                </div>
-                <div className="grid grid-cols-3   w-5/12   m-4 ">
-                  <label className="col-span-2">message</label>
-                  <input
-                    type="text"
-                    className="bg-gray-300 rounded-md outline-none  lg:h-10 h-8 lg:w-fit  w-fit px-2"
-                  />
-                </div>
+          {/* grids starts here */}
+          <div className="grid lg:grid-cols-2 gap-4  py-4 lg:py-8 my-8">
+
+            {/* left sections starts here */}
+            <div className="lg:border-r-2">
+              <div className="p-4 lg:px-12">
+              <h1>Contact Information</h1>
+              <hr />
+              <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
+                <IoCall />
+                <p>+977-9867842300</p>
+                <p></p>
+              </div>
+              <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
+                <AiOutlineMail />
+                <p>vip@gmail.com</p>
+              </div>
+              <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
+                <BiCurrentLocation/>
+                <p>Butwal Rupandehi</p>
+              </div>
               </div>
             </div>
-          </div>
-          {/* form div closed */}
-        </div>
-        </PageTemplate>
+            {/* left sections ends here */}
+            
+            {/* right sections starts here */}
+            <ContactForm/>
+            {/* right sections ends here */}
 
+          </div>
+          {/* grids ends here */}
+
+          </div>
+          {/* contact section div closed */}
+
+        </div>
+      </PageTemplate>
     </div>
   );
 }
