@@ -4,17 +4,16 @@ import { BsFillFilePersonFill } from "react-icons/bs";
 import { GoDeviceMobile } from "react-icons/go";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineMessage } from "react-icons/ai";
-// import Head from "next/head";
 import PageTemplate from "../components/Templates/PageTemplate";
 
 function Contact() {
   return (
     <div>
             <PageTemplate>
-        <div className=" container ">
+        <div className="  Card bg-blue-800">
           {/* starting of top part of contact */}
           <div
-            className="  h-96 bg-blue-800 grid 
+            className="  h-96  w-full  grid 
        items-center "
           >
             <div className="text-center">
