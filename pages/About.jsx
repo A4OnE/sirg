@@ -43,7 +43,7 @@ function About() {
             {/* right section  */}
             <div className="flex-1 mt-10 p-2">
               <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> 
-              <p className="text-2xl text-primary font-bold my-2 tracking-wide sm:text-center lg:text-left ">
+              <p className="text-2xl text-primary font-bold my-2 text-center tracking-wide sm:text-center md:text-left lg:text-left ">
                 {" "}
                 Who we are ?
               </p>
@@ -58,7 +58,7 @@ function About() {
                 and graphic design,
               </p>
 
-              <div className="pt-10  h-fit flex sm:justify-center lg:justify-start">
+              <div className="pt-10  h-fit flex justify-center md:justify-start sm:justify-center lg:justify-start">
                 <Link href={"/Contact"} >
                   <div className="btn-outline-primary rounded-full
                 
@@ -77,13 +77,13 @@ function About() {
               return (
                 <div
                   key={i}
-                  className={`m-4 ${i === 1 ? "ml-96 pl-44 mt-14 sm:pl-0 sm:ml-10 md:pl-0 md:ml-10 lg:ml-96 lg:pl-44" : "ml-10"} `}
+                  className={`m-4 ${i === 1 ? "ml-10 pl-0 mt-14 sm:pl-0  sm:ml-10 md:pl-0 md:ml-10 lg:ml-96 lg:pl-44" : "ml-10"} `}
                 >
-                  <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9 sm:text-center lg:text-left">
+                  <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9 text-center md:text-left sm:text-center lg:text-left">
                     {val.title}
                   </p>
                   <div className={`text-base leading-6 
-                  ${i===0?'w-6/12 sm:w-full lg:w-6/12':'max-w-screen-xl sm:w-full'} 
+                  ${i===0?'w-full md:w-6/12 sm:w-full lg:w-6/12':'max-w-screen-xl sm:w-full'} 
                   `}>
                     {val.description}
                   </div>
