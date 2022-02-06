@@ -10,10 +10,10 @@ function Contact() {
   return (
     <div>
             <PageTemplate>
-        <div className="  Card bg-blue-800">
+        <div className=" Box">
           {/* starting of top part of contact */}
           <div
-            className="  h-96  w-full  grid 
+            className="  h-96 bg-blue-800 w-full  grid 
        items-center "
           >
             <div className="text-center">
