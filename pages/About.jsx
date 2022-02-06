@@ -13,7 +13,7 @@ function About() {
     {
       title: "Our Vision",
       description:
-        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
+        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without  relying on meaningful content",
     },
     {
       title: "Our Mission",
@@ -42,8 +42,8 @@ function About() {
             </div>
             {/* right section  */}
             <div className="flex-1 mt-10 p-2">
-              <p className="text-base text-gray-400 my-2 mt-0 ">About us</p>
-              <p className="text-2xl text-primary font-bold my-2 tracking-wide ">
+              <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> 
+              <p className="text-2xl text-primary font-bold my-2 tracking-wide sm:text-center lg:text-left ">
                 {" "}
                 Who we are ?
               </p>
@@ -58,9 +58,11 @@ function About() {
                 and graphic design,
               </p>
 
-              <div className="my-4">
-                <Link href={"/Contact"}>
-                  <div className="btn-outline-primary rounded-full inline t-4">
+              <div className="pt-10  h-fit flex sm:justify-center lg:justify-start">
+                <Link href={"/Contact"} >
+                  <div className="btn-outline-primary rounded-full
+                
+                   inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100">
                     Contact us
                   </div>
                 </Link>
@@ -75,13 +77,14 @@ function About() {
               return (
                 <div
                   key={i}
-                  className={`w
-             m-4 ${i === 1 ? "ml-52 mt-14" : "ml-10"} `}
+                  className={`m-4 ${i === 1 ? "ml-96 pl-44 mt-14 sm:pl-0 sm:ml-10 md:pl-0 md:ml-10 lg:ml-96 lg:pl-44" : "ml-10"} `}
                 >
-                  <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9">
+                  <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9 sm:text-center lg:text-left">
                     {val.title}
                   </p>
-                  <div className="text-base leading-6 w-fit">
+                  <div className={`text-base leading-6 
+                  ${i===0?'w-6/12 sm:w-full lg:w-6/12':'max-w-screen-xl sm:w-full'} 
+                  `}>
                     {val.description}
                   </div>
                 </div>
@@ -89,8 +92,12 @@ function About() {
             })}
           </div>
         </div>
+        <div className="w-full flex justify-center items-center flex-col">
+
         <HappyCustomer />
         <OurClients />
+        </div>
+
       </PageTemplate>
       {/* Happy Customer Section */}
     </div>

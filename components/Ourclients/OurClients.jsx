@@ -24,6 +24,7 @@ export class OurClients extends Component {
     return (
       <div
         className="h-96  w-full  flex   flex-col justify-center  items-center 
+      
       "
       >
         {this.state.head.map((val, i) => {
