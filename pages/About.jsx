@@ -62,7 +62,7 @@ function About() {
                 <Link href={"/Contact"} >
                   <div className="btn-outline-primary rounded-full
                 
-                   inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-150">
+                   inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100">
                     Contact us
                   </div>
                 </Link>
