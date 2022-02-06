@@ -3,6 +3,7 @@ import Link from "next/link";
 import ProjectsHomeCard from "../components/Cards/ProjectsHomeCard";
 import ServiHomeCard from "../components/Cards/ServiHomeCard";
 import HomePageSeviceSection from "../components/Sections/HomePageSeviceSection";
+import HomePageWelcomeSection from "../components/Sections/HomePageWelcomeSection";
 import HomeSlider from "../components/Sliders/HomeSlider";
 import PageTemplate from "../components/Templates/PageTemplate";
 import background from "../images/aboutbg.png";
@@ -19,8 +20,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageTemplate>
+        <HomePageWelcomeSection />
+
         <div className="container mx-auto px-4 lg:px-8">
-          <HomeSlider />
+          {/* <HomeSlider /> */}
 
           {/* about us section starts  */}
           <div
