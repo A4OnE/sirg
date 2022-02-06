@@ -7,7 +7,7 @@ import TabFinished from "../components/ProjectTabs/TabFinished";
 import TabRunning from "../components/ProjectTabs/TabRunning";
 import TabUpcoming from "../components/ProjectTabs/TabUpcoming";
 
-function Project() {
+function Projects() {
   const data = [
     {
       img: "https://cdn.pixabay.com/photo/2016/02/10/21/57/heart-1192662__340.jpg",
@@ -75,4 +75,4 @@ function Project() {
   );
 }
 
-export default Project;
+export default Projects;
