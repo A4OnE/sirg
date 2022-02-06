@@ -34,7 +34,7 @@ function Contact() {
 
           {/* form div starts */}
           <div
-            className="cards  md:w-11/12 lg:w-6/12  
+            className="cards  md:w-11/12 lg:w-7/12  sm:w-10/12
         md:h-96 lg:h-10/12 mb-16
          bg-white shadow-2xl	
       grid items-center mx-auto -my-28 p-4  rounded-md"
@@ -46,7 +46,7 @@ function Contact() {
             >
               {/* icon wala part in left side starts */}
               <div className="grid grid-rows-4 w-40   ">
-                <div className="grid grid-cols-2  lg:w-fit  w-28   m-4 ">
+                <div className="grid grid-cols-2  lg:w-fit   w-28   m-4 ">
                   <div>
                     <BsFillFilePersonFill className="h-8 w-8" />
                   </div>
@@ -73,33 +73,33 @@ function Contact() {
               </div>
               {/* icon wala part in left side ends */}
 
-              <div className="col-span-2  grid   grid-rows-1 border-l border-gray-500">
+              <div className="col-span-2  grid   pl-3 grid-rows-1 border-l border-gray-500">
                 <div className="grid  grid-cols-3 w-5/12   m-4 ">
                   <label className=" col-span-2">full name</label>
                   <input
                     type="text"
-                    className="bg-gray-300 rounded-md outline-none lg:h-10  h-8 lg:w-80 w-64 px-2"
+                    className="bg-gray-300 rounded-md outline-none lg:h-10  h-8 lg:w-fit w-fit px-2"
                   />
                 </div>
                 <div className="grid grid-cols-3  w-5/12  m-4 ">
                   <label className="col-span-2">phone</label>
                   <input
                     type="text"
-                    className="bg-gray-300 rounded-md outline-none lg:h-10 h-8 lg:w-80 w-64 px-2"
+                    className="bg-gray-300 rounded-md outline-none lg:h-10 h-8 lg:w-fit w-fit px-2"
                   />
                 </div>
                 <div className="grid grid-cols-3  w-5/12   m-4 ">
                   <label className="col-span-2 ">email</label>
                   <input
                     type="text"
-                    className="bg-gray-300 rounded-md outline-none lg:h-10 h-8 lg:w-80 w-64 px-2"
+                    className="bg-gray-300 rounded-md outline-none lg:h-10 h-8 lg:w-fit w-fit px-2"
                   />
                 </div>
                 <div className="grid grid-cols-3   w-5/12   m-4 ">
                   <label className="col-span-2">message</label>
                   <input
                     type="text"
-                    className="bg-gray-300 rounded-md outline-none  lg:h-10 h-8 lg:w-80  w-64 px-2"
+                    className="bg-gray-300 rounded-md outline-none  lg:h-10 h-8 lg:w-fit  w-fit px-2"
                   />
                 </div>
               </div>
