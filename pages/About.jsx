@@ -58,9 +58,9 @@ function About() {
                 and graphic design,
               </p>
 
-              <div className="my-4">
+              <div className="pt-10">
                 <Link href={"/Contact"}>
-                  <div className="btn-outline-primary rounded-full inline t-4">
+                  <div className="btn-outline-primary rounded-full inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-150">
                     Contact us
                   </div>
                 </Link>
@@ -75,13 +75,12 @@ function About() {
               return (
                 <div
                   key={i}
-                  className={`w
-             m-4 ${i === 1 ? "ml-52 mt-14" : "ml-10"} `}
+                  className={`m-4 ${i === 1 ? "ml-52 mt-14" : "ml-10"} `}
                 >
                   <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9">
                     {val.title}
                   </p>
-                  <div className="text-base leading-6 w-fit">
+                  <div className={`text-base leading-6 ${i===0?'w-9/12':'w-fit'} `}>
                     {val.description}
                   </div>
                 </div>

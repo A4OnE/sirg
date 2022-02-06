@@ -134,6 +134,7 @@ ol {
 }
 .btn-outline-primary {
   @include btn-outline($primaryColor, $primaryColor);
+  cursor: pointer;
 }
 .btn-outline-gray {
   @include btn-outline($GrayD, $GrayD);

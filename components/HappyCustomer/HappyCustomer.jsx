@@ -14,20 +14,23 @@ const HappyCustomer = () => {
     },
   ];
   return (
-    <div>
+    <div className="py-10">
       <div>
-        <h3 className="text-primary  text-3xl font-medium ml-10 h-10 tracking-wider gap-4">
+        <p className="text-primary  
+        text-4xl font-bold ml-40 tracking-wider ">
           Happy Customer's
-          <br />
+        </p>
+        <p className="text-primary  pt-3
+        text-3xl font-bold ml-40 tracking-wider">
           About us
-        </h3>
+        </p>
       </div>
       <div className="container mx-auto px-4 lg:px-8 grid grid-cols-2 gap-6 m-10">
         <div className=" mr-4">
           <img src={data[0].img} alt="" />
           <div className="flex mt-4">
-            <AiOutlineArrowLeft className="mr-4 text-3xl" />
-            <AiOutlineArrowRight className=" text-3xl placeholder-opacity-50" />
+            <AiOutlineArrowLeft className="mr-4 text-3xl cursor-pointer" />
+            <AiOutlineArrowRight className=" text-3xl placeholder-opacity-50 cursor-pointer" />
           </div>
         </div>
         <div className="wrap">
