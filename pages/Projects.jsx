@@ -1,7 +1,5 @@
 import React from "react";
 import PageTemplate from "../components/Templates/PageTemplate";
-import { AiOutlineArrowLeft } from "react-icons/ai";
-import { AiOutlineArrowRight } from "react-icons/ai";
 
 import TabFinished from "../components/ProjectTabs/TabFinished";
 import TabRunning from "../components/ProjectTabs/TabRunning";

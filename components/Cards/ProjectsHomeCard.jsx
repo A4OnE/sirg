@@ -49,9 +49,7 @@ function ProjectsHomeCard() {
           </div>
           <div className="my-4 mt-10">
             <Link href={"/Projects"}>
-              <button className="btn-outline-primary rounded-full">
-                Our Projects
-              </button>
+              <button className="btn-primary rounded-full">Our Projects</button>
             </Link>
           </div>
         </div>
