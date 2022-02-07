@@ -63,9 +63,7 @@ export default function Home() {
             <p className="">Services we offer to our custormers</p>
             <div className="my-8">
               <Link href={"/Services"}>
-                <button className="btn-outline-primary rounded-full">
-                  View All
-                </button>
+                <button className="btn-primary rounded-full">View All</button>
               </Link>
             </div>
           </div>
