@@ -21,13 +21,13 @@ function Events(props) {
       </Head>
       <PageTemplate>
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-primary text-4xl font-bold mt-4 md:mt-7 lg:mt-12 py-7">
+          <div className="text-primary  flex justify-center text-4xl font-bold  mt-4 md:mt-7 lg:mt-12 py-7">
             Events
           </div>
 
           {/* event categories section  */}
-          <div className="flex flex-row items-center space-x-8">
-            <p className="text-3xl">categories</p>
+          <div className="flex flex-row items-center  justify-center space-x-8">
+            <p className="text-3xl ">categories</p>
             <div className="border px-4 py-2 border-black rounded-full">
               <select className="lg:w-80 outline-none">
                 <option className="p-4">All</option>

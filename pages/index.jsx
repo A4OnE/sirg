@@ -30,9 +30,9 @@ export default function Home() {
             className="text-center my-24 py-10 "
             style={{ backgroundImage: `url(${background})` }}
           >
-            <div className="">
-              <h1>About Us</h1>
-              <hr className="w-96 mx-auto border-2" />
+            <div>
+              <h1 className="text-primary">About Us</h1>
+              <hr className=" border-4 border-black mx-auto  w-20 rounded-full" />
               <p className="my-10 leading-8 lg:p-10">
                 In publishing and graphic design, Lorem ipsum is a placeholder
                 text commonly used to demonstrate the visual form of a document
@@ -59,7 +59,8 @@ export default function Home() {
           {/* about us section ends  */}
           {/* Service section starts here */}
           <div className="text-center py-10">
-            <h1 className="text-normal">What do we Do ?</h1>
+            <h1 className="text-primary">What do we Do ?</h1>
+            <hr className=" border-4 mb-2  border-black mx-auto w-20 rounded-full" />
             <p className="">Services we offer to our custormers</p>
             <div className="my-8">
               <Link href={"/Services"}>

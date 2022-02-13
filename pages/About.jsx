@@ -43,7 +43,7 @@ function About() {
             {/* right section  */}
             <div className="flex-1 mt-10 p-2">
               <p className="text-base text-gray-400 my-2 mt-0 ">About us</p>
-              <p className="text-2xl text-primary font-bold my-2 text-center tracking-wide sm:text-center md:text-left lg:text-left ">
+              <p className="text-3xl text-primary font-bold my-2 mx-auto tracking-wide sm:text-center md:text-center lg:text-left ">
                 {" "}
                 Who we are ?
               </p>
@@ -63,7 +63,7 @@ function About() {
                   <div
                     className="btn-primary rounded-full
                 
-                   inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100"
+                   inline t-4  shadow hover:shadow-md hover:shadow-gray-500 mx-auto hover:scale-100"
                   >
                     Contact us
                   </div>
