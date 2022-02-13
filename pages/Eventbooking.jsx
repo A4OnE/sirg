@@ -8,14 +8,14 @@ const Eventbooking = () => {
     <PageTemplate>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mx-auto my-24 ">
-          <h1 className="text-primary text-5xl font-bold tracking-wider text-center mb-4  ">
+          <h1 className="text-primary lg:text-5xl text-3xl font-bold tracking-wider text-center mb-4  ">
             Event Booking
           </h1>
           <p className="text-gray-500  text-center text-lg">
             You Can Book all of the upcoming event here
           </p>
           <div className="border rounded-md h-full lg:w-3/5 mx-auto bg-primary  mt-8  text-white p-4 lg:p-8 shadow-lg">
-            <p className="text-4xl font-bold  tracking-wider mt-8">
+            <p className="lg:text-4xl  text-3xl font-bold  tracking-wider mt-8">
               Event Title
             </p>
             <div className="mt-4 ">

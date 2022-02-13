@@ -19,7 +19,7 @@ function Services() {
           <div
             className="
               flex flex-col justify-center items-center h-52 
-              text-4xl text-primary font-bold
+              lg:text-4xl text-primary font-bold text-3xl
               "
           >
             Our Services
