@@ -4,19 +4,22 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 function ProjectsComponent({ img, title, description }) {
   return (
     <div>
-      <div className="container mx-auto px-4 lg:px-8 grid grid-cols-2 gap-6 m-10">
-        <div className="mr-4 min-h-fit">
+      <div className="container mx-auto px-4  lg:px-8 grid md:grid-cols-2 md:gap-6 py-8 ">
+        <div className="mr-4 min-h-fit ">
           <img src={img} />
-          <div className="flex mt-4">
-            <AiOutlineArrowLeft className="mr-4 text-3xl" />
+          <div className="flex justify-around m-4">
+            <AiOutlineArrowLeft className="text-3xl" />
             <AiOutlineArrowRight className=" text-3xl placeholder-opacity-50" />
           </div>
         </div>
         <div className="wrap">
-          <p className="text-gray-500 tracking-wider font-bold mb-6 text-5xl">
+          <p
+            className="text-gray-600 tracking-wider  
+           font-bold mb-6  text-2xl  capitalize md:text-4xl"
+          >
             {title}
           </p>
-          <p className="h-30 w-4/5  object-cover tracking-wider">
+          <p className=" lg:w-4/5  line-clamp-10  leading-7 md:line-clamp-none object-cover tracking-wider">
             {description}
           </p>
           <div>

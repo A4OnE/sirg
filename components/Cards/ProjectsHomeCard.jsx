@@ -32,8 +32,8 @@ function ProjectsHomeCard() {
         {/* left section of projects card ends */}
         {/* rigt side of our project section  */}
         <div className="row-start-1 lg:col-start-3">
-          <h1 className="-mt-2">Our Projects </h1>
-          <hr className="my-2 border-4 border-primary w-20 rounded-full" />
+          <p className="  text-2xl  font-bold -mt-2">Our Projects </p>
+          <p className="w-20 h-1 mt-2 bg-blue-600 " />
           <div className="my-4 text-gray-600 leading-7 line-clamp-6">
             <p>
               In publishing and graphic design, Lorem ipsum is a placeholder

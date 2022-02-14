@@ -43,16 +43,20 @@ export class OurClients extends Component {
             </div>
           );
         })}
-        <div className="flex   flex-wrap h-48 m-5  lg:w-5/12 justify-evenly items-center">
+        <div className="flex  flex-wrap h-48 m-5  lg:w-5/12 justify-evenly items-center">
           {this.state.body.map((val, i) => {
             return (
               <div
                 key={i}
                 width={val.width}
-                className={` ml-5 text-gray-600 w-fit 
-                p-1
+                className={` ml-3 md:ml-5 lg:ml-2 text-gray-600 w-fit 
+                px-1  md:p-1 
                 ${i === 5 ? "font-medium  " : "font-bold"}
-                ${i === 5 || i === 0 ? "text-3xl" : "text-4xl"}
+                ${
+                  i === 5 || i === 0
+                    ? " text-lg sm:text-xl md:text-4xl lg:text-3xl"
+                    : " text-lg sm:text-xl md:text-4xl  lg:text-3xl"
+                }
                 `}
               >
                 {val.name}

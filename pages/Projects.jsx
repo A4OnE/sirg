@@ -28,9 +28,9 @@ function Projects() {
   return (
     <PageTemplate>
       <div>
-        <div className="container mx-auto px-4 lg:px-8 my-24">
+        <div className="container mx-auto px-4 lg:px-8 lg:my-10">
           <div>
-            <p className="text-5xl lg:text-6xl text-center font-bold text-primary py-8">
+            <p className="text-5xl lg:text-4xl text-center font-bold text-primary py-8">
               Our Projects
             </p>
           </div>

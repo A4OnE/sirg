@@ -26,8 +26,8 @@ function HomePageSeviceSection() {
     },
   ];
   return (
-    <div className="py-10">
-      <div className="grid grid-cols-3 gap-4 lg:gap-8">
+    <div className="">
+      <div className="grid md:grid-cols-3    gap-4 pb-8 lg:gap-8">
         {data.map((item) => (
           <ServiHomeCard
             img={item.image}

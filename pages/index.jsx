@@ -32,7 +32,7 @@ export default function Home() {
           >
             <div className="">
               <h1>About Us</h1>
-              <hr className="w-96 mx-auto border-2" />
+              <hr className="w-80 mx-auto bg-primary border-2 border-blue-500" />
               <p className="my-10 leading-8 lg:p-10">
                 In publishing and graphic design, Lorem ipsum is a placeholder
                 text commonly used to demonstrate the visual form of a document

@@ -42,12 +42,12 @@ function About() {
             </div>
             {/* right section  */}
             <div className="flex-1 mt-10 p-2">
-              <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> 
-              <p className="text-2xl text-primary font-bold my-2 text-center tracking-wide sm:text-center md:text-left lg:text-left ">
+              <p className="text-base text-gray-400 my-2 mt-0 ">About us</p>
+              <p className="text-2xl text-primary font-bold my-2 text-center  tracking-wide sm:text-center md:text-left lg:text-left ">
                 {" "}
                 Who we are ?
               </p>
-
+              <p className="md:w-20 md:h-1 md:mt-2 md:bg-blue-600 " />
               <p className="w-full my-4 -tracking-tight leading-7 lg:leading-7 text-lg">
                 In publishing and graphic design, Lorem ipsum is a placeholder
                 text commonly used to demonstrate the visual form of a document
@@ -59,10 +59,12 @@ function About() {
               </p>
 
               <div className="pt-10  h-fit flex justify-center md:justify-start sm:justify-center lg:justify-start">
-                <Link href={"/Contact"} >
-                  <div className="btn-outline-primary rounded-full
+                <Link href={"/Contact"}>
+                  <div
+                    className="btn-outline-primary rounded-full
                 
-                   inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100">
+                   inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100"
+                  >
                     Contact us
                   </div>
                 </Link>
@@ -71,20 +73,31 @@ function About() {
             {/* right section ends  */}
           </div>
 
-          {/* our Vesion  and our mission */}
+          {/* our Vision  and our mission sections */}
           <div className=" w-full h-fit mt-20">
             {Data.map((val, i) => {
               return (
                 <div
                   key={i}
-                  className={`m-4 ${i === 1 ? "ml-10 pl-0 mt-14 sm:pl-0  sm:ml-10 md:pl-0 md:ml-10 lg:ml-96 lg:pl-44" : "ml-10"} `}
+                  className={`m-4 ${
+                    i === 1
+                      ? "ml-10 pl-0 mt-14 sm:pl-0  sm:ml-10 md:pl-0 md:ml-10 lg:ml-96 lg:pl-44"
+                      : "ml-10"
+                  } `}
                 >
                   <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9 text-center md:text-left sm:text-center lg:text-left">
                     {val.title}
+                    <p className="md:w-20 md:h-1 md:mt-2 md:bg-blue-600 " />
                   </p>
-                  <div className={`text-base leading-6 
-                  ${i===0?'w-full md:w-6/12 sm:w-full lg:w-6/12':'max-w-screen-xl sm:w-full'} 
-                  `}>
+                  <div
+                    className={`text-base leading-6 
+                  ${
+                    i === 0
+                      ? "w-full  sm:w-full lg:w-6/12 "
+                      : "max-w-screen-xl sm:w-full"
+                  } 
+                  `}
+                  >
                     {val.description}
                   </div>
                 </div>
@@ -93,11 +106,9 @@ function About() {
           </div>
         </div>
         <div className="w-full flex justify-center items-center flex-col">
-
-        <HappyCustomer />
-        <OurClients />
+          <HappyCustomer />
+          <OurClients />
         </div>
-
       </PageTemplate>
       {/* Happy Customer Section */}
     </div>

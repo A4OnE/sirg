@@ -7,7 +7,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import PageTemplate from "../components/Templates/PageTemplate";
 import ContactForm from "../components/form/ContactForm";
 import { IoCall } from "react-icons/io5";
-import {BiCurrentLocation} from 'react-icons/bi'
+import { BiCurrentLocation } from "react-icons/bi";
 
 function Contact() {
   return (
@@ -17,50 +17,45 @@ function Contact() {
           {/* starting of top part of contact */}
           <div className="bg-primary h-96 lg:h-72 w-full py-10">
             <div className="text-center text-white">
-            <h1>CONTACT US</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <h1>CONTACT US</h1>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit .</p>
             </div>
           </div>
           {/*ending of  top part of contact */}
 
           {/* contact section div starts */}
           <div className="w-full lg:w-3/4 mx-auto -mt-24 bg-white shadow-md">
+            {/* grids starts here */}
+            <div className="grid lg:grid-cols-2 gap-4  py-4 lg:py-8 my-8">
+              {/* left sections starts here */}
+              <div className="lg:border-r-2">
+                <div className="p-4 lg:px-12">
+                  <h1>Contact Information</h1>
+                  <hr />
+                  <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
+                    <IoCall />
+                    <p>+977-9867842300</p>
+                    <p></p>
+                  </div>
+                  <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
+                    <AiOutlineMail />
+                    <p>vip@gmail.com</p>
+                  </div>
+                  <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
+                    <BiCurrentLocation />
+                    <p>Butwal Rupandehi</p>
+                  </div>
+                </div>
+              </div>
+              {/* left sections ends here */}
 
-          {/* grids starts here */}
-          <div className="grid lg:grid-cols-2 gap-4  py-4 lg:py-8 my-8">
-
-            {/* left sections starts here */}
-            <div className="lg:border-r-2">
-              <div className="p-4 lg:px-12">
-              <h1>Contact Information</h1>
-              <hr />
-              <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
-                <IoCall />
-                <p>+977-9867842300</p>
-                <p></p>
-              </div>
-              <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
-                <AiOutlineMail />
-                <p>vip@gmail.com</p>
-              </div>
-              <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
-                <BiCurrentLocation/>
-                <p>Butwal Rupandehi</p>
-              </div>
-              </div>
+              {/* right sections starts here */}
+              <ContactForm />
+              {/* right sections ends here */}
             </div>
-            {/* left sections ends here */}
-            
-            {/* right sections starts here */}
-            <ContactForm/>
-            {/* right sections ends here */}
-
-          </div>
-          {/* grids ends here */}
-
+            {/* grids ends here */}
           </div>
           {/* contact section div closed */}
-
         </div>
       </PageTemplate>
     </div>
