@@ -12,7 +12,7 @@ function HomePageWelcomeSection() {
         }}
       >
         <div className="text-center">
-          <h1 className="text-8xl font-bold">VIP GROUP</h1>
+          <h1 className=" text-6xl md:text-8xl font-bold">VIP GROUP</h1>
           <p className="text-xl font-semibold -mt-8">Slogon Goes Here !</p>
           <div className="flex flex-col items-center my-8 justify-center animate-pulse">
             <div className="bg-white h-10 w-10 rounded-full p-3 transition ">

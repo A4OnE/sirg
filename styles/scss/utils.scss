@@ -158,3 +158,10 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(117, 136, 144);
   outline: 1px solid slategrey;
 }
+
+.line-clamp-10 {
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

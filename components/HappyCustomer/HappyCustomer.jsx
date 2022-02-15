@@ -22,14 +22,13 @@ const HappyCustomer = () => {
     "
     >
       <div className="ml-8">
-        <p
-          className="text-primary  
-        ml-4
-        text-center
-        text-3xl font-extrabold my-2 mx-auto tracking-wide sm:text-center  "
-        >
-          Happy Customer's
-        </p>
+        <div className="flex flex-col mx-auto  text-center w-fit items-start ">
+          <p className=" text-2xl md:text-4xl text-blue-700 capitalize  md:font-bold font-semibold ">
+            happy customer's
+          </p>
+          <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+        </div>
+
         {/* <p className="text-primary  pt-3
         text-3xl font-bold tracking-wider">
           About us
@@ -43,23 +42,23 @@ const HappyCustomer = () => {
       "
       >
         <div
-          className="w-full h-72
-        md:h-128 md:w-full md:pb-0 sm:pb-4 sm:h-96
-        lg:h-fit
+          className="w-full h-fit
         flex
         flex-col
         items-center
+        justify-center
+
         "
         >
           <img
             src={data[0].img}
             alt=""
             className="
-          w-56 h-56
+            h-48 w-48
+          md:w-80 md:h-80
+          lg:h-92 lg:w-92
           rounded-full
-          sm:w-7/12 sm:h-full
-          md:w-8/12
-          lg:w-10/12 lg:h-80 lg:rounded-full 
+
           "
           />
           <div className="flex mt-4">
@@ -79,7 +78,7 @@ const HappyCustomer = () => {
             className="h-fit w-full  object-cover tracking-wider italic mt-8
           md:w-full
           lg:w-11/12 lg:text-lg
-          sm:w-full
+          sm:w-full line-clamp-10
         
           "
           >
@@ -87,15 +86,16 @@ const HappyCustomer = () => {
           </p>
           <div>
             <p
-              className="text-gray-500 font-bold text-xl mt-6 text-center
-            md:text-lg
-            lg:text-lg lg:mt-4 
-            sm:text-base 
+              className="text-gray-500  capitalize font-bold tg mt-6 text-center
+             lg:mt-4  
+             md:text-2xl 
+             text-base
             "
             >
               {data[0].name}
             </p>
-            <p className=" text-center text-xs  sm:text-xs">
+            <p className=" text-center text-xs  md:text-lg">
+
               {data[0].nametitle}
             </p>
           </div>

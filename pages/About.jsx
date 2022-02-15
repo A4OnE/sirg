@@ -42,13 +42,14 @@ function About() {
             </div>
             {/* right section  */}
             <div className="flex-1 mt-10 p-2">
-              <p className="text-base text-gray-400 my-2 mt-0 ">About us</p>
-              <p className="text-3xl text-primary font-bold my-2 mx-auto tracking-wide sm:text-center md:text-center lg:text-left ">
-                {" "}
-                Who we are ?
-              </p>
-
-              <p className="w-full my-4 -tracking-tight leading-7 lg:leading-7 text-lg">
+              {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
+              <div className="flex flex-col mx-auto text-center  w-fit items-start ">
+                <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
+                  who we are?{" "}
+                </p>
+                <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+              </div>
+              <p className="w-full my-4 line-clamp-10 -tracking-tight leading-7 lg:leading-7 text-lg">
                 In publishing and graphic design, Lorem ipsum is a placeholder
                 text commonly used to demonstrate the visual form of a document
                 or a typeface without relying on meaningful content. In
@@ -57,13 +58,12 @@ function About() {
                 typeface without relying on meaningful content. In publishing
                 and graphic design,
               </p>
-
-              <div className="pt-10  h-fit flex justify-center md:justify-start sm:justify-center lg:justify-start">
+              <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start">
                 <Link href={"/Contact"}>
                   <div
                     className="btn-primary rounded-full
-                
-                   inline t-4  shadow hover:shadow-md hover:shadow-gray-500 mx-auto hover:scale-100"
+                                  inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100"
+
                   >
                     Contact us
                   </div>
@@ -73,7 +73,7 @@ function About() {
             {/* right section ends  */}
           </div>
 
-          {/* our Vesion  and our mission */}
+          {/* our Vision  and our mission sections */}
           <div className=" w-full h-fit mt-20">
             {Data.map((val, i) => {
               return (
@@ -85,14 +85,17 @@ function About() {
                       : "ml-10"
                   } `}
                 >
-                  <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9 text-center md:text-left sm:text-center lg:text-left">
-                    {val.title}
-                  </p>
+                  <div className="flex flex-col mx-auto lg:mx-0 text-center w-fit items-start ">
+                    <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
+                      {val.title}
+                    </p>
+                    <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+                  </div>
                   <div
-                    className={`text-base leading-6 
+                    className={`text-base leading-6 line-clamp-10
                   ${
                     i === 0
-                      ? "w-full md:w-6/12 sm:w-full lg:w-6/12"
+                      ? "w-full  sm:w-full lg:w-6/12 "
                       : "max-w-screen-xl sm:w-full"
                   } 
                   `}

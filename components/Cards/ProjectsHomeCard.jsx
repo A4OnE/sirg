@@ -16,25 +16,27 @@ function ProjectsHomeCard() {
   ];
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 my-24">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10  lg:gap-8 my-24">
         {/* left section of projects card  */}
         {data.map((item) => (
-          <div className="flex flex-col">
+          <div className="flex flex-col  ">
             <div className="bg-gray-500 h-44 w-full"></div>
             <div className="my-4 font-bold">
-              <h2>{item.title}</h2>
+              <p className="capitalize  text-xl md:text-2xl">{item.title}</p>
             </div>
-            <div className="my-2 text-gray-600 line-clamp-2">
-              {item.description}
-            </div>
+            <div className="text-gray-600 line-clamp-2">{item.description}</div>
           </div>
         ))}
         {/* left section of projects card ends */}
         {/* rigt side of our project section  */}
         <div className="row-start-1 lg:col-start-3">
-          <h1 className="-mt-2 text-primary">Our Projects </h1>
-          <hr className="my-2 border-4 border-black w-20 rounded-full" />
-          <div className="my-4 text-gray-600 leading-7 line-clamp-6">
+          <div className="flex flex-col mx-auto text-center  w-fit items-start ">
+            <p className=" text-2xl md:text-4xl  capitalize font-bold ">
+              our projects
+            </p>
+            <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+          </div>
+          <div className="my-4 text-gray-600  leading-7 line-clamp-6">
             <p>
               In publishing and graphic design, Lorem ipsum is a placeholder
               text commonly used to demonstrate the visual form of a document or
@@ -47,7 +49,7 @@ function ProjectsHomeCard() {
               relying on meaningful content.
             </p>
           </div>
-          <div className="my-4 mt-10">
+          <div className="my-4 flex justify-center lg:justify-start  mt-10">
             <Link href={"/Projects"}>
               <button className="btn-primary rounded-full">Our Projects</button>
             </Link>
