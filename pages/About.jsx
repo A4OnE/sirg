@@ -42,12 +42,13 @@ function About() {
             </div>
             {/* right section  */}
             <div className="flex-1 mt-10 p-2">
-              <p className="text-base text-gray-400 my-2 mt-0 ">About us</p>
-              <p className="text-2xl text-primary font-bold my-2 text-center  tracking-wide sm:text-center md:text-left lg:text-left ">
-                {" "}
-                Who we are ?
-              </p>
-              <p className="md:w-20 md:h-1 md:mt-2 md:bg-blue-600 " />
+              {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
+              <div className="flex flex-col mx-auto text-center  w-fit items-start ">
+                <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
+                  who we are?{" "}
+                </p>
+                <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+              </div>
               <p className="w-full my-4 line-clamp-10 -tracking-tight leading-7 lg:leading-7 text-lg">
                 In publishing and graphic design, Lorem ipsum is a placeholder
                 text commonly used to demonstrate the visual form of a document
@@ -58,10 +59,10 @@ function About() {
                 and graphic design,
               </p>
 
-              <div className="pt-10  h-fit flex justify-center md:justify-start sm:justify-center lg:justify-start">
+              <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start">
                 <Link href={"/Contact"}>
                   <div
-                    className="btn-outline-primary rounded-full
+                    className="btn-primary rounded-full
                 
                    inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100"
                   >
@@ -85,10 +86,12 @@ function About() {
                       : "ml-10"
                   } `}
                 >
-                  <p className="text-primary  text-3xl font-extrabold tracking-wide mb-5 leading-9 text-center md:text-left sm:text-center lg:text-left">
-                    {val.title}
-                    <p className="md:w-20 md:h-1 md:mt-2 md:bg-blue-600 " />
-                  </p>
+                  <div className="flex flex-col mx-auto lg:mx-0 text-center w-fit items-start ">
+                    <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
+                      {val.title}
+                    </p>
+                    <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+                  </div>
                   <div
                     className={`text-base leading-6 line-clamp-10
                   ${

@@ -32,7 +32,7 @@ export default function Home() {
           >
             <div className=" text-left ">
               <div className="flex flex-col mx-auto text-center w-fit items-start ">
-                <p className=" text-2xl md:text-4xl  capitalize font-semibold ">
+                <p className=" text-2xl md:text-4xl  capitalize font-bold ">
                   about us
                 </p>
                 <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
@@ -63,15 +63,18 @@ export default function Home() {
           {/* about us section ends  */}
           {/* Service section starts here */}
           <div className="text-center md:py-10">
-            <h1 className=" text-2xl md:text-4xl">What do we Do ?</h1>
-            <p className="text-sm md:text-lg">
+            <div className="flex flex-col mx-auto text-center w-fit items-start ">
+              <p className=" text-2xl md:text-4xl  capitalize font-bold ">
+                what do we do?{" "}
+              </p>
+              <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+            </div>{" "}
+            <p className="text-sm font-medium md:text-lg">
               Services we offer to our custormers
             </p>
             <div className="my-8">
               <Link href={"/Services"}>
-                <button className="btn-outline-primary rounded-full">
-                  View All
-                </button>
+                <button className="btn-primary rounded-full">View All</button>
               </Link>
             </div>
           </div>

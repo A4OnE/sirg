@@ -30,9 +30,13 @@ function ProjectsHomeCard() {
         {/* left section of projects card ends */}
         {/* rigt side of our project section  */}
         <div className="row-start-1 lg:col-start-3">
-          <p className="  text-2xl  font-bold -mt-2">Our Projects </p>
-          <p className="w-20 h-1 mt-2 bg-blue-600 " />
-          <div className="my-4 text-gray-600 leading-7 line-clamp-6">
+          <div className="flex flex-col mx-auto text-center  w-fit items-start ">
+            <p className=" text-2xl md:text-4xl  capitalize font-bold ">
+              our projects
+            </p>
+            <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+          </div>
+          <div className="my-4 text-gray-600  leading-7 line-clamp-6">
             <p>
               In publishing and graphic design, Lorem ipsum is a placeholder
               text commonly used to demonstrate the visual form of a document or
@@ -45,11 +49,9 @@ function ProjectsHomeCard() {
               relying on meaningful content.
             </p>
           </div>
-          <div className="my-4 mt-10">
+          <div className="my-4 flex justify-center lg:justify-start  mt-10">
             <Link href={"/Projects"}>
-              <button className="btn-outline-primary rounded-full">
-                Our Projects
-              </button>
+              <button className="btn-primary rounded-full">Our Projects</button>
             </Link>
           </div>
         </div>
