@@ -15,7 +15,7 @@ function Contact() {
       <PageTemplate>
         <div className="">
           {/* starting of top part of contact */}
-          <div className="bg-primary h-96 lg:h-72 w-full py-10">
+          <div className="bg-primary h-48 lg:h-64 md:h-60 w-full py-10">
             <div className="text-center text-white">
               <h1>CONTACT US</h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit .</p>

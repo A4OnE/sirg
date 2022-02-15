@@ -58,13 +58,12 @@ function About() {
                 typeface without relying on meaningful content. In publishing
                 and graphic design,
               </p>
-
               <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start">
                 <Link href={"/Contact"}>
                   <div
                     className="btn-primary rounded-full
-                
-                   inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100"
+                                  inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100"
+
                   >
                     Contact us
                   </div>

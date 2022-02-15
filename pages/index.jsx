@@ -38,6 +38,7 @@ export default function Home() {
                 <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
               </div>
               <p className="my-5 md:my-5 leading-8 lg:p-5">
+
                 In publishing and graphic design, Lorem ipsum is a placeholder
                 text commonly used to demonstrate the visual form of a document
                 or a typeface without relying on meaningful content. In
@@ -72,6 +73,7 @@ export default function Home() {
             <p className="text-sm font-medium md:text-lg">
               Services we offer to our custormers
             </p>
+
             <div className="my-8">
               <Link href={"/Services"}>
                 <button className="btn-primary rounded-full">View All</button>
