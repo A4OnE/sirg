@@ -48,7 +48,7 @@ function About() {
                 Who we are ?
               </p>
               <p className="md:w-20 md:h-1 md:mt-2 md:bg-blue-600 " />
-              <p className="w-full my-4 -tracking-tight leading-7 lg:leading-7 text-lg">
+              <p className="w-full my-4 line-clamp-10 -tracking-tight leading-7 lg:leading-7 text-lg">
                 In publishing and graphic design, Lorem ipsum is a placeholder
                 text commonly used to demonstrate the visual form of a document
                 or a typeface without relying on meaningful content. In
@@ -85,12 +85,12 @@ function About() {
                       : "ml-10"
                   } `}
                 >
-                  <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9 text-center md:text-left sm:text-center lg:text-left">
+                  <p className="text-primary  text-3xl font-extrabold tracking-wide mb-5 leading-9 text-center md:text-left sm:text-center lg:text-left">
                     {val.title}
                     <p className="md:w-20 md:h-1 md:mt-2 md:bg-blue-600 " />
                   </p>
                   <div
-                    className={`text-base leading-6 
+                    className={`text-base leading-6 line-clamp-10
                   ${
                     i === 0
                       ? "w-full  sm:w-full lg:w-6/12 "

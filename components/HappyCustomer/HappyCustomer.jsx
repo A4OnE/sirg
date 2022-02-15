@@ -24,9 +24,9 @@ const HappyCustomer = () => {
       <div className="ml-8">
         <p
           className="text-primary  
-        ml-4
-        text-center
-        text-4xl font-bold  tracking-wider sm:text-center  "
+        md:ml-4
+        md:text-center
+        text-xl  md:text-4xl font-bold   tracking-wider sm:text-center  "
         >
           Happy Customer's
         </p>
@@ -77,7 +77,7 @@ const HappyCustomer = () => {
             className="h-fit w-full  object-cover tracking-wider italic mt-8
           md:w-full
           lg:w-11/12 lg:text-lg
-          sm:w-full
+          sm:w-full line-clamp-10
         
           "
           >
