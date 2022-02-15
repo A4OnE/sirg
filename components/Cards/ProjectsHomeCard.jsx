@@ -16,17 +16,15 @@ function ProjectsHomeCard() {
   ];
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 my-24">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10  lg:gap-8 my-24">
         {/* left section of projects card  */}
         {data.map((item) => (
-          <div className="flex flex-col">
+          <div className="flex flex-col  ">
             <div className="bg-gray-500 h-44 w-full"></div>
             <div className="my-4 font-bold">
-              <h2>{item.title}</h2>
+              <p className="capitalize  text-xl md:text-2xl">{item.title}</p>
             </div>
-            <div className="my-2 text-gray-600 line-clamp-2">
-              {item.description}
-            </div>
+            <div className="text-gray-600 line-clamp-2">{item.description}</div>
           </div>
         ))}
         {/* left section of projects card ends */}

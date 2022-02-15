@@ -5,7 +5,7 @@ function ProjectsComponent({ img, title, description }) {
   return (
     <div>
       <div className="container mx-auto px-4  lg:px-8 grid md:grid-cols-2 md:gap-6 py-8 ">
-        <div className="mr-4 min-h-fit ">
+        <div className="mr-4 min-h-fit   flex flex-col justify-center ">
           <img src={img} />
           <div className="flex justify-around m-4">
             <AiOutlineArrowLeft className="text-3xl" />
@@ -15,7 +15,7 @@ function ProjectsComponent({ img, title, description }) {
         <div className="wrap">
           <p
             className="text-gray-600 tracking-wider  
-           font-bold mb-6  text-2xl  capitalize md:text-4xl"
+           font-bold mb-6  text-xl  capitalize md:text-4xl"
           >
             {title}
           </p>

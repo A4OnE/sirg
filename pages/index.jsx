@@ -27,13 +27,17 @@ export default function Home() {
 
           {/* about us section starts  */}
           <div
-            className="text-center my-24 py-10 "
+            className="text-center  md:my-24 py-8 md:py-10 "
             style={{ backgroundImage: `url(${background})` }}
           >
-            <div className="">
-              <h1>About Us</h1>
-              <hr className="w-80 mx-auto bg-primary border-2 border-blue-500" />
-              <p className="my-10 leading-8 lg:p-10">
+            <div className=" text-left ">
+              <div className="flex flex-col mx-auto text-center w-fit items-start ">
+                <p className=" text-2xl md:text-4xl  capitalize font-semibold ">
+                  about us
+                </p>
+                <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+              </div>
+              <p className="my-5 md:my-5 leading-8 lg:p-5">
                 In publishing and graphic design, Lorem ipsum is a placeholder
                 text commonly used to demonstrate the visual form of a document
                 or a typeface without relying on meaningful content. In
@@ -45,7 +49,7 @@ export default function Home() {
                 without relying on meaningful content.
               </p>
             </div>
-            <div className="my-10">
+            <div className="pt-5 ">
               <Link href={"/About"}>
                 <button className="btn-primary rounded-full">
                   More About Us
@@ -58,9 +62,11 @@ export default function Home() {
 
           {/* about us section ends  */}
           {/* Service section starts here */}
-          <div className="text-center py-10">
-            <h1 className="text-normal">What do we Do ?</h1>
-            <p className="">Services we offer to our custormers</p>
+          <div className="text-center md:py-10">
+            <h1 className=" text-2xl md:text-4xl">What do we Do ?</h1>
+            <p className="text-sm md:text-lg">
+              Services we offer to our custormers
+            </p>
             <div className="my-8">
               <Link href={"/Services"}>
                 <button className="btn-outline-primary rounded-full">
