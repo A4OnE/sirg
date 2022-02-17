@@ -34,12 +34,12 @@ function Contact() {
                   <hr />
                   <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
                     <IoCall />
-                    <p>+977-9867842300</p>
+                    <p>+977-9857074929</p>
                     <p></p>
                   </div>
                   <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
                     <AiOutlineMail />
-                    <p>vip@gmail.com</p>
+                    <p>Cvipgroup@gmail.com</p>
                   </div>
                   <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
                     <BiCurrentLocation />
