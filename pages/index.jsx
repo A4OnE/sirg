@@ -7,6 +7,7 @@ import HomePageWelcomeSection from "../components/Sections/HomePageWelcomeSectio
 import HomeSlider from "../components/Sliders/HomeSlider";
 import PageTemplate from "../components/Templates/PageTemplate";
 import background from "../images/aboutbg.png";
+import { staticAbout } from "../components/staticData/StaticData";
 
 export default function Home() {
   return (
@@ -37,17 +38,8 @@ export default function Home() {
                 </p>
                 <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
               </div>
-              <p className="my-5 md:my-5 leading-8 lg:p-5">
-
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful content. In
-                publishing and graphic design, Lorem ipsum is a placeholder text
-                commonly used to demonstrate the visual form of a document or a
-                typeface without relying on meaningful content. In publishing
-                and graphic design, Lorem ipsum is a placeholder text commonly
-                used to demonstrate the visual form of a document or a typeface
-                without relying on meaningful content.
+              <p className="my-5 md:my-5 leading-8 lg:p-5 line-clamp-4">
+                {staticAbout.aboutUs}
               </p>
             </div>
             <div className="pt-5 ">
@@ -73,7 +65,6 @@ export default function Home() {
             <p className="text-sm font-medium md:text-lg">
               Services we offer to our custormers
             </p>
-
             <div className="my-8">
               <Link href={"/Services"}>
                 <button className="btn-primary rounded-full">View All</button>

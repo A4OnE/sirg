@@ -36,17 +36,13 @@ function ProjectsHomeCard() {
             </p>
             <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
           </div>
-          <div className="my-4 text-gray-600  leading-7 line-clamp-6">
+          <div className="my-4   leading-7 line-clamp-6">
             <p>
-              In publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to demonstrate the visual form of a document or
-              a typeface without relying on meaningful content. In publishing
-              and graphic design, Lorem ipsum is a placeholder text commonly
-              used to demonstrate the visual form of a document or a typeface
-              without relying on meaningful content. In publishing and graphic
-              design, Lorem ipsum is a placeholder text commonly used to
-              demonstrate the visual form of a document or a typeface without
-              relying on meaningful content.
+              We have been working on several fields such as Event Management,
+              Event Orgainzers, Entrepreneurship Development, Business
+              Development Orientation, Motivational Seminars,Skills based
+              training, Vocational trainings, Personality Development trainings,
+              Leadership trainings, Job placements & so on.
             </p>
           </div>
           <div className="my-4 flex justify-center lg:justify-start  mt-10">
