@@ -34,7 +34,7 @@ const Eventbooking = () => {
               a required item
             </p>
             <button className="rounded-full cursor-pointer bg-white text-primary mt-6 w-cover tracking-wider px-5 py-2 font-bold transition hover:opacity-70">
-              Book Now
+              Book Noww
             </button>
           </div>
         </div>
