@@ -34,7 +34,7 @@ export class OurClients extends Component {
               className=" w-3/5 h-fit  flex flex-col justify-end items-center     "
             >
               <div className="flex flex-col mx-auto lg:mx-0 text-center w-fit items-start ">
-                <p className=" text-sm md:text-4xl text-blue-500 capitalize  font-bold ">
+                <p className=" text-sm sm:text-lg md:text-4xl text-blue-500 capitalize  font-bold ">
                   {val.title}
                 </p>
                 <p className="w-20 h-1  my-1 md:my-2 bg-blue-500  " />
@@ -51,8 +51,8 @@ export class OurClients extends Component {
               <div
                 key={i}
                 width={val.width}
-                className={`ml-3 lg:ml-2 text-gray-600 w-fit 
-                px-1  md:p-1 
+                className={` ml-1 md:ml-3 lg:ml-2 text-gray-600 w-fit 
+                px-1 sm:p-2 md:p-1 
                 ${i === 5 ? "font-medium  " : "font-bold"}
                 ${
                   i === 5 || i === 0
