@@ -3,10 +3,10 @@ import { ImLocation } from "react-icons/im";
 import { BsCalendar2DateFill } from "react-icons/bs";
 import PageTemplate from "../components/Templates/PageTemplate";
 import Modal from "react-modal";
-import Modals from "./Modals";
 import { AiOutlineClose } from "react-icons/ai";
 
 import { useState } from "react";
+import BookingEventModal from "../components/Modal/BookingEventModal";
 
 const Eventbooking = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -15,10 +15,10 @@ const Eventbooking = () => {
     <PageTemplate>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mx-auto my-24 ">
-          <h1 className="text-primary lg:text-5xl text-3xl font-bold tracking-wider text-center mb-4  ">
+          <h1 className="text-primary lg:text-4xl text-3xl font-bold tracking-wider text-center mb-4  ">
             Event Booking
           </h1>
-          <hr className=" border-4 border-black mx-auto w-24 rounded-full mt-2 mb-2" />{" "}
+
           <p className="text-gray-500  text-center text-lg">
             You Can Book all of the upcoming event here
           </p>
@@ -54,7 +54,7 @@ const Eventbooking = () => {
               >
                 <AiOutlineClose />
               </button>
-              <Modals />
+              <BookingEventModal />
             </Modal>
           </div>
         </div>
