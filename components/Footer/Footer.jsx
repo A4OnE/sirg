@@ -26,8 +26,8 @@ function Footer() {
 
       {/* nav section footer  starts */}
       <div className="grid grid-cols-2 gap-4 lg:flex lg:items-center lg:space-x-6 lg:justify-center">
-        {NavItems.map((item) => (
-          <Link href={item.to}>
+        {NavItems.map((item,i) => (
+          <Link key={i} href={item.to}>
             <a className="text-lg font-normal">{item.title}</a>
           </Link>
         ))}
