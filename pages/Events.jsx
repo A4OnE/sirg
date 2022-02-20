@@ -24,7 +24,7 @@ function Events(props) {
           <div className="text-primary  flex justify-center text-4xl font-bold  mt-4 md:mt-7 lg:mt-12 py-7">
             Events
           </div>
-
+          <hr className=" border-4 border-black mx-auto w-20 rounded-full mb-4" />{" "}
           {/* event categories section  */}
           <div className="flex flex-row items-center  justify-center space-x-8">
             <p className="text-3xl ">categories</p>
@@ -38,7 +38,6 @@ function Events(props) {
             </div>
           </div>
           <hr className="mt-8 shadow" />
-
           {/* events card section  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 lg:gap-10 xl:gap-12  my-12">
             {EventData.map((val, i) => {
