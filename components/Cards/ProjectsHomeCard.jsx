@@ -29,13 +29,19 @@ setData(res.data)
   ];
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10  lg:gap-8 my-24">
+      <div className={`grid grid-cols-1
+       lg:${Data.length<=2?'grid-cols-3':'grid-cols-3'} gap-10  lg:gap-8 my-24`}>
         {/* left section of projects card  */}
         {Data.slice(0,2).map((item,i) => {
         let image = `${process.env.Url}/images/${item.img}`;
 
-          return <div className="flex flex-col  " key={i}>
-            <div className="bg-gray-500 h-44 w-full" style={{
+          return <div className={`flex flex-col 
+          lg:items-center
+          lg:${i<1?'col-span-2':'col-span-1'}
+          `} key={i}>
+            <div className={`bg-gray-500 h-44 w-full lg:${i<1?'w-1/2':'w-full'}`}
+            
+            style={{
               backgroundImage:`url(${image})`,
               backgroundRepeat:'no-repeat',
               backgroundSize:'cover',
@@ -52,7 +58,7 @@ setData(res.data)
         {/* left section of projects card ends */}
         {/* rigt side of our project section  */}
 
-        <div className="row-start-1 lg:col-start-3">
+        <div className={`row-start-1 lg:col-start-3`}>
           <div className="flex flex-col mx-auto text-center  w-fit items-start ">
             <p className=" text-2xl md:text-4xl  capitalize font-bold ">
               our projects
