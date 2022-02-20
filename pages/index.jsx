@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Link from "next/link";
-import ProjectsHomeCard from "../components/Cards/ProjectsHomeCard";
-import ServiHomeCard from "../components/Cards/ServiHomeCard";
 import HomePageSeviceSection from "../components/Sections/HomePageSeviceSection";
 import HomePageWelcomeSection from "../components/Sections/HomePageWelcomeSection";
 import HomeSlider from "../components/Sliders/HomeSlider";
+import Link from "next/link";
 import PageTemplate from "../components/Templates/PageTemplate";
+import ProjectsHomeCard from "../components/Cards/ProjectsHomeCard";
+import ServiHomeCard from "../components/Cards/ServiHomeCard";
 import background from "../images/aboutbg.png";
 import { staticAbout } from "../components/staticData/StaticData";
 
