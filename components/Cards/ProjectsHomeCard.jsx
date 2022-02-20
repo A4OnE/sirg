@@ -19,16 +19,19 @@ function ProjectsHomeCard() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10  lg:gap-8 my-24">
         {/* left section of projects card  */}
         {data.map((item) => (
+
           <div className="flex flex-col  ">
             <div className="bg-gray-500 h-44 w-full"></div>
             <div className="my-4 font-bold">
               <p className="capitalize  text-xl md:text-2xl">{item.title}</p>
+
             </div>
             <div className="text-gray-600 line-clamp-2">{item.description}</div>
           </div>
         ))}
         {/* left section of projects card ends */}
         {/* rigt side of our project section  */}
+
         <div className="row-start-1 lg:col-start-3">
           <div className="flex flex-col mx-auto text-center  w-fit items-start ">
             <p className=" text-2xl md:text-4xl  capitalize font-bold ">
@@ -45,9 +48,13 @@ function ProjectsHomeCard() {
               Leadership trainings, Job placements & so on.
             </p>
           </div>
+
           <div className="my-4 flex justify-center lg:justify-start  mt-10">
+
             <Link href={"/Projects"}>
-              <button className="btn-primary rounded-full">Our Projects</button>
+              <button className="btn-primary rounded-full ">
+                Our Projects
+              </button>
             </Link>
           </div>
         </div>

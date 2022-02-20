@@ -22,6 +22,7 @@ const HappyCustomer = () => {
     "
     >
       <div className="ml-8">
+
         <div className="flex flex-col mx-auto  text-center w-fit items-start ">
           <p className=" text-2xl md:text-4xl text-blue-700 capitalize  md:font-bold font-semibold ">
             happy customer's
@@ -33,6 +34,7 @@ const HappyCustomer = () => {
         text-3xl font-bold tracking-wider">
           About us
         </p> */}
+
       </div>
       <div
         className="container mx-auto px-4 lg:px-8 grid grid-cols-1 gap-0 m-10

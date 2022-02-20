@@ -42,6 +42,7 @@ function About() {
             </div>
             {/* right section  */}
             <div className="flex-1 mt-10 p-2">
+
               {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
               <div className="flex flex-col mx-auto text-center  w-fit items-start ">
                 <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
@@ -65,6 +66,7 @@ function About() {
                 provide platform for people to learn, provide multiple
                 opportunities to Earn & also are providing different
                 opportunities for Ownership of Dream life.
+
               </p>
               <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start">
                 <Link href={"/Contact"}>
@@ -80,7 +82,9 @@ function About() {
             {/* right section ends  */}
           </div>
 
+
           {/* our Vision  and our mission sections */}
+
           <div className=" w-full h-fit mt-20">
             {Data.map((val, i) => {
               return (
@@ -88,21 +92,24 @@ function About() {
                   key={i}
                   className={`m-4 ${
                     i === 1
-                      ? "ml-10 pl-0 mt-14 sm:pl-0  sm:ml-10 md:pl-0 md:ml-10 lg:ml-96 lg:pl-44"
+                      ? "ml-10  pl-0 mt-14 sm:pl-0  sm:ml-10 md:pl-0 md:ml-10 lg:ml-96 lg:pl-44"
                       : "ml-10"
                   } `}
                 >
+
                   <div className="flex flex-col mx-auto lg:mx-0 text-center w-fit items-start ">
                     <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
                       {val.title}
                     </p>
                     <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
                   </div>
-                  <div
+     <div
                     className={`text-lg   leading-6 line-clamp-10
                   ${
                     i === 0
+
                       ? "w-full  sm:w-full lg:w-6/12 "
+
                       : "max-w-screen-xl sm:w-full"
                   } 
                   `}

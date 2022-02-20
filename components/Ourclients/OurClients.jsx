@@ -33,6 +33,7 @@ export class OurClients extends Component {
               key={i}
               className=" w-3/5 h-fit  flex flex-col justify-end items-center     "
             >
+
               <div className="flex flex-col mx-auto lg:mx-0 text-center w-fit items-start ">
                 <p className=" text-sm sm:text-lg md:text-4xl text-blue-500 capitalize  font-bold ">
                   {val.title}
@@ -40,6 +41,7 @@ export class OurClients extends Component {
                 <p className="w-20 h-1  my-1 md:my-2 bg-blue-500  " />
               </div>
               <div className="text-gray-500 mt-3 capitalize md:text-xl">
+
                 {val.data}
               </div>
             </div>
@@ -59,6 +61,7 @@ export class OurClients extends Component {
                     ? " text-lg sm:text-xl md:text-4xl lg:text-3xl"
                     : " text-lg sm:text-xl md:text-4xl  lg:text-3xl"
                 }
+
                 `}
               >
                 {val.name}
