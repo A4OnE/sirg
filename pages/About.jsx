@@ -7,7 +7,7 @@ import PageTemplate from "../components/Templates/PageTemplate";
 import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
 import OurClients from "../components/Ourclients/OurClients";
 import EventBooking from "./Eventbooking";
-
+import { staticAbout } from "../components/staticData/StaticData";
 function About() {
   const [Data, setData] = useState([
     {
@@ -18,7 +18,7 @@ function About() {
     {
       title: "Our Mission",
       description:
-        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without  relying on meaningful content",
+        " To create a platform for  youths to learn their desired skills, help them to utilize their skills to Earn and Guide youths for ownership of their dream life. ",
     },
   ]);
   return (
@@ -42,29 +42,37 @@ function About() {
             </div>
             {/* right section  */}
             <div className="flex-1 mt-10 p-2">
-              <p className="text-base text-gray-400 my-2 mt-0 ">About us</p>
-              <p className="text-3xl text-primary font-bold my-2 mx-auto tracking-wide sm:text-center md:text-center lg:text-left ">
-                {" "}
-                Who we are ?
-              </p>
-              <hr className=" border-4 border-black  w-20 rounded-full" />
 
-              <p className="w-full my-4 -tracking-tight leading-7 lg:leading-7 text-lg">
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful content. In
-                publishing and graphic design, Lorem ipsum is a placeholder text
-                commonly used to demonstrate the visual form of a document or a
-                typeface without relying on meaningful content. In publishing
-                and graphic design,
-              </p>
+              {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
+              <div className="flex flex-col mx-auto text-center  w-fit items-start ">
+                <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
+                  who we are?{" "}
+                </p>
+                <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+              </div>
+              <p className="w-full my-4 line-clamp-10 -tracking-tight leading-7 lg:leading-7 text-lg">
+                {/* {staticAbout.aboutUs} */}
+                VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
+                of dedicated and energetic youth Entreprenuers. Since 2019, we
+                have been working on several fields such as
+                <span className=" ml-1 font-medium text-left">
+                  Event Management, Event Orgainzers, Entrepreneurship
+                  Development, Business Development Orientation, Motivational
+                  Seminars,Skills based training, Vocational trainings,
+                  Personality Development trainings, Leadership trainings, Job
+                  placements, Website Development & so on.
+                </span>
+                We Believe the concept of Learn, Earn, & Own. We train and
+                provide platform for people to learn, provide multiple
+                opportunities to Earn & also are providing different
+                opportunities for Ownership of Dream life.
 
-              <div className="pt-10  h-fit flex justify-center md:justify-start sm:justify-center lg:justify-start">
+              </p>
+              <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start">
                 <Link href={"/Contact"}>
                   <div
                     className="btn-primary rounded-full
-                
-                   inline t-4  shadow hover:shadow-md hover:shadow-gray-500 mx-auto hover:scale-100"
+                                  inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100"
                   >
                     Contact us
                   </div>
@@ -74,7 +82,9 @@ function About() {
             {/* right section ends  */}
           </div>
 
-          {/* our Vision  and our mission */}
+
+          {/* our Vision  and our mission sections */}
+
           <div className=" w-full h-fit mt-20">
             {Data.map((val, i) => {
               return (
@@ -86,15 +96,20 @@ function About() {
                       : "ml-10"
                   } `}
                 >
-                  <p className="text-primary text-3xl  text-center font-extrabold tracking-wide mb-5 leading-9  md:text-center sm:text-center lg:text-left">
-                    {val.title}
-                  </p>
-                  <hr className=" border-4 border-black  w-20 rounded-full m-4" />
-                  <div
-                    className={`text-base leading-6 
+
+                  <div className="flex flex-col mx-auto lg:mx-0 text-center w-fit items-start ">
+                    <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
+                      {val.title}
+                    </p>
+                    <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+                  </div>
+     <div
+                    className={`text-lg   leading-6 line-clamp-10
                   ${
                     i === 0
-                      ? "w-full sm:w-full md:w-full lg:w-6/12"
+
+                      ? "w-full  sm:w-full lg:w-6/12 "
+
                       : "max-w-screen-xl sm:w-full"
                   } 
                   `}

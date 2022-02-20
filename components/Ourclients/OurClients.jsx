@@ -33,26 +33,35 @@ export class OurClients extends Component {
               key={i}
               className=" w-3/5 h-fit  flex flex-col justify-end items-center     "
             >
-              <div className="text-3xl text-blue-600 font-extrabold ">
-                {val.title}
+
+              <div className="flex flex-col mx-auto lg:mx-0 text-center w-fit items-start ">
+                <p className=" text-sm sm:text-lg md:text-4xl text-blue-500 capitalize  font-bold ">
+                  {val.title}
+                </p>
+                <p className="w-20 h-1  my-1 md:my-2 bg-blue-500  " />
               </div>
-              <hr className=" border-4 border-black mx- auto w-20 rounded-full m-4" />{" "}
-              <div className="text-gray-500 mt-3 capitalize text-xl">
+              <div className="text-gray-500 mt-3 capitalize md:text-xl">
+
                 {val.data}
               </div>
             </div>
           );
         })}
-        <div className="flex   flex-wrap h-48 m-5  lg:w-5/12 justify-evenly items-center">
+        <div className="flex  flex-wrap h-48 m-5  lg:w-5/12 justify-evenly items-center">
           {this.state.body.map((val, i) => {
             return (
               <div
                 key={i}
                 width={val.width}
-                className={` ml-5 text-gray-600 w-fit 
-                p-1
-                ${i === 5 ? "font-medium  " : "font- font-bold"}
-                ${i === 5 || i === 0 ? "text-3xl" : "text-4xl"}
+                className={` ml-1 md:ml-3 lg:ml-2 text-gray-600 w-fit 
+                px-1 sm:p-2 md:p-1 
+                ${i === 5 ? "font-medium  " : "font-bold"}
+                ${
+                  i === 5 || i === 0
+                    ? " text-lg sm:text-xl md:text-4xl lg:text-3xl"
+                    : " text-lg sm:text-xl md:text-4xl  lg:text-3xl"
+                }
+
                 `}
               >
                 {val.name}

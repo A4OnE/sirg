@@ -22,8 +22,8 @@ const Eventbooking = () => {
           <p className="text-gray-500  text-center text-lg">
             You Can Book all of the upcoming event here
           </p>
-          <div className="border rounded-md h-full lg:w-3/5 mx-auto bg-primary  mt-8  text-white p-4 lg:p-8 shadow-lg">
-            <p className="lg:text-4xl  text-3xl font-bold  tracking-wider mt-8">
+          <div className="border rounded-md  h-full lg:w-3/5 mx-auto bg-primary  mt-8  text-white p-4 lg:p-6 shadow-lg">
+            <p className=" text-2xl md:text-4xl font-bold  tracking-wider ">
               Event Title
             </p>
             <div className="mt-4 ">
@@ -36,7 +36,7 @@ const Eventbooking = () => {
                 <p className="ml-2">2feb,2022</p>
               </div>
             </div>
-            <p className=" mt-4">
+            <p className="  leading-7 ">
               In publishing and graphic design, Lorem ipsum is a placeholder
               text commonly used to demonstrate the visual form of a document or
               a required item
