@@ -6,8 +6,19 @@ import Head from "next/head";
 import PageTemplate from "../components/Templates/PageTemplate";
 import Link from "next/link";
 
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`${process.env.Url}/event`);
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
+}
+
 function Events(props) {
-  const [EventData, setEventData] = useState(props.data);
+  const [EventData] = useState(props.data);
+
   return (
     <div>
       {/* head */}
@@ -21,13 +32,13 @@ function Events(props) {
       </Head>
       <PageTemplate>
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-primary  flex justify-center text-4xl font-bold  mt-4 md:mt-7 lg:mt-12 py-7">
+          <div className="text-primary text-4xl font-bold mt-4 md:mt-7 lg:mt-12 py-7">
             Events
           </div>
-          <hr className=" border-4 border-black mx-auto w-20 rounded-full mb-4" />{" "}
+
           {/* event categories section  */}
-          <div className="flex flex-row items-center  justify-center space-x-8">
-            <p className="text-3xl ">categories</p>
+          <div className="flex flex-row items-center space-x-8">
+            <p className="text-3xl">categories</p>
             <div className="border px-4 py-2 border-black rounded-full">
               <select className="lg:w-80 outline-none">
                 <option className="p-4">All</option>
@@ -38,11 +49,20 @@ function Events(props) {
             </div>
           </div>
           <hr className="mt-8 shadow" />
+
           {/* events card section  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 lg:gap-10 xl:gap-12  my-12">
-            {EventData.map((val, i) => {
-              console.log(val);
-              return <Event_Card index={i} />;
+            {EventData.map((item) => {
+              return (
+                <Event_Card
+                  key={item.id}
+                  id={item.id}
+                  title={item.event_title}
+                  date={item.event_date}
+                  location={item.event_location}
+                  img={item.img}
+                />
+              );
             })}
           </div>
         </div>
@@ -51,11 +71,4 @@ function Events(props) {
   );
 }
 
-export async function getStaticProps(context) {
-  return {
-    props: {
-      data: EventDummhy,
-    },
-  };
-}
 export default Events;

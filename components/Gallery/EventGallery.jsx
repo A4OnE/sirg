@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import GallerySlider from "../Sliders/GallerySlider";
 import { AiOutlineClose } from "react-icons/ai";
+import axios from "axios";
 
-function EventGallery() {
+function EventGallery({ id }) {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const customStyles = {
     content: {
@@ -20,33 +21,27 @@ function EventGallery() {
       transform: "translate(-50%, -50%)",
     },
   };
-  const images = [
-    {
-      id: 1,
-      img: "https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    },
-    {
-      id: 2,
-      img: "https://images.pexels.com/photos/2113566/pexels-photo-2113566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    },
-    {
-      id: 3,
-      img: "https://images.pexels.com/photos/2083179/pexels-photo-2083179.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    },
-    {
-      id: 4,
-      img: "https://images.pexels.com/photos/2113562/pexels-photo-2113562.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-    },
-  ];
+  const [images, setImages] = useState([]);
+  console.log("images", images);
+  useEffect(() => {
+    const fetch = async () => {
+      await axios
+        .get(`${process.env.Url}/eventgallery/onEvent/${id}`)
+        .then((res) => {
+          setImages(res.data.gallery);
+        });
+    };
+    fetch();
+  }, [id]);
   return (
     <div className="p-4">
       <h2 className="text-gray-800">Event Gallery</h2>
       <hr className="my-4" />
       <div className="grid grid-cols-2 gap-4">
         {images.map((item) => (
-          <div className="bg-gray-600 h-32 w-full cursor-pointer">
+          <div className="bg-gray-600 h-32 w-full cursor-pointer" key={item.id}>
             <img
-              src={item.img}
+              src={`${process.env.Url}/images/${item.img}`}
               alt=""
               className="w-full h-full object-cover rounded shadow-md "
               onClick={() => {
