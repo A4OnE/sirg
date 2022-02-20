@@ -18,6 +18,7 @@ function Contact() {
           <div className="bg-primary h-48 lg:h-64 md:h-60 w-full py-10">
             <div className="text-center text-white">
               <p className="lg:text-4xl md:text-3xl text-2xl">CONTACT US</p>
+              <hr className=" border-4 border-white mx-auto w-20 rounded-full mt-2 mb-2" />{" "}
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
           </div>

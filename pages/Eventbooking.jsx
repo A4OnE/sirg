@@ -2,8 +2,15 @@ import React from "react";
 import { ImLocation } from "react-icons/im";
 import { BsCalendar2DateFill } from "react-icons/bs";
 import PageTemplate from "../components/Templates/PageTemplate";
+import Modal from "react-modal";
+import Modals from "./Modals";
+import { AiOutlineClose } from "react-icons/ai";
+
+import { useState } from "react";
 
 const Eventbooking = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
   return (
     <PageTemplate>
       <div className="container mx-auto px-4 lg:px-8">
@@ -11,6 +18,7 @@ const Eventbooking = () => {
           <h1 className="text-primary lg:text-5xl text-3xl font-bold tracking-wider text-center mb-4  ">
             Event Booking
           </h1>
+          <hr className=" border-4 border-black mx-auto w-24 rounded-full mt-2 mb-2" />{" "}
           <p className="text-gray-500  text-center text-lg">
             You Can Book all of the upcoming event here
           </p>
@@ -33,9 +41,21 @@ const Eventbooking = () => {
               text commonly used to demonstrate the visual form of a document or
               a required item
             </p>
-            <button className="rounded-full cursor-pointer bg-white text-primary mt-6 w-cover tracking-wider px-5 py-2 font-bold transition hover:opacity-70">
+            <button
+              className="rounded-full cursor-pointer bg-white text-primary mt-6 w-cover tracking-wider px-5 py-2 font-bold transition hover:opacity-70"
+              onClick={() => setModalIsOpen(true)}
+            >
               Book Now
             </button>
+            <Modal isOpen={modalIsOpen}>
+              <button
+                className="gap-4 text-2xl  rounded-md  font-bold mb-4 text-red-500  "
+                onClick={() => setModalIsOpen(false)}
+              >
+                <AiOutlineClose />
+              </button>
+              <Modals />
+            </Modal>
           </div>
         </div>
       </div>

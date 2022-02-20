@@ -44,6 +44,7 @@ function Projects() {
               >
                 Finished Projects
               </p>
+              <hr className=" border-4 border-black mx- auto w-20 rounded-full" />{" "}
               <p
                 className={`text-gray-500 font-semibold  tracking-wider cursor-pointer  ${
                   tab === "running" && "text-primary"

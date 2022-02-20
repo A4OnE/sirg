@@ -30,10 +30,6 @@ const HappyCustomer = () => {
         >
           Happy Customer's
         </p>
-        {/* <p className="text-primary  pt-3
-        text-3xl font-bold tracking-wider">
-          About us
-        </p> */}
       </div>
       <div
         className="container mx-auto px-4 lg:px-8 grid grid-cols-1 gap-0 m-10

@@ -31,7 +31,7 @@ export default function Home() {
             style={{ backgroundImage: `url(${background})` }}
           >
             <div>
-              <h1 className="text-primary">About Us</h1>
+              <h1 className="text-primary ">About Us</h1>
               <hr className=" border-4 border-black mx-auto  w-20 rounded-full" />
               <p className="my-10 leading-8 lg:p-10">
                 In publishing and graphic design, Lorem ipsum is a placeholder

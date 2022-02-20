@@ -23,6 +23,7 @@ function Services() {
               "
           >
             Our Services
+            <hr className=" border-4 border-black mx-auto w-20 rounded-full mt-2 mb-2" />{" "}
             <p
               className="
                   text-base font-semibold pt-4 text-gray-500

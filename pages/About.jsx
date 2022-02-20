@@ -47,6 +47,7 @@ function About() {
                 {" "}
                 Who we are ?
               </p>
+              <hr className=" border-4 border-black  w-20 rounded-full" />
 
               <p className="w-full my-4 -tracking-tight leading-7 lg:leading-7 text-lg">
                 In publishing and graphic design, Lorem ipsum is a placeholder
@@ -73,7 +74,7 @@ function About() {
             {/* right section ends  */}
           </div>
 
-          {/* our Vesion  and our mission */}
+          {/* our Vision  and our mission */}
           <div className=" w-full h-fit mt-20">
             {Data.map((val, i) => {
               return (
@@ -81,18 +82,19 @@ function About() {
                   key={i}
                   className={`m-4 ${
                     i === 1
-                      ? "ml-10 pl-0 mt-14 sm:pl-0  sm:ml-10 md:pl-0 md:ml-10 lg:ml-96 lg:pl-44"
+                      ? "ml-10  pl-0 mt-14 sm:pl-0  sm:ml-10 md:pl-0 md:ml-10 lg:ml-96 lg:pl-44"
                       : "ml-10"
                   } `}
                 >
-                  <p className="text-primary text-3xl font-extrabold tracking-wide mb-5 leading-9 text-center md:text-left sm:text-center lg:text-left">
+                  <p className="text-primary text-3xl  text-center font-extrabold tracking-wide mb-5 leading-9  md:text-center sm:text-center lg:text-left">
                     {val.title}
                   </p>
+                  <hr className=" border-4 border-black  w-20 rounded-full m-4" />
                   <div
                     className={`text-base leading-6 
                   ${
                     i === 0
-                      ? "w-full md:w-6/12 sm:w-full lg:w-6/12"
+                      ? "w-full sm:w-full md:w-full lg:w-6/12"
                       : "max-w-screen-xl sm:w-full"
                   } 
                   `}

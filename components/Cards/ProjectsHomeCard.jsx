@@ -20,8 +20,8 @@ function ProjectsHomeCard() {
         {/* left section of projects card  */}
         {data.map((item) => (
           <div className="flex flex-col">
-            <div className="bg-gray-500 h-44 w-full"></div>
-            <div className="my-4 font-bold">
+            <div className="bg-gray-500 h-44 w-full "></div>
+            <div className="my-4 font-bold text-center md:text-center sm:text-center">
               <h2>{item.title}</h2>
             </div>
             <div className="my-2 text-gray-600 line-clamp-2">
@@ -31,9 +31,11 @@ function ProjectsHomeCard() {
         ))}
         {/* left section of projects card ends */}
         {/* rigt side of our project section  */}
-        <div className="row-start-1 lg:col-start-3">
-          <h1 className="-mt-2 text-primary">Our Projects </h1>
-          <hr className="my-2 border-4 border-black w-20 rounded-full" />
+        <div className="row-start-1 lg:col-start-3 ">
+          <h1 className="-mt-2 text-primary md:text-center text-center sm:text-center ">
+            Our Projects{" "}
+          </h1>
+          <hr className="my-2 border-4 border-black  mx-auto w-20 md:mx-auto  sm:mx-auto rounded-full " />
           <div className="my-4 text-gray-600 leading-7 line-clamp-6">
             <p>
               In publishing and graphic design, Lorem ipsum is a placeholder
@@ -47,9 +49,11 @@ function ProjectsHomeCard() {
               relying on meaningful content.
             </p>
           </div>
-          <div className="my-4 mt-10">
+          <div className="my-4 mt-10 sm:text-center">
             <Link href={"/Projects"}>
-              <button className="btn-primary rounded-full">Our Projects</button>
+              <button className="btn-primary rounded-full ">
+                Our Projects
+              </button>
             </Link>
           </div>
         </div>
