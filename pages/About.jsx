@@ -3,7 +3,6 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import Head from "next/head";
 import Link from "next/link";
 import PageTemplate from "../components/Templates/PageTemplate";
-
 import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
 import OurClients from "../components/Ourclients/OurClients";
 
@@ -55,8 +54,15 @@ function About() {
           {/* About us introduction */}
           <div className="h-fit flex flex-col lg:flex-row w-full mt-5 ">
             <div className="lg:flex-1 ">
-              <div className="bg-grayD h-96 lg:h-full lg:m-10 flex justify-center items-center">
-                <p className="text-white ">Video modal</p>
+              <div className=" h-96 lg:h-full lg:m-10 flex justify-center items-center">
+                {/* <p className="text-white ">Video modal</p> */}
+                <video autoPlay={true} loop controls style={{height:'100%'}} >
+                  <source 
+                  src={'aboutus.mp4'}
+                  type='video/mp4' />
+                </video>
+                {/* <ReactPlayer  url={require('../images/aboutus.mp4')} /> */}
+                
               </div>
             </div>
             {/* right section  */}

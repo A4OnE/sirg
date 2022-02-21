@@ -41,6 +41,7 @@ function Nav() {
               );
             }
           })}
+
         </div>
       </div>
       {/* mobile nav section */}
@@ -49,8 +50,8 @@ function Nav() {
           mobileNav ? "block" : "hidden"
         } lg:hidden flex flex-col space-y-8 p-5 text-white`}
       >
-        {NavItems.map((item) => (
-          <Link href={item.to}>
+        {NavItems.map((item,i) => (
+          <Link key={i} href={item.to}>
             <a className="text-lg">{item.title}</a>
           </Link>
         ))}

@@ -1,25 +1,25 @@
-
 import React from "react";
-import PageTemplate from "../components/Templates/PageTemplate";
 import { BiCategory } from "react-icons/bi";
-import PageNavInfo from "../components/Page Info/PageNavInfo";
-import ProjectCard from "../components/Cards/ProjectCard";
 import Link from "next/link";
-import ProjectCategory from "../components/Cards/ProjectCategory";
+import PageTemplate from "../../components/Templates/PageTemplate";
+import PageNavInfo from "../../components/Page Info/PageNavInfo";
+import ProjectCard from "../../components/Cards/ProjectCard";
+import ProjectCategory from "../../components/Cards/ProjectCategory";
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  const { category } = context.query;
   const [categoryRes, projectRes] = await Promise.all([
     fetch(`${process.env.Url}/projectcategory`),
-    fetch(`${process.env.Url}/project`),
+    fetch(`${process.env.Url}/project/oncategory/${category}`),
   ]);
-  const [category, project] = await Promise.all([
+  const [categories, project] = await Promise.all([
     categoryRes.json(),
     projectRes.json(),
   ]);
-  return { props: { category, project } };
+  return { props: { categories, project } };
 }
 
-function Projects({ category, project }) {
+function Projectscategory({ categories, project }) {
   return (
     <PageTemplate>
       <div className="">
@@ -35,13 +35,13 @@ function Projects({ category, project }) {
                   <BiCategory /> <p>Categories</p>
                 </div>
                 <Link href={`/Projects`}>
-                  <p className="cursor-pointer font-bold text-xl">All</p>
+                  <p className="cursor-pointer font-medium text-xl">All</p>
                 </Link>
-                {category.map((item) => (
+                {categories.map((item) => (
                   <ProjectCategory
                     key={item.id}
                     category={item.type}
-                    link={`Project/${item.id}`}
+                    link={`/Project/${item.id}`}
                   />
                 ))}
               </div>
@@ -66,10 +66,9 @@ function Projects({ category, project }) {
             {/* grid ends  */}
           </div>
         </div>
-
       </div>
     </PageTemplate>
   );
 }
 
-export default Projects;
+export default Projectscategory;
