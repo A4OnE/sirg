@@ -22,19 +22,17 @@ const HappyCustomer = () => {
     "
     >
       <div className="ml-8">
-
         <div className="flex flex-col mx-auto  text-center w-fit items-start ">
           <p className=" text-2xl md:text-4xl text-blue-700 capitalize  md:font-bold font-semibold ">
             happy customer's
           </p>
-          <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+          <p className="w-20 h-1  my-1 md:my-2 bg-black  " />
         </div>
 
         {/* <p className="text-primary  pt-3
         text-3xl font-bold tracking-wider">
           About us
         </p> */}
-
       </div>
       <div
         className="container mx-auto px-4 lg:px-8 grid grid-cols-1 gap-0 m-10
@@ -97,7 +95,6 @@ const HappyCustomer = () => {
               {data[0].name}
             </p>
             <p className=" text-center text-xs  md:text-lg">
-
               {data[0].nametitle}
             </p>
           </div>
