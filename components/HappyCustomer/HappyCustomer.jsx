@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import axios from '../../AXIOS/Axios-create';
@@ -66,12 +67,14 @@ const HappyCustomer = () => {
           <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
         </div>
 
+
         {/* <p className="text-primary  pt-3
         text-3xl font-bold tracking-wider">
           About us
         </p> */}
 
       </div>
+
       {
 body.map((val,i)=>{
 
@@ -80,6 +83,7 @@ body.map((val,i)=>{
 
   return <div
   key={i}
+
         className="container mx-auto px-4 lg:px-8 grid grid-cols-1 gap-0 m-10
       md:grid-cols-1
       lg:grid-cols-3 lg:gap-0 lg:ml-4
@@ -96,7 +100,9 @@ body.map((val,i)=>{
         "
         >
           <img
+
             src={image}
+
             alt=""
             className="
             h-48 w-48
@@ -128,6 +134,7 @@ body.map((val,i)=>{
           "
           >
             "{val.feedback}"
+
           </p>
           <div>
             <p
@@ -143,6 +150,7 @@ body.map((val,i)=>{
 
               {val.job_title}
             </p>
+
           </div>
         </div>
       </div>

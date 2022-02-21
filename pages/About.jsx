@@ -7,7 +7,6 @@ import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
 import OurClients from "../components/Ourclients/OurClients";
 import EventBooking from "./Eventbooking";
 import { staticAbout } from "../components/staticData/StaticData";
-import ReactPlayer from "react-player";
 function About() {
   const [Data, setData] = useState([
     {

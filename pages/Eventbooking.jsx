@@ -5,6 +5,7 @@ import PageTemplate from "../components/Templates/PageTemplate";
 import Modal from "react-modal";
 import { AiOutlineClose } from "react-icons/ai";
 import axios from "../AXIOS/Axios-create";
+
 import BookingEventModal from "../components/Modal/BookingEventModal";
 
 const Eventbooking = () => {
@@ -42,6 +43,7 @@ const Eventbooking = () => {
     // references are now sync'd and can be accessed.
     subtitle.style.color = "#f00";
   }
+
   return (
     <PageTemplate>
       <div className="container mx-auto px-4  lg:px-8">
@@ -53,6 +55,7 @@ const Eventbooking = () => {
           <p className="text-gray-500  text-center text-lg">
             You Can Book all of the upcoming event here
           </p>
+
           <div className="lg:grid lg:grid-cols-2">
             {Upcommming.map((val, i) => {
               return (
@@ -114,6 +117,7 @@ const Eventbooking = () => {
                 </div>
               );
             })}
+
           </div>
         </div>
       </div>

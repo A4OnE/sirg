@@ -10,6 +10,7 @@ import background from "../images/aboutbg.png";
 import { staticAbout } from "../components/staticData/StaticData";
 import { useRef, useState } from "react";
 
+
 export default function Home() {
   const nextVideo = useRef(null);
   const [show, setshow] = useState(false)

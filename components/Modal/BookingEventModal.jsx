@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import Inputs from "../Inputs/Inputs";
 import * as yup from "yup";
 import axios from "axios";
+
 const forms = [
   // {
   //   name: "Event title",
@@ -40,7 +41,9 @@ const forms = [
   },
   {
     name: "contact No",
+
     usename: "contact",
+
     placeholder: "contact No",
     type: "text",
   },
@@ -73,6 +76,7 @@ const forms = [
     type: "textarea",
   },
 ];
+
 export const EventBookingSchems = yup.object().shape({
   communticationMethod: yup
     .string()
@@ -99,11 +103,13 @@ export const EventBookingSchems = yup.object().shape({
     }),
 });
 function BookingEventModal({ id, close }) {
+
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm({
+
     resolver: yupResolver(EventBookingSchems),
   });
 
@@ -141,6 +147,7 @@ function BookingEventModal({ id, close }) {
           onSubmit={handleSubmit(submit)}
           div
           className=" grid grid-cols-2   gap-4  "
+
         >
           {forms.map((val, i) => {
             let named = val.usename;
@@ -148,12 +155,14 @@ function BookingEventModal({ id, close }) {
             return (
               <div
                 key={i}
+
                 className={`${
                   val.type === "select" ? "lg:row-colspan-2" : "null"
                 }
                   flex flex-col space-y-4 
                     text-gray-700 font-semibold
                     lg:space-y-3`}
+
               >
                 <label className="capitalize">{val.name}</label>
                 {
@@ -183,6 +192,7 @@ function BookingEventModal({ id, close }) {
             <input
               type="submit"
               value="SUBMIT"
+
               className="btn-primary rounded-md my-5 cursor-pointer"
             />
             <button
@@ -191,6 +201,7 @@ function BookingEventModal({ id, close }) {
             >
               cancel
             </button>
+
           </div>
         </form>
       </div>
