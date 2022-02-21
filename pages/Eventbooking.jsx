@@ -56,7 +56,7 @@ const Eventbooking = () => {
             You Can Book all of the upcoming event here
           </p>
 
-          <div className="lg:grid lg:grid-cols-2">
+          <div className="lg:grid lg:grid-cols-1 gap-8">
             {Upcommming.map((val, i) => {
               return (
                 <div
@@ -117,7 +117,6 @@ const Eventbooking = () => {
                 </div>
               );
             })}
-
           </div>
         </div>
       </div>

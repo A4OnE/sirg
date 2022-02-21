@@ -1,18 +1,20 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import axios from '../../AXIOS/Axios-create';
+import axios from "../../AXIOS/Axios-create";
 function ProjectsHomeCard() {
   const [Data, setData] = useState([]);
-  const getProjects=()=>{
-    axios.get('/project').then(res=>{
-console.log(res);
-setData(res.data)
-// data.push(res)
-}).catch(err=>console.log(err))
-}
+  const getProjects = () => {
+    axios
+      .get("/project")
+      .then((res) => {
+        console.log(res);
+        setData(res.data);
+        // data.push(res)
+      })
+      .catch((err) => console.log(err));
+  };
   useEffect(() => {
     getProjects();
-    
   }, []);
 
   const data = [
@@ -29,32 +31,41 @@ setData(res.data)
   ];
   return (
     <div>
-      <div className={`grid grid-cols-1
-       lg:${Data.length<=2?'grid-cols-3':'grid-cols-3'} gap-10  lg:gap-8 my-24`}>
+      <div className={`grid grid-cols-3 gap-10  lg:gap-8 my-24`}>
         {/* left section of projects card  */}
-        {Data.slice(0,2).map((item,i) => {
-        let image = `${process.env.Url}/images/${item.img}`;
+        {Data.slice(0, 2).map((item, i) => {
+          let image = `${process.env.Url}/images/${item.img}`;
 
-          return <div className={`flex flex-col 
-          lg:items-center
-          lg:${i<1?'col-span-2':'col-span-1'}
-          `} key={i}>
-            <div className={`bg-gray-500 h-44 w-full lg:${i<1?'w-1/2':'w-full'}`}
-            
-            style={{
-              backgroundImage:`url(${image})`,
-              backgroundRepeat:'no-repeat',
-              backgroundSize:'cover',
-              backgroundPosition:'center',
-              backgroundPositiony:'10px'
-            }}></div>
-            <div className="my-4 font-bold">
-              <p className="capitalize  text-xl md:text-2xl">{item.project_title}</p>
-
+          return (
+            <div
+              className={`flex flex-col 
+          lg:items-center}
+          `}
+              key={i}
+            >
+              <div
+                className={`bg-gray-500 h-44 w-full`}
+                style={{
+                  backgroundImage: `url(${image})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundPositiony: "10px",
+                }}
+              ></div>
+              <div className="my-4 font-bold">
+                <Link href={`/Project/details/${item.id}`}>
+                  <p className="capitalize  text-xl md:text-2xl cursor-pointer">
+                    {item.project_title}
+                  </p>
+                </Link>
+              </div>
+              <div className="text-gray-600 line-clamp-2">
+                {item.project_details}
+              </div>
             </div>
-            <div className="text-gray-600 line-clamp-2">{item.project_details}</div>
-          </div>
-})}
+          );
+        })}
         {/* left section of projects card ends */}
         {/* rigt side of our project section  */}
 
@@ -76,7 +87,6 @@ setData(res.data)
           </div>
 
           <div className="my-4 flex justify-center lg:justify-start  mt-10">
-
             <Link href={"/Projects"}>
               <button className="btn-primary rounded-full ">
                 Our Projects

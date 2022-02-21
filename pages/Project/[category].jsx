@@ -53,6 +53,7 @@ function Projectscategory({ categories, project }) {
                   {project.map((item) => (
                     <ProjectCard
                       key={item.id}
+                      id={item.id}
                       title={item.project_title}
                       desc={item.project_s_des}
                       img={`${process.env.Url}/images/${item.img}`}
