@@ -1,40 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from '../../AXIOS/Axios-create';
 import ServiHomeCard from "../Cards/ServiHomeCard";
 
 function HomePageSeviceSection() {
-  const data = [
-    {
-      image:
-        "https://images.pexels.com/photos/845451/pexels-photo-845451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "Service one",
-      description:
-        "Lore is an American horror anthology television series developed by the creator of the podcast of the same name, Aaron Mahnke, with Valhalla Entertainment and Propagate Content. The series airs through Amazon Prime Video and follows the podcast's anthology format with each episode featuring a new story.",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/845451/pexels-photo-845451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "Service two",
-      description:
-        "Lore is an American horror anthology television series developed by the creator of the podcast of the same name, Aaron Mahnke, with Valhalla Entertainment and Propagate Content. The series airs through Amazon Prime Video and follows the podcast's anthology format with each episode featuring a new story.",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/845451/pexels-photo-845451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "Service three",
-      description:
-        "Lore is an American horror anthology television series developed by the creator of the podcast of the same name, Aaron Mahnke, with Valhalla Entertainment and Propagate Content. The series airs through Amazon Prime Video and follows the podcast's anthology format with each episode featuring a new story.",
-    },
-  ];
+  const [Data, setData] = useState([]);
+  const getProjects=()=>{
+    axios.get('/service').then(res=>{
+console.log(res);
+setData(res.data)
+// data.push(res)
+}).catch(err=>console.log(err))
+}
+  useEffect(() => {
+    getProjects();
+    
+  }, []);
+  
   return (
-    <div className="py-10">
-      <div className="grid grid-cols-3 gap-4 lg:gap-8">
-        {data.map((item) => (
-          <ServiHomeCard
-            img={item.image}
-            title={item.title}
-            description={item.description}
+    <div className="">
+      <div className="grid md:grid-cols-3    gap-4 pb-8 lg:gap-8">
+        {Data.slice(0,3).map((item ,i) => {
+          let image= `${process.env.Url}/images/${item.img}`
+         return  <ServiHomeCard
+          key={i}
+            img={image}
+            title={item.service_title}
+            description={item.service_details}
           />
-        ))}
+})}
       </div>
     </div>
   );

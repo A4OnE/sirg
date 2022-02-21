@@ -16,8 +16,8 @@ function Nav() {
         />
         <h2 className="font-bold">VIP GROUP</h2>
         <div className="hidden lg:block flex flex-col lg:flex-row items-center space-x-6">
-          {NavItems.map((item) => (
-            <Link href={item.to}>
+          {NavItems.map((item,i) => (
+            <Link key={i} href={item.to}>
               <a className="text-lg">{item.title}</a>
             </Link>
           ))}
@@ -29,8 +29,8 @@ function Nav() {
           mobileNav ? "block" : "hidden"
         } lg:hidden flex flex-col space-y-8 p-5 text-white`}
       >
-        {NavItems.map((item) => (
-          <Link href={item.to}>
+        {NavItems.map((item,i) => (
+          <Link key={i} href={item.to}>
             <a className="text-lg">{item.title}</a>
           </Link>
         ))}

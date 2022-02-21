@@ -1,14 +1,23 @@
 import Head from "next/head";
-import Link from "next/link";
-import ProjectsHomeCard from "../components/Cards/ProjectsHomeCard";
-import ServiHomeCard from "../components/Cards/ServiHomeCard";
 import HomePageSeviceSection from "../components/Sections/HomePageSeviceSection";
 import HomePageWelcomeSection from "../components/Sections/HomePageWelcomeSection";
 import HomeSlider from "../components/Sliders/HomeSlider";
+import Link from "next/link";
 import PageTemplate from "../components/Templates/PageTemplate";
+import ProjectsHomeCard from "../components/Cards/ProjectsHomeCard";
+import ServiHomeCard from "../components/Cards/ServiHomeCard";
 import background from "../images/aboutbg.png";
+import { staticAbout } from "../components/staticData/StaticData";
+import { useRef, useState } from "react";
 
 export default function Home() {
+  const nextVideo = useRef(null);
+  const [show, setshow] = useState(false)
+  const play=(e)=>{
+
+    setshow(true)
+    // nextVideo.play();
+  }
   return (
     <div>
       <Head>
@@ -20,32 +29,40 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageTemplate>
-        <HomePageWelcomeSection />
+        {
+          show?
+          <video ref={nextVideo}
+          autoPlay={show?true:false}
+          onPause={()=>setshow(false)}
+          loop controls style={{height:'100%'}} >
+          <source 
+          src={'aboutus.mp4'}
+          type='video/mp4' />
+        </video>:
+        <HomePageWelcomeSection play={(e)=>play(e)}  />
+        }
+        
 
         <div className="container mx-auto px-4 lg:px-8">
           {/* <HomeSlider /> */}
 
           {/* about us section starts  */}
           <div
-            className="text-center my-24 py-10 "
+            className="text-center  md:my-24 py-8 md:py-10 "
             style={{ backgroundImage: `url(${background})` }}
           >
-            <div className="">
-              <h1>About Us</h1>
-              <hr className="w-96 mx-auto border-2" />
-              <p className="my-10 leading-8 lg:p-10">
-                In publishing and graphic design, Lorem ipsum is a placeholder
-                text commonly used to demonstrate the visual form of a document
-                or a typeface without relying on meaningful content. In
-                publishing and graphic design, Lorem ipsum is a placeholder text
-                commonly used to demonstrate the visual form of a document or a
-                typeface without relying on meaningful content. In publishing
-                and graphic design, Lorem ipsum is a placeholder text commonly
-                used to demonstrate the visual form of a document or a typeface
-                without relying on meaningful content.
+            <div className=" text-left ">
+              <div className="flex flex-col mx-auto text-center w-fit items-start ">
+                <p className=" text-2xl md:text-4xl  capitalize font-bold ">
+                  about us
+                </p>
+                <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+              </div>
+              <p className="my-5 md:my-5 leading-8 lg:p-5 line-clamp-4">
+                {staticAbout.aboutUs}
               </p>
             </div>
-            <div className="my-10">
+            <div className="pt-5 ">
               <Link href={"/About"}>
                 <button className="btn-primary rounded-full">
                   More About Us
@@ -58,14 +75,19 @@ export default function Home() {
 
           {/* about us section ends  */}
           {/* Service section starts here */}
-          <div className="text-center py-10">
-            <h1 className="text-normal">What do we Do ?</h1>
-            <p className="">Services we offer to our custormers</p>
+          <div className="text-center md:py-10">
+            <div className="flex flex-col mx-auto text-center w-fit items-start ">
+              <p className=" text-2xl md:text-4xl  capitalize font-bold ">
+                what do we do?{" "}
+              </p>
+              <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+            </div>{" "}
+            <p className="text-sm font-medium md:text-lg">
+              Services we offer to our custormers
+            </p>
             <div className="my-8">
               <Link href={"/Services"}>
-                <button className="btn-outline-primary rounded-full">
-                  View All
-                </button>
+                <button className="btn-primary rounded-full">View All</button>
               </Link>
             </div>
           </div>

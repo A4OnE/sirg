@@ -15,11 +15,11 @@ function GallerySlider({ data }) {
 
   return (
     <div className="p-10">
-      <Slider {...settings}>
+      <Slider {...settings} ariaHideApp={false}>
         {data.map((item) => (
           <div key={item.id}>
             <img
-              src={item.img}
+              src={`${process.env.Url}/images/${item.img}`}
               className="h-96 lg:h-128 w-full object-cover"
               srcset=""
             />

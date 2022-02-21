@@ -6,8 +6,19 @@ import Head from "next/head";
 import PageTemplate from "../components/Templates/PageTemplate";
 import Link from "next/link";
 
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`${process.env.Url}/event`);
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
+}
+
 function Events(props) {
-  const [EventData, setEventData] = useState(props.data);
+  const [EventData] = useState(props.data);
+
   return (
     <div>
       {/* head */}
@@ -41,9 +52,17 @@ function Events(props) {
 
           {/* events card section  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 lg:gap-10 xl:gap-12  my-12">
-            {EventData.map((val, i) => {
-              console.log(val);
-              return <Event_Card index={i} />;
+            {EventData.map((item) => {
+              return (
+                <Event_Card
+                  key={item.id}
+                  id={item.id}
+                  title={item.event_title}
+                  date={item.event_date}
+                  location={item.event_location}
+                  img={item.img}
+                />
+              );
             })}
           </div>
         </div>
@@ -52,11 +71,4 @@ function Events(props) {
   );
 }
 
-export async function getStaticProps(context) {
-  return {
-    props: {
-      data: EventDummhy,
-    },
-  };
-}
 export default Events;

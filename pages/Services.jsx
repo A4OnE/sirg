@@ -1,9 +1,22 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ServiceCard from "../components/Cards/serviceCard";
 import PageTemplate from "../components/Templates/PageTemplate";
-
+import axios from '../AXIOS/Axios-create';
 function Services() {
+  const [Data, setData] = useState([]);
+  const getProjects=()=>{
+    axios.get('/service').then(res=>{
+console.log(res);
+setData(res.data)
+// data.push(res)
+}).catch(err=>console.log(err))
+}
+  useEffect(() => {
+    getProjects();
+    
+  }, []);
+  
   return (
     <div>
       <Head>
@@ -19,10 +32,11 @@ function Services() {
           <div
             className="
               flex flex-col justify-center items-center h-52 
-              text-4xl text-primary font-bold
+              lg:text-4xl text-primary font-bold text-3xl
               "
           >
             Our Services
+            <hr className=" border-4 border-black mx-auto w-20 rounded-full mt-2 mb-2" />{" "}
             <p
               className="
                   text-base font-semibold pt-4 text-gray-500
@@ -40,10 +54,20 @@ function Services() {
                  mb-16 
               "
             >
+              {
+                Data.map((val,i)=>{
+          let image= `${process.env.Url}/images/${val.img}`
+                  return <ServiceCard
+                  img={image}
+                  title={val.service_title}
+                  description={val.service_details}
+                  
+                  />
+                })
+              }
+              {/* <ServiceCard />
               <ServiceCard />
-              <ServiceCard />
-              <ServiceCard />
-              <ServiceCard />
+              <ServiceCard /> */}
             </div>
           </div>
         </div>
