@@ -1,5 +1,7 @@
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import axios from '../../AXIOS/Axios-create';
 const HappyCustomer = () => {
   const data = [
     {
@@ -11,13 +13,48 @@ const HappyCustomer = () => {
         "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content ",
     },
   ];
+  const [body, setBody] = useState([]);
+  const [index,setIndex]=useState(0);
+  const getTestimonials = () => {
+    axios
+      .get("/testimonials")
+      .then((res) => {
+
+        setBody(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  // component did mount ko kaam garcha yo code le
+  useEffect(() => {
+    getTestimonials();
+  }, []);
+  let nextData=(i)=>{
+    console.log(i,body.length)
+    if(i<body.length-1){
+      setIndex(i+1);
+    }else{
+      setIndex(0)
+    }
+  }
+  let PrevData=(i)=>{
+    console.log(i,body.length)
+    if(i!==0){
+      setIndex(i-1);
+    }else{
+      setIndex(0)
+    }
+  }
   return (
     <div
       className="w-10/12
+      fade-anim
   h-fit
   mt-10
     md:w-full 
     lg:w-screen lg:mx-10 lg:mt-10
+    
 
     "
     >
@@ -30,13 +67,23 @@ const HappyCustomer = () => {
           <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
         </div>
 
+
         {/* <p className="text-primary  pt-3
         text-3xl font-bold tracking-wider">
           About us
         </p> */}
 
       </div>
-      <div
+
+      {
+body.map((val,i)=>{
+
+          let image= `${process.env.Url}/images/${val.img}`
+          if(i===index){
+
+  return <div
+  key={i}
+
         className="container mx-auto px-4 lg:px-8 grid grid-cols-1 gap-0 m-10
       md:grid-cols-1
       lg:grid-cols-3 lg:gap-0 lg:ml-4
@@ -53,7 +100,9 @@ const HappyCustomer = () => {
         "
         >
           <img
-            src={data[0].img}
+
+            src={image}
+
             alt=""
             className="
             h-48 w-48
@@ -64,8 +113,8 @@ const HappyCustomer = () => {
           "
           />
           <div className="flex mt-4">
-            <FaLongArrowAltLeft className="mr-4 text-4xl cursor-pointer" />
-            <FaLongArrowAltRight className=" text-4xl placeholder-opacity-50 cursor-pointer" />
+            <FaLongArrowAltLeft onClick={()=>PrevData(i)} className="mr-4 text-4xl cursor-pointer" />
+            <FaLongArrowAltRight onClick={()=>nextData(i)} className=" text-4xl placeholder-opacity-50 cursor-pointer" />
           </div>
         </div>
         <div className="lg:col-span-2 lg:ml-28">
@@ -84,7 +133,8 @@ const HappyCustomer = () => {
         
           "
           >
-            "{data[0].description}"
+            "{val.feedback}"
+
           </p>
           <div>
             <p
@@ -94,15 +144,19 @@ const HappyCustomer = () => {
              text-base
             "
             >
-              {data[0].name}
+              {val.name}
             </p>
             <p className=" text-center text-xs  md:text-lg">
 
-              {data[0].nametitle}
+              {val.job_title}
             </p>
+
           </div>
         </div>
       </div>
+          }
+})
+      }
     </div>
   );
 };

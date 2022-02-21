@@ -15,3 +15,32 @@
   border-radius: 100%;
   box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.02);
 }
+
+.fade-anim img {
+  animation: fadeAnim 0.5s ease-in-out;
+}
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(14, 13, 13, 0.2) !important;
+  inset: 0px !important;
+}
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}

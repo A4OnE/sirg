@@ -1,3 +1,4 @@
+
 import React from "react";
 import PageTemplate from "../components/Templates/PageTemplate";
 import { BiCategory } from "react-icons/bi";
@@ -65,6 +66,7 @@ function Projects({ category, project }) {
             {/* grid ends  */}
           </div>
         </div>
+
       </div>
     </PageTemplate>
   );

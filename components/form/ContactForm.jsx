@@ -39,6 +39,7 @@ function ContactForm() {
       <h1 className="p-2">Drop us a line</h1>
       <hr />
 
+
       <form action="" className="p-4 lg:px-8" onSubmit={handleSubmit(onSubmit)}>
         <div className=" flex flex-col space-y-2 mt-4">
           <label htmlFor="name">Full name</label>
@@ -108,6 +109,7 @@ function ContactForm() {
           type="submit"
           value={loading ? "LOADING..." : "SUBMIT"}
           className="btn-primary rounded-md my-8 cursor-pointer"
+
         />
       </form>
     </div>

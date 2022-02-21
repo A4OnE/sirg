@@ -8,8 +8,17 @@ import ProjectsHomeCard from "../components/Cards/ProjectsHomeCard";
 import ServiHomeCard from "../components/Cards/ServiHomeCard";
 import background from "../images/aboutbg.png";
 import { staticAbout } from "../components/staticData/StaticData";
+import { useRef, useState } from "react";
+
 
 export default function Home() {
+  const nextVideo = useRef(null);
+  const [show, setshow] = useState(false)
+  const play=(e)=>{
+
+    setshow(true)
+    // nextVideo.play();
+  }
   return (
     <div>
       <Head>
@@ -21,7 +30,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageTemplate>
-        <HomePageWelcomeSection />
+        {
+          show?
+          <video ref={nextVideo}
+          autoPlay={show?true:false}
+          onPause={()=>setshow(false)}
+          loop controls style={{height:'100%'}} >
+          <source 
+          src={'aboutus.mp4'}
+          type='video/mp4' />
+        </video>:
+        <HomePageWelcomeSection play={(e)=>play(e)}  />
+        }
+        
 
         <div className="container mx-auto px-4 lg:px-8">
           {/* <HomeSlider /> */}
