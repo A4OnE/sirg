@@ -19,7 +19,7 @@ function projectdetails({ data }) {
         <div className="bg-gray-50">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="lg:w-2/3 mx-auto bg-gray-50 lg:p-4">
-              {data.project.map((item) => (
+              {data.project?.map((item) => (
                 <div key={item.id}>
                   <h1 className="my-8">{item.project_title}</h1>
                   <img

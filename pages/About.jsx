@@ -1,13 +1,32 @@
 import React, { useState } from "react";
-
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import Head from "next/head";
 import Link from "next/link";
 import PageTemplate from "../components/Templates/PageTemplate";
 import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
 import OurClients from "../components/Ourclients/OurClients";
-import EventBooking from "./Eventbooking";
-import { staticAbout } from "../components/staticData/StaticData";
+
+import BodCard from "../components/Cards/BodCard";
 function About() {
+  const data = [
+    {
+      img: "https://static.generated.photos/vue-static/face-generator/landing/wall/23.jpg",
+      name: "Sunder Darji",
+      title: "Manager",
+    },
+
+    {
+      img: "https://media.istockphoto.com/photos/smiling-mixed-race-mature-man-on-grey-background-picture-id1319763895?b=1&k=20&m=1319763895&s=170667a&w=0&h=jhqKyg62cQVZ-NjDQjpcenCdHDrprkN4caRjk4K76E8=",
+      name: "Raj Kumar Darji",
+      title: "Investor & Advisor",
+    },
+
+    {
+      img: "https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot2003/vadymvdrobot200300051/142744663-image-of-a-young-strong-happy-cheery-sports-man-posing-outdoors-in-nature-green-park-looking-camera-.jpg?ver=6",
+      name: "",
+      title: "Project Manager",
+    },
+  ];
   const [Data, setData] = useState([
     {
       title: "Our Vision",
@@ -115,6 +134,30 @@ function About() {
             })}
           </div>
         </div>
+
+        <div className="container mx-auto px-4  mt-8 lg:px-8">
+          <div>
+            <h1 className="text-primary text-center gap-8 my-14 text-4xl tracking-wider font-bold">
+              Board of Directors
+            </h1>
+          </div>
+          {/* Bod body section */}
+          <div className="container  mx-auto px-4  lg:px-8">
+            <div className="grid lg:grid-cols-3 gap-8">
+              {data.map((item) => (
+                <BodCard img={item.img} name={item.name} title={item.title} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <Link href={"/Aboutus/BOD"}>
+          <div className="flex justify-center">
+            <button className="btn-primary rounded-full flex items-center justify-between">
+              view all <BsFillArrowRightCircleFill className="ml-2" />
+            </button>
+          </div>
+        </Link>
         <div className="w-full flex justify-center items-center flex-col">
           <HappyCustomer />
           <OurClients />

@@ -196,7 +196,7 @@ function BookingEventModal({ id, close }) {
               className="btn-primary rounded-md my-5 cursor-pointer"
             />
             <button
-              // onClick={() => setShowModal(false)}
+ onClick={() =>close()}
               className=" border-2 bg-red-500 text-white  uppercase font-normal  outline-none text-center   h-12 mx-2 w-24 rounded-md my-5 cursor-pointer "
             >
               cancel
