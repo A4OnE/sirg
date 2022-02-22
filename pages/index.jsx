@@ -87,7 +87,9 @@ export default function Home() {
             </p>
             <div className="my-8">
               <Link href={"/Services"}>
-                <button className="btn-primary rounded-full">View All</button>
+                <button className="border-2 font-semibold border-blue-700 w-fit px-4 h-10 text-blue-700 rounded-full ">
+                  View All
+                </button>
               </Link>
             </div>
           </div>

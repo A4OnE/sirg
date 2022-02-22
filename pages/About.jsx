@@ -71,10 +71,7 @@ function About() {
               </p>
               <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start">
                 <Link href={"/Contact"}>
-                  <div
-                    className="btn-primary rounded-full
-                                  inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100"
-                  >
+                  <div className="border-2 font-semibold border-blue-700 w-fit flex items-center  px-4 h-10 text-blue-700 rounded-full cursor-pointer">
                     Contact us
                   </div>
                 </Link>
