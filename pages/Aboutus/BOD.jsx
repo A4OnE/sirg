@@ -18,7 +18,7 @@ function BOD() {
 
     {
       img: "https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot2003/vadymvdrobot200300051/142744663-image-of-a-young-strong-happy-cheery-sports-man-posing-outdoors-in-nature-green-park-looking-camera-.jpg?ver=6",
-      name: "",
+      name: "haribahadur gotame",
       title: "Project Manager",
     },
 
@@ -44,7 +44,7 @@ function BOD() {
     <PageTemplate>
       <div className="container mx-auto px-4  mt-8 lg:px-8">
         <div>
-          <h1 className="text-primary text-center gap-8 my-14 text-4xl tracking-wider font-bold">
+          <h1 className="text-primary  text-2xl text-center gap-8 my-14 lg:text-4xl md:text-3xl sm:text-2xl tracking-wider font-bold">
             Board of Directors
           </h1>
         </div>
@@ -52,10 +52,10 @@ function BOD() {
         <div className="text-center my-10">
           <img
             src={data[0].img}
-            className="rounded-md shadow-md h-96 mx-auto"
+            className="rounded-md shadow-md lg:h-96  md:h-72 sm:h-40 mx-auto"
           />
-          <p className="text-2xl font-bold mt-5 ">{data[0].name}</p>
-          <p className="text-xl font-medium mt-3 ">{data[0].title}</p>
+          <p className="lg:text-2xl font-bold mt-5 ">{data[0].name}</p>
+          <p className="lg:text-xl font-medium mt-3 ">{data[0].title}</p>
         </div>
 
         {/* Bod body section */}
