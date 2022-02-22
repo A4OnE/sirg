@@ -11,6 +11,14 @@ const HappyCustomer = () => {
       description:
         "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content ",
     },
+    {
+      nametitle: "MD of my Casfaasdfompany Butwal",
+      name: "Rabinsadfasdfdra nath Taigore",
+      img: "https://cdn.pixabay.com/photo/2016/02/10/21/57/heart-1192662__340.jpg",
+      title: "Help us inasdf our productivity",
+      description:
+        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content ",
+    },
   ];
   const [body, setBody] = useState([]);
   const [index, setIndex] = useState(0);
@@ -51,7 +59,7 @@ const HappyCustomer = () => {
   h-fit
   mt-10
     md:w-full 
-    lg:w-screen lg:mx-10 lg:my-32
+    lg:w-full lg:mx-10 lg:my-32
     
 
     "

@@ -7,7 +7,7 @@ function Nav() {
   const [mobileNav, setMobileNav] = useState(false);
   const [clicked, setClicked] = useState("");
   return (
-    <div className="bg-blue-800 h-full">
+    <div className="bg-primary h-full">
       <div className=" container mx-auto px-4 lg:px-8  text-white flex items-center justify-between">
         <FaBars
           className="text-xl block lg:hidden"
@@ -41,7 +41,6 @@ function Nav() {
               );
             }
           })}
-
         </div>
       </div>
       {/* mobile nav section */}
@@ -50,7 +49,7 @@ function Nav() {
           mobileNav ? "block" : "hidden"
         } lg:hidden flex flex-col space-y-8 p-5 text-white`}
       >
-        {NavItems.map((item,i) => (
+        {NavItems.map((item, i) => (
           <Link key={i} href={item.to}>
             <a className="text-lg">{item.title}</a>
           </Link>

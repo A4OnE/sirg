@@ -103,13 +103,11 @@ export const EventBookingSchems = yup.object().shape({
     }),
 });
 function BookingEventModal({ id, close }) {
-
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm({
-
     resolver: yupResolver(EventBookingSchems),
   });
 
@@ -124,7 +122,7 @@ function BookingEventModal({ id, close }) {
     await formData.append("address", data.address);
     await formData.append("email", data.email);
     await formData.append("contact", data.contact);
-    await formData.append("expectation", data.expectation);
+    await formData.append("expectation", JSON.stringify(data.expectation));
     await formData.append("communication_method", data.communticationMethod);
     await formData.append("status", "pending");
 
@@ -132,8 +130,8 @@ function BookingEventModal({ id, close }) {
       .post(`${process.env.Url}/eventbooking/create`, formData)
       .then((res) => {
         if (res.status) {
-          alert('thank you. your booking is under review ')
-            close();          
+          alert("thank you. your booking is under review ");
+          close();
         }
       })
       .catch((err) => {
@@ -147,7 +145,6 @@ function BookingEventModal({ id, close }) {
           onSubmit={handleSubmit(submit)}
           div
           className=" grid grid-cols-2   gap-4  "
-
         >
           {forms.map((val, i) => {
             let named = val.usename;
@@ -155,14 +152,12 @@ function BookingEventModal({ id, close }) {
             return (
               <div
                 key={i}
-
                 className={`${
                   val.type === "select" ? "lg:row-colspan-2" : "null"
                 }
                   flex flex-col space-y-4 
                     text-gray-700 font-semibold
                     lg:space-y-3`}
-
               >
                 <label className="capitalize">{val.name}</label>
                 {
@@ -192,16 +187,14 @@ function BookingEventModal({ id, close }) {
             <input
               type="submit"
               value="SUBMIT"
-
               className="btn-primary rounded-md my-5 cursor-pointer"
             />
             <button
- onClick={() =>close()}
+              onClick={() => close()}
               className=" border-2 bg-red-500 text-white  uppercase font-normal  outline-none text-center   h-12 mx-2 w-24 rounded-md my-5 cursor-pointer "
             >
               cancel
             </button>
-
           </div>
         </form>
       </div>

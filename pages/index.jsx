@@ -85,9 +85,9 @@ export default function Home() {
             <p className="text-sm font-medium text-gray-600 md:text-lg">
               Services we offer to our custormers
             </p>
-            <div className="my-8">
+            <div className="mt-8">
               <Link href={"/Services"}>
-                <button className="border-2 font-semibold border-blue-700 w-fit px-4 h-10 text-blue-700 rounded-full ">
+                <button className="btn-outline-primary rounded-full  ">
                   View All
                 </button>
               </Link>
