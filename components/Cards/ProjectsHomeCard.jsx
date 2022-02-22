@@ -31,7 +31,7 @@ function ProjectsHomeCard() {
   ];
   return (
     <div>
-      <div className={`grid grid-cols-3 gap-10  lg:gap-8 my-24`}>
+      <div className={`grid grid-cols-3 gap-10  lg:gap-8 my-48`}>
         {/* left section of projects card  */}
         {Data.slice(0, 2).map((item, i) => {
           let image = `${process.env.Url}/images/${item.img}`;
@@ -70,13 +70,13 @@ function ProjectsHomeCard() {
         {/* rigt side of our project section  */}
 
         <div className={`row-start-1 lg:col-start-3`}>
-          <div className="flex flex-col mx-auto text-center  w-fit items-start ">
+          <div className="flex flex-col lg:mx-0 mx-auto text-center  w-fit items-start ">
             <p className=" text-2xl md:text-4xl  capitalize font-bold ">
               our projects
             </p>
-            <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " />
+            <p className="lg:w-32 md:w-32 w-20 h-1  my-3 lg:my-4 bg-blue-600  " />
           </div>
-          <div className="my-4   leading-7 line-clamp-6">
+          <div className="my-2   leading-7 line-clamp-6">
             <p>
               We have been working on several fields such as Event Management,
               Event Orgainzers, Entrepreneurship Development, Business
@@ -88,8 +88,8 @@ function ProjectsHomeCard() {
 
           <div className="my-4 flex justify-center lg:justify-start  mt-10">
             <Link href={"/Projects"}>
-              <button className="btn-primary rounded-full ">
-                Our Projects
+              <button className="border-2 font-semibold border-blue-700 w-fit px-3 h-10 text-blue-700 rounded-full ">
+                View Projects
               </button>
             </Link>
           </div>

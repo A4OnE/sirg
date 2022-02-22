@@ -52,27 +52,24 @@ function About() {
       <PageTemplate>
         <div className="container mx-auto px-4 lg:px-8">
           {/* About us introduction */}
-          <div className="h-fit flex flex-col lg:flex-row w-full mt-5 ">
+          <div className="h-fit flex flex-col lg:flex-row w-full mt-24 ">
             <div className="lg:flex-1 ">
               <div className=" h-96 lg:h-full lg:m-10 flex justify-center items-center">
                 {/* <p className="text-white ">Video modal</p> */}
-                <video autoPlay={true} loop controls style={{height:'100%'}} >
-                  <source 
-                  src={'aboutus.mp4'}
-                  type='video/mp4' />
+                <video autoPlay={true} loop controls style={{ height: "100%" }}>
+                  <source src={"aboutus.mp4"} type="video/mp4" />
                 </video>
                 {/* <ReactPlayer  url={require('../images/aboutus.mp4')} /> */}
-                
               </div>
             </div>
             {/* right section  */}
-            <div className="flex-1 mt-10 p-2">
+            <div className="flex-1 mt-10 mx-5   p-2">
               {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
-              <div className="flex flex-col mx-auto text-center  w-fit items-start ">
+              <div className="flex flex-col mx-auto  lg:mx-0 text-center  w-fit items-start  ">
                 <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
                   who we are?{" "}
                 </p>
-                <p className="w-20 h-1  my-1 md:my-2 bg-black  " />
+                {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
               </div>
               <p className="w-full my-4 line-clamp-10 -tracking-tight leading-7 lg:leading-7 text-lg">
                 {/* {staticAbout.aboutUs} */}
@@ -93,10 +90,7 @@ function About() {
               </p>
               <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start">
                 <Link href={"/Contact"}>
-                  <div
-                    className="btn-primary rounded-full
-                                  inline t-4 shadow hover:shadow-md hover:shadow-gray-500 hover:scale-100"
-                  >
+                  <div className="border-2 font-semibold border-blue-700 w-fit flex items-center  px-4 h-10 text-blue-700 rounded-full cursor-pointer">
                     Contact us
                   </div>
                 </Link>
@@ -107,7 +101,7 @@ function About() {
 
           {/* our Vision  and our mission sections */}
 
-          <div className=" w-full h-fit mt-20">
+          <div className=" w-full h-fit my-16 lg:my-32">
             {Data.map((val, i) => {
               return (
                 <div
@@ -119,10 +113,10 @@ function About() {
                   } `}
                 >
                   <div className="flex flex-col mx-auto lg:mx-0 text-center w-fit items-start ">
-                    <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
+                    <p className=" text-2xl md:text-4xl my-3 md:my-5 lg:my-8 text-blue-700 capitalize font-bold ">
                       {val.title}
                     </p>
-                    <p className="w-20 h-1  my-1 md:my-2 bg-black " />
+                    {/* <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " /> */}
                   </div>
                   <div
                     className={`text-lg   leading-6 line-clamp-10

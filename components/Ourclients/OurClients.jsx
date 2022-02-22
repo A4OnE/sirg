@@ -23,7 +23,7 @@ export class OurClients extends Component {
   render() {
     return (
       <div
-        className="h-96  w-full  flex   flex-col justify-center  items-center 
+        className="h-96  w-full  flex   flex-col justify-center  items-center my-16 lg:my-32
       
       "
       >
@@ -37,7 +37,7 @@ export class OurClients extends Component {
                 <p className=" text-sm sm:text-lg md:text-4xl text-blue-500 capitalize  font-bold ">
                   {val.title}
                 </p>
-                <p className="w-20 h-1  my-1 md:my-2 bg-black  " />
+                {/* <p className="w-20 h-1  my-1 md:my-2 bg-blue-500  " /> */}
               </div>
               <div className="text-gray-500 mt-3 capitalize md:text-xl">
                 {val.data}
