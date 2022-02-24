@@ -31,7 +31,7 @@ function ProjectsHomeCard() {
   ];
   return (
     <div>
-      <div className={`grid grid-cols-3 gap-10  lg:gap-8 my-48`}>
+      <div className={`grid md:grid-cols-3  gap-10   lg:gap-8 my-48`}>
         {/* left section of projects card  */}
         {Data.slice(0, 2).map((item, i) => {
           let image = `${process.env.Url}/images/${item.img}`;
@@ -74,7 +74,7 @@ function ProjectsHomeCard() {
             <p className=" text-2xl md:text-4xl  capitalize font-bold ">
               our projects
             </p>
-            <p className="lg:w-32 md:w-32 w-20 h-1  my-3 lg:my-4 bg-blue-600  " />
+            <p className="lg:w-32 md:w-32 w-20 h-1  my-3 lg:my-4 md:bg-blue-600  " />
           </div>
           <div className="my-2   leading-7 line-clamp-6">
             <p>
