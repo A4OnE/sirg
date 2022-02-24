@@ -74,7 +74,9 @@ function ProjectsHomeCard() {
             <p className=" text-2xl md:text-4xl  capitalize font-bold ">
               our projects
             </p>
+
             <p className="lg:w-32 md:w-32 w-20 h-1  my-3 lg:my-4 md:bg-blue-600  " />
+
           </div>
           <div className="my-2   leading-7 line-clamp-6">
             <p>
@@ -88,7 +90,7 @@ function ProjectsHomeCard() {
 
           <div className="my-4 flex justify-center lg:justify-start  mt-10">
             <Link href={"/Projects"}>
-              <button className="border-2 font-semibold border-blue-700 w-fit px-3 h-10 text-blue-700 rounded-full ">
+              <button className="btn-outline-primary rounded-full ">
                 View Projects
               </button>
             </Link>

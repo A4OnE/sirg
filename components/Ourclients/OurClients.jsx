@@ -23,7 +23,7 @@ export class OurClients extends Component {
   render() {
     return (
       <div
-        className="h-96  w-full  flex   flex-col justify-center  items-center my-16 lg:my-32
+        className="h-96  w-full  flex   flex-col justify-center  items-center my-16 lg:my-24
       
       "
       >
