@@ -88,7 +88,7 @@ function ProjectsHomeCard() {
 
           <div className="my-4 flex justify-center lg:justify-start  mt-10">
             <Link href={"/Projects"}>
-              <button className="border-2 font-semibold border-blue-700 w-fit px-3 h-10 text-blue-700 rounded-full ">
+              <button className="btn-outline-primary rounded-full ">
                 View Projects
               </button>
             </Link>

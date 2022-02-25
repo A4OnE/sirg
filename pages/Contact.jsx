@@ -17,10 +17,8 @@ function Contact() {
           {/* starting of top part of contact */}
           <div className="bg-primary h-48 lg:h-64 md:h-60 w-full py-10">
             <div className="text-center text-white">
-
               <h1>CONTACT US</h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit .</p>
-
             </div>
           </div>
           {/*ending of  top part of contact */}

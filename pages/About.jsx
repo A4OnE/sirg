@@ -6,39 +6,18 @@ import PageTemplate from "../components/Templates/PageTemplate";
 import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
 import OurClients from "../components/Ourclients/OurClients";
 
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`${process.env.Url}/bod`);
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
+}
+
 import BodCard from "../components/Cards/BodCard";
-function About() {
-  const data = [
-    {
-      img: "https://static.generated.photos/vue-static/face-generator/landing/wall/23.jpg",
-      name: "Sunder Darji",
-      title: "Manager",
-    },
-
-    {
-      img: "https://media.istockphoto.com/photos/smiling-mixed-race-mature-man-on-grey-background-picture-id1319763895?b=1&k=20&m=1319763895&s=170667a&w=0&h=jhqKyg62cQVZ-NjDQjpcenCdHDrprkN4caRjk4K76E8=",
-      name: "Raj Kumar Darji",
-      title: "Investor & Advisor",
-    },
-
-    {
-      img: "https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot2003/vadymvdrobot200300051/142744663-image-of-a-young-strong-happy-cheery-sports-man-posing-outdoors-in-nature-green-park-looking-camera-.jpg?ver=6",
-      name: "",
-      title: "Project Manager",
-    },
-  ];
-  const [Data, setData] = useState([
-    {
-      title: "Our Vision",
-      description:
-        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without  relying on meaningful content",
-    },
-    {
-      title: "Our Mission",
-      description:
-        " To create a platform for  youths to learn their desired skills, help them to utilize their skills to Earn and Guide youths for ownership of their dream life. ",
-    },
-  ]);
+function About({ data }) {
   return (
     <div>
       <Head>
@@ -52,7 +31,7 @@ function About() {
       <PageTemplate>
         <div className="container mx-auto px-4 lg:px-8">
           {/* About us introduction */}
-          <div className="h-fit flex flex-col lg:flex-row w-full mt-24 ">
+          <div className=" flex flex-col lg:flex-row w-full mt-24 ">
             <div className="lg:flex-1 ">
               <div className=" h-96 lg:h-full lg:m-10 flex justify-center items-center">
                 {/* <p className="text-white ">Video modal</p> */}
@@ -76,7 +55,7 @@ function About() {
                 VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
                 of dedicated and energetic youth Entreprenuers. Since 2019, we
                 have been working on several fields such as
-                <span className=" ml-1 font-medium text-left">
+                <span className=" ml-1 font-medium  text-justify">
                   Event Management, Event Orgainzers, Entrepreneurship
                   Development, Business Development Orientation, Motivational
                   Seminars,Skills based training, Vocational trainings,
@@ -133,34 +112,36 @@ function About() {
               );
             })}
           </div>
-        </div>
 
-        <div className="container mx-auto px-4  mt-8 lg:px-8">
+          {/* BOD SECTION  */}
           <div>
             <h1 className="text-primary text-center gap-8 my-14 text-4xl tracking-wider font-bold">
               Board of Directors
             </h1>
           </div>
           {/* Bod body section */}
-          <div className="container  mx-auto px-4  lg:px-8">
+          <div className="">
+            <Link href={"/Aboutus/BOD"}>
+              <a className=" text-center btn-primary rounded-full flex items-center justify-center w-32 mx-auto">
+                view all <BsFillArrowRightCircleFill className="ml-2" />
+              </a>
+            </Link>
             <div className="grid lg:grid-cols-3 gap-8">
-              {data.map((item) => (
-                <BodCard img={item.img} name={item.name} title={item.title} />
+              {data.slice(0, 3)?.map((item) => (
+                <BodCard
+                  img={`${process.env.Url}/images/${item.img}`}
+                  name={item.name}
+                  title={item.job_title}
+                />
               ))}
             </div>
           </div>
-        </div>
 
-        <Link href={"/Aboutus/BOD"}>
-          <div className="flex justify-center">
-            <button className="btn-primary rounded-full flex items-center justify-between">
-              view all <BsFillArrowRightCircleFill className="ml-2" />
-            </button>
+          <div className="w-full flex justify-center items-center flex-col">
+            <HappyCustomer />
+            <OurClients />
           </div>
-        </Link>
-        <div className="w-full flex justify-center items-center flex-col">
-          <HappyCustomer />
-          <OurClients />
+          {/* BOD SECITON ENDS  */}
         </div>
       </PageTemplate>
       {/* Happy Customer Section */}
