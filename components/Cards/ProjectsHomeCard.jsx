@@ -74,9 +74,7 @@ function ProjectsHomeCard() {
             <p className=" text-2xl md:text-4xl  capitalize font-bold ">
               our projects
             </p>
-
             <p className="lg:w-32 md:w-32 w-20 h-1  my-3 lg:my-4 md:bg-blue-600  " />
-
           </div>
           <div className="my-2   leading-7 line-clamp-6">
             <p>

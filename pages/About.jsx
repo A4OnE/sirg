@@ -50,7 +50,7 @@ function About({ data }) {
                 </p>
                 {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
               </div>
-              <p className="w-full my-4 line-clamp-10 -tracking-tight leading-7 lg:leading-7 text-lg">
+              <p className="w-full my-4  -tracking-tight leading-7 lg:leading-7 text-lg">
                 {/* {staticAbout.aboutUs} */}
                 VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
                 of dedicated and energetic youth Entreprenuers. Since 2019, we
@@ -80,27 +80,37 @@ function About({ data }) {
 
           {/* our Vision  and our mission sections */}
 
-          <div className="bg-gray-50 p-4 lg:p-24 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 my-24">
-            <div className="">
-              <h1 className="text-5xl lg:text-8xl text-primary">
-                Our <br /> Mission <br /> & Vision
-              </h1>
-            </div>
-            <div className="mt-16">
-              <p className="font-bold text-gray-700 text-2xl">Our Vision</p>
-              <p className="my-8 text-gray-800 text-justify">
-                To establish as a leading company of Nepal in our specific field
-                by connecting, inspiring youths and transforming them to live a
-                life of entrepreneurial on their own terms.
-              </p>
-
-              <p className="font-bold text-gray-700 text-2xl">Our Mission</p>
-              <p className="my-8 text-gray-800 text-justify">
-                To provide a platform for youths to learn desired skills, assist
-                them in putting those skills to work, and guide in taking
-                control of their dream lives.{" "}
-              </p>
-            </div>
+          <div className=" w-full h-fit my-16 lg:my-32">
+            {Data.map((val, i) => {
+              return (
+                <div
+                  key={i}
+                  className={`m-4 ${
+                    i === 1
+                      ? "ml-10  pl-0 mt-14 sm:pl-0  sm:ml-10 md:pl-0 md:ml-10 lg:ml-96 lg:pl-44"
+                      : "ml-10"
+                  } `}
+                >
+                  <div className="flex flex-col mx-auto lg:mx-0 text-center w-fit items-start ">
+                    <p className=" text-2xl md:text-4xl my-3 md:my-5 lg:my-8 text-blue-700 capitalize font-bold ">
+                      {val.title}
+                    </p>
+                    {/* <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " /> */}
+                  </div>
+                  <div
+                    className={`text-lg   leading-6 
+                  ${
+                    i === 0
+                      ? "w-full  sm:w-full lg:w-6/12 "
+                      : "max-w-screen-xl sm:w-full"
+                  } 
+                  `}
+                  >
+                    {val.description}
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* BOD SECTION  */}
