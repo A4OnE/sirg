@@ -15,9 +15,10 @@ export async function getServerSideProps() {
   // Pass data to the page via props
   return { props: { data } };
 }
-
 import BodCard from "../components/Cards/BodCard";
 function About({ data }) {
+  const [Data, setData] = useState([]);
+
   return (
     <div>
       <Head>
