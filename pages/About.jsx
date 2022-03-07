@@ -15,9 +15,10 @@ export async function getServerSideProps() {
   // Pass data to the page via props
   return { props: { data } };
 }
-
 import BodCard from "../components/Cards/BodCard";
 function About({ data }) {
+  const [Data, setData] = useState([]);
+
   return (
     <div>
       <Head>
@@ -50,7 +51,7 @@ function About({ data }) {
                 </p>
                 {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
               </div>
-              <p className="w-full my-4 line-clamp-10 -tracking-tight leading-7 lg:leading-7 text-lg">
+              <p className="w-full my-4  -tracking-tight leading-7 lg:leading-7 text-lg">
                 {/* {staticAbout.aboutUs} */}
                 VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
                 of dedicated and energetic youth Entreprenuers. Since 2019, we
@@ -101,6 +102,7 @@ function About({ data }) {
                 control of their dream lives.{" "}
               </p>
             </div>
+
           </div>
 
           {/* BOD SECTION  */}
