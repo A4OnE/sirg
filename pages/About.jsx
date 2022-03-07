@@ -83,7 +83,7 @@ function About({ data }) {
           <div className="bg-gray-50 p-4 lg:p-24 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 my-24">
             <div className="">
               <h1 className="text-5xl lg:text-8xl text-primary">
-                Our <br /> Mission <br /> & Vision
+                Our <br /> Mission <br /> & Vision gv
               </h1>
             </div>
             <div className="mt-16">
