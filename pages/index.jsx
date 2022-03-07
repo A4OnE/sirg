@@ -64,7 +64,7 @@ export default function Home() {
             </div>
             <div className="pt-5 ">
               <Link href={"/About"}>
-                <button className="btn-primary rounded-full">
+                <button className="btn-outline-primary rounded-full">
                   More About Us
                 </button>
               </Link>
