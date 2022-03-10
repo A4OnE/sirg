@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ServiceCard from "../components/Cards/serviceCard";
 import PageTemplate from "../components/Templates/PageTemplate";
 import axios from "../AXIOS/Axios-create";
+
 function Services() {
   const [Data, setData] = useState([]);
   const getProjects = () => {
@@ -41,7 +42,7 @@ function Services() {
             {/* <hr className=" border-4 border-black mx-auto w-20 rounded-full mt-2 mb-2" />{" "} */}
             <p
               className="
-                  text-base font-semibold pt-4 text-gray-500
+                  text-base font-semi-bold pt-4 text-gray-500
                   "
             >
               We provide best services in e-learning field.
@@ -60,7 +61,8 @@ function Services() {
                 let image = `${process.env.Url}/images/${val.img}`;
                 return (
                   <ServiceCard
-                    img={image}
+                    id={val.id}
+                    image={image}
                     title={val.service_title}
                     description={val.service_details}
                   />
