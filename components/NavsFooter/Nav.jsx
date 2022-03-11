@@ -15,7 +15,9 @@ function Nav() {
             setMobileNav(!mobileNav);
           }}
         />
-        <h2 className="font-bold">VIP GROUP</h2>
+        <Link href="/">
+          <h2 className="font-bold cursor-pointer">VIP GROUP</h2>
+        </Link>
         <div className="hidden  lg:flex flex-col lg:flex-row items-center space-x-6">
           {NavItems.map((item, i) => {
             if (!item.subNav) {
@@ -32,7 +34,11 @@ function Nav() {
                     <div className="flex flex-col divide-y-2 justify-center absolute  bg-primary shadow-md w-16 mx-auto border  gap-1 m-2 text-center active:bg-transparent">
                       {i == clicked && item.subNav
                         ? item.subNav.map((val, i) => {
-                            return <Link href={val.to}>{val.title}</Link>;
+                            return (
+                              <Link key={i} href={val.to}>
+                                {val.title}
+                              </Link>
+                            );
                           })
                         : null}
                     </div>

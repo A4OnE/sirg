@@ -8,10 +8,50 @@ import PageTemplate from "../components/Templates/PageTemplate";
 import ContactForm from "../components/form/ContactForm";
 import { IoCall } from "react-icons/io5";
 import { BiCurrentLocation } from "react-icons/bi";
+import Head from "next/head";
 
 function Contact() {
   return (
     <div>
+      <Head>
+        <title>Contact Us</title>
+        {/* primary meta tags  */}
+        <meta name="title" content="Contact VIP GROUP PVT.LTD." />
+        <meta
+          name="description"
+          content="Connect with us through PHONE : +977-9857074929 EMAIL : cvipgroup@gmail.com LOCATION:Butwal Rupandehi Nepal"
+        />
+        <link rel="icon" href="/logo.png" />
+
+        {/* facebook  */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vipgroupnepal.com/Contact" />
+        <meta property="og:title" content="Contact VIP Group Pvt. Ltd " />
+        <meta
+          property="og:description"
+          content="Connect with us through PHONE : +977-9857074929 EMAIL : cvipgroup@gmail.com LOCATION:Butwal Rupandehi Nepal"
+        />
+        <meta
+          property="og:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
+
+        {/* twitter  */}
+        <meta property="twitter:type" content="website" />
+        <meta
+          property="twitter:url"
+          content="https://vipgroupnepal.com/Contact"
+        />
+        <meta property="twitter:title" content="Contact VIP Group Pvt. Ltd" />
+        <meta
+          property="twitter:description"
+          content="Connect with us through PHONE : +977-9857074929 EMAIL : cvipgroup@gmail.com LOCATION:Butwal Rupandehi Nepal"
+        />
+        <meta
+          property="twitter:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
+      </Head>
       <PageTemplate>
         <div className="">
           {/* starting of top part of contact */}

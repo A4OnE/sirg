@@ -7,7 +7,6 @@ function ProjectsHomeCard() {
     axios
       .get("/project")
       .then((res) => {
-        console.log(res);
         setData(res.data);
         // data.push(res)
       })

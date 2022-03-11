@@ -1,75 +1,45 @@
-import React, { Component } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
-export class OurClients extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      head: [{ title: "We have worked with...", data: "our clients" }],
-      body: [
-        { name: "gofundme", icon: "", width: "20%" },
-        { name: "TATA", icon: "", width: "10%" },
-        { name: "eventbrite", width: "20%" },
-        { name: "box", width: "10%" },
-        { name: "Nordea", width: "20%" },
-        {
-          name: "SurveyMonkey",
-          icon: "",
-          width: "20%",
-          fontWeight: "font-normal",
-        },
-      ],
+function OurClients() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState([]);
+  useEffect(() => {
+    const fetch = async () => {
+      setLoading(true);
+      await axios.get(`${process.env.Url}/clients`).then((res) => {
+        setLoading(false);
+        setData(res.data);
+      });
     };
-  }
-  render() {
-    return (
-      <div
-        className="h-96  w-full  flex   flex-col justify-center  items-center my-16 lg:my-24
-      
-      "
-      >
-        {this.state.head.map((val, i) => {
-          return (
-            <div
-              key={i}
-              className=" w-3/5 h-fit  flex flex-col justify-end items-center     "
-            >
-              <div className="flex flex-col mx-auto lg:mx-0 text-center w-fit items-start ">
-                <p className=" text-sm sm:text-lg md:text-4xl text-blue-500 capitalize  font-bold ">
-                  {val.title}
-                </p>
-                {/* <p className="w-20 h-1  my-1 md:my-2 bg-blue-500  " /> */}
-              </div>
-              <div className="text-gray-500 mt-3 capitalize md:text-xl">
-                {val.data}
-              </div>
-            </div>
-          );
-        })}
-        <div className="flex  flex-wrap h-48 m-5  lg:w-5/12 justify-evenly items-center">
-          {this.state.body.map((val, i) => {
-            return (
-              <div
-                key={i}
-                width={val.width}
-                className={` ml-1 md:ml-3 lg:ml-2 text-gray-600 w-fit 
-                px-1 sm:p-2 md:p-1 
-                ${i === 5 ? "font-medium  " : "font-bold"}
-                ${
-                  i === 5 || i === 0
-                    ? " text-lg sm:text-xl md:text-4xl lg:text-3xl"
-                    : " text-lg sm:text-xl md:text-4xl  lg:text-3xl"
-                }
+    fetch();
+  }, []);
 
-                `}
-              >
-                {val.name}
-              </div>
-            );
-          })}
+  return (
+    <div>
+      {/* head section  */}
+      <div className="text-center">
+        <h1 className="text-primary">We Have Worked With...</h1>
+        <p className="font-medium text-lg text-gray-800">Our Clients</p>
+      </div>
+
+      <div className="flex justify-center my-24">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          {/* clients logo section  */}
+          {data.map((item) => (
+            <div className="mx-auto" key={item.id}>
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={`${process.env.Url}/images/${item.img}`}
+                  alt={item.id}
+                />
+              </a>
+            </div>
+          ))}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default OurClients;

@@ -10,7 +10,6 @@ function Services() {
     axios
       .get("/service")
       .then((res) => {
-        console.log(res);
         setData(res.data);
         // data.push(res)
       })
@@ -24,11 +23,45 @@ function Services() {
     <div>
       <Head>
         <title>Services</title>
+        {/* primary meta tags  */}
+        <meta name="title" content="Services of VIP GROUP PVT.LTD." />
         <meta
           name="description"
-          content="This is the official site of VIP GROUP PVT.LTd."
+          content="VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company of dedicated and energetic youth Entreprenuers. Since 2019, we have been working on several fields such asEvent Management, Event Orgainzers, Entrepreneurship Development, Business Development Orientation, Motivational Seminars,Skills based training, Vocational trainings, Personality Development trainings, Leadership trainings, Job placements, Website Development & so on."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
+
+        {/* facebook  */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vipgroupnepal.com/Services" />
+        <meta property="og:title" content="Services of VIP Group Pvt. Ltd " />
+        <meta
+          property="og:description"
+          content="VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company of dedicated and energetic youth Entreprenuers. Since 2019, we have been working on several fields such asEvent Management, Event Orgainzers, Entrepreneurship Development, Business Development Orientation, Motivational Seminars,Skills based training, Vocational trainings, Personality Development trainings, Leadership trainings, Job placements, Website Development & so on."
+        />
+        <meta
+          property="og:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
+
+        {/* twitter  */}
+        <meta property="twitter:type" content="website" />
+        <meta
+          property="twitter:url"
+          content="https://vipgroupnepal.com/Services"
+        />
+        <meta
+          property="twitter:title"
+          content="Services of VIP Group Pvt. Ltd"
+        />
+        <meta
+          property="twitter:description"
+          content="VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company of dedicated and energetic youth Entreprenuers. Since 2019, we have been working on several fields such asEvent Management, Event Orgainzers, Entrepreneurship Development, Business Development Orientation, Motivational Seminars,Skills based training, Vocational trainings, Personality Development trainings, Leadership trainings, Job placements, Website Development & so on."
+        />
+        <meta
+          property="twitter:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
       </Head>
       <PageTemplate>
         <div className="bg-gray flex flex-col ">
@@ -58,11 +91,11 @@ function Services() {
               "
             >
               {Data.map((val, i) => {
-                let image = `${process.env.Url}/images/${val.img}`;
                 return (
                   <ServiceCard
+                    key={i}
                     id={val.id}
-                    image={image}
+                    img={`${process.env.Url}/images/${val.img}`}
                     title={val.service_title}
                     description={val.service_details}
                   />

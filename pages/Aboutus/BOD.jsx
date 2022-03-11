@@ -36,6 +36,7 @@ function BOD({ data }) {
           <div className="grid lg:grid-cols-3 gap-8">
             {data.map((item) => (
               <BodCard
+                key={item.id}
                 img={`${process.env.Url}/images/${item.img}`}
                 name={item.name}
                 title={item.title}

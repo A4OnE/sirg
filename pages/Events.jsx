@@ -24,30 +24,55 @@ function Events(props) {
       {/* head */}
       <Head>
         <title>Events</title>
+        {/* primary meta tags  */}
+        <meta name="title" content="Events of VIP VIP GROUP PVT.LTD." />
         <meta
           name="description"
-          content="This is the official site of VIP GROUP PVT.LTd."
+          content="We organise number of events in different sector of businesses growth and personnal growth such as:personality developement, how to sell anything?, how to grow business after covid etc"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
+
+        {/* facebook  */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vipgroupnepal.com/Events" />
+        <meta property="og:title" content="Events of VIP VIP Group Pvt. Ltd " />
+        <meta
+          property="og:description"
+          content="We organise number of events in different sector of businesses growth and personnal growth such as:personality developement, how to sell anything?, how to grow business after covid etc"
+        />
+        <meta
+          property="og:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
+
+        {/* twitter  */}
+        <meta property="twitter:type" content="website" />
+        <meta
+          property="twitter:url"
+          content="https://vipgroupnepal.com/Events"
+        />
+        <meta
+          property="twitter:title"
+          content="Events of VIP VIP Group Pvt. Ltd"
+        />
+        <meta
+          property="twitter:description"
+          content="We organise number of events in different sector of businesses growth and personnal growth such as:personality developement, how to sell anything?, how to grow business after covid etc"
+        />
+        <meta
+          property="twitter:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
       </Head>
       <PageTemplate>
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-primary text-4xl font-bold mt-4 md:mt-7 lg:mt-12 py-7">
+          <div className="text-primary text-center text-6xl font-bold mt-4 md:mt-7 lg:mt-12 py-7">
             Events
           </div>
+          <p className="text-gray-800 font-medium text-center">
+            All the events done by VIP Group
+          </p>
 
-          {/* event categories section  */}
-          <div className="flex flex-row items-center space-x-8">
-            <p className="text-3xl">categories</p>
-            <div className="border px-4 py-2 border-black rounded-full">
-              <select className="lg:w-80 outline-none">
-                <option className="p-4">All</option>
-                <option className="p-4">All</option>
-                <option className="p-4">All</option>
-                <option className="p-4">All</option>
-              </select>
-            </div>
-          </div>
           <hr className="mt-8 shadow" />
 
           {/* events card section  */}

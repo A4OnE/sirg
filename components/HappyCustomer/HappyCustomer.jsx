@@ -66,8 +66,8 @@ const HappyCustomer = () => {
     >
       <div className="ml-8">
         <div className="flex flex-col mx-auto  text-center w-fit items-start ">
-          <p className=" text-2xl md:text-4xl text-blue-700 capitalize  md:font-bold font-semibold ">
-            happy customer's
+          <p className=" text-2xl md:text-4xl text-primary capitalize  md:font-bold font-semibold my-8 ">
+            happy customers
           </p>
           {/* <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " /> */}
         </div>
@@ -121,7 +121,7 @@ const HappyCustomer = () => {
                   />
                 </div>
               </div>
-              <div className="lg:col-span-2 lg:ml-28">
+              <div className="lg:col-span-2 lg:ml-28 text-center">
                 {/* <p className="text-gray-500 capitalize tracking-wider font-bold mb-6 text-3xl
           md:text-2xl md:mb-3 
           lg:text-4xl lg:mb-8 lg:w-1/2 lg:leading-snug
@@ -137,7 +137,7 @@ const HappyCustomer = () => {
         
           "
                 >
-                  "{val.feedback}"
+                  &ldquo;{val.feedback}&rdquo;
                 </p>
                 <div>
                   <p

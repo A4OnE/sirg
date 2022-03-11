@@ -46,7 +46,11 @@ function Inputs(props) {
       Inputed = (
         <select name={props.usename} {...props.register} className={className}>
           {props.options?.map((val, i) => {
-            return <option value={i === 0 ? "" : val.name}>{val.name}</option>;
+            return (
+              <option key={i} value={i === 0 ? "" : val.name}>
+                {val.name}
+              </option>
+            );
           })}
         </select>
       );

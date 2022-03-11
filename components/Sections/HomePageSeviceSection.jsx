@@ -8,7 +8,6 @@ function HomePageSeviceSection() {
     axios
       .get("/service")
       .then((res) => {
-        console.log(res);
         setData(res.data);
         // data.push(res)
       })

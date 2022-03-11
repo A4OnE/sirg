@@ -16,42 +16,69 @@ export async function getServerSideProps() {
   return { props: { data } };
 }
 import BodCard from "../components/Cards/BodCard";
+import AboutVideoSection from "../components/Sections/AboutVideoSection";
 function About({ data }) {
   const [Data, setData] = useState([]);
 
   return (
     <div>
       <Head>
-        <title>About us</title>
+        <title>About Us</title>
+        {/* primary meta tags  */}
+        <meta name="title" content="About VIP GROUP PVT.LTD." />
         <meta
           name="description"
-          content="This is the official site of VIP GROUP PVT.LTd."
+          content="VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company of dedicated and energetic youth Entreprenuers. Since 2019, we have been working on several fields such asEvent Management, Event Orgainzers, Entrepreneurship Development, Business Development Orientation, Motivational Seminars,Skills based training, Vocational trainings, Personality Development trainings, Leadership trainings, Job placements, Website Development & so on."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
+
+        {/* facebook  */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vipgroupnepal.com/About" />
+        <meta property="og:title" content="About VIP Group Pvt. Ltd " />
+        <meta
+          property="og:description"
+          content="VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company of dedicated and energetic youth Entreprenuers. Since 2019, we have been working on several fields such asEvent Management, Event Orgainzers, Entrepreneurship Development, Business Development Orientation, Motivational Seminars,Skills based training, Vocational trainings, Personality Development trainings, Leadership trainings, Job placements, Website Development & so on."
+        />
+        <meta
+          property="og:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
+
+        {/* twitter  */}
+        <meta property="twitter:type" content="website" />
+        <meta
+          property="twitter:url"
+          content="https://vipgroupnepal.com/About"
+        />
+        <meta property="twitter:title" content="About VIP Group Pvt. Ltd" />
+        <meta
+          property="twitter:description"
+          content="VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company of dedicated and energetic youth Entreprenuers. Since 2019, we have been working on several fields such asEvent Management, Event Orgainzers, Entrepreneurship Development, Business Development Orientation, Motivational Seminars,Skills based training, Vocational trainings, Personality Development trainings, Leadership trainings, Job placements, Website Development & so on."
+        />
+        <meta
+          property="twitter:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
       </Head>
       <PageTemplate>
         <div className="container mx-auto px-4 lg:px-8">
           {/* About us introduction */}
-          <div className=" flex flex-col lg:flex-row w-full mt-24 ">
-            <div className="lg:flex-1 ">
-              <div className=" h-96 lg:h-full lg:m-10 flex justify-center items-center">
-                {/* <p className="text-white ">Video modal</p> */}
-                <video autoPlay={true} loop controls style={{ height: "100%" }}>
-                  <source src={"aboutus.mp4"} type="video/mp4" />
-                </video>
-                {/* <ReactPlayer  url={require('../images/aboutus.mp4')} /> */}
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="mt-14 w-full overflow-hidden h-full">
+              {/* <p className="text-white ">Video modal</p> */}
+              <AboutVideoSection />
             </div>
             {/* right section  */}
-            <div className="flex-1 mt-10 mx-5   p-2">
+            <div className="row-start-1 lg:col-start-2 mt-10">
               {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
-              <div className="flex flex-col mx-auto  lg:mx-0 text-center  w-fit items-start  ">
-                <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
+              <div className="">
+                <p className=" text-2xl md:text-4xl text-primary capitalize font-bold ">
                   who we are?{" "}
                 </p>
                 {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
               </div>
-              <p className="w-full my-4  -tracking-tight leading-7 lg:leading-7 text-lg">
+              <p className="w-full my-4  -tracking-tight leading-7 lg:leading-7 text-lg text-justify">
                 {/* {staticAbout.aboutUs} */}
                 VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
                 of dedicated and energetic youth Entreprenuers. Since 2019, we
@@ -70,7 +97,7 @@ function About({ data }) {
               </p>
               <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start">
                 <Link href={"/Contact"}>
-                  <div className="border-2 font-semibold border-blue-700 w-fit flex items-center  px-4 h-10 text-blue-700 rounded-full cursor-pointer">
+                  <div className="border-2 font-semibold border-primary w-fit flex items-center  px-4 h-10 text-primary rounded-full cursor-pointer">
                     Contact us
                   </div>
                 </Link>
@@ -84,7 +111,7 @@ function About({ data }) {
           <div className="bg-gray-50 p-4 lg:p-24 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 my-24">
             <div className="">
               <h1 className="text-5xl lg:text-8xl text-primary">
-                Our <br /> Mission <br /> & Vision gv
+                Our <br /> Mission <br /> & Vision
               </h1>
             </div>
             <div className="mt-16">
@@ -102,7 +129,6 @@ function About({ data }) {
                 control of their dream lives.{" "}
               </p>
             </div>
-
           </div>
 
           {/* BOD SECTION  */}
@@ -121,6 +147,7 @@ function About({ data }) {
             <div className="grid lg:grid-cols-3 gap-8">
               {data.slice(0, 3)?.map((item) => (
                 <BodCard
+                  key={item.id}
                   img={`${process.env.Url}/images/${item.img}`}
                   name={item.name}
                   title={item.job_title}
