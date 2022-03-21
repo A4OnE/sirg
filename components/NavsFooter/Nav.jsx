@@ -12,13 +12,13 @@ import Radium, { StyleRoot } from "radium";
 function Nav() {
   const fadeLeft = {
     fadeInLeft: {
-      animation: "x 1.6s ",
+      animation: "x 0.6s ",
       animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
     },
   };
   const fadeLeftt = {
     fadeInLeft: {
-      animation: "x 1.5s",
+      animation: "x 0.6s",
       animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
     },
   };
@@ -37,6 +37,7 @@ function Nav() {
   // }
   const [mobileNav, setMobileNav] = useState(false);
   const [clicked, setClicked] = useState("");
+
   return (
     <div className=" h-full bg-white sticky top-0 left-0  shadow-md">
       <div
@@ -46,11 +47,11 @@ function Nav() {
       >
         {mobileNav ? (
           <GrFormClose
-            className={`text-xl block   bg-white  translate-x-56  translate-y-14  md:translate-x-64 z-50 rounded-full ${
+            className={`text-xl block  shadow-md border bg-white  translate-x-52  translate-y-8  md:translate-x-64 z-50 rounded-full ${
               mobileNav
-                ? "transform hover:rotate-180 duration-500 delay-200 ease-in-out"
+                ? "transform hover:rotate-180 duration-500 delay-200 animate-ulse ease-in-out"
                 : null
-            } h-11  p-1  w-11 lg:hidden cursor-pointer `}
+            } h-12  p-1  w-12 lg:hidden cursor-pointer `}
             onClick={() => {
               setMobileNav(false);
             }}
@@ -61,7 +62,6 @@ function Nav() {
             onClick={() => {
               setMobileNav(true);
             }}
-            style={fadeLeft.fadeInLeft}
           />
         )}
 
