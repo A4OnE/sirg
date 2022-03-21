@@ -64,7 +64,6 @@ export default function Home() {
         />
       </Head>
       <PageTemplate>
-
         <div>
           {show ? (
             <video
@@ -95,18 +94,18 @@ export default function Home() {
           >
             <div className=" text-left ">
               <div className="flex flex-col mx-auto text-center w-fit items-center ">
-                <p className=" text-2xl md:text-4xl  capitalize font-bold ">
+                <p className=" text-2xl md:text-4xl  capitalize font-openSansSeven">
                   about us
                 </p>
                 <p className="lg:w-80 lg:my-3 md:w-56 w-36 h-1  my-1 md:my-2 rounded-md bg-blue-600  " />
               </div>
-              <p className="my-5 md:my-5  md:text-center  mx-auto w-9/12 leading-8 lg:p-5 line-clamp-6  md:line-clamp-4 lg:line-clamp-6">
+              <p className="my-5 md:my-5  md:text-center  mx-auto w-9/12 leading-8 lg:p-5 line-clamp-6 font-openSansFive  md:line-clamp-4 lg:line-clamp-6">
                 {staticAbout.aboutUs}
               </p>
             </div>
             <div className="pt-5 ">
               <Link href={"/About"}>
-                <button className="btn-outline-primary hover:bg-blue-900 hover:text-white  rounded-full">
+                <button className="btn-outline-primary hover:bg-blue-900 hover:text-white font-openSansFive rounded-full">
                   More About Us
                 </button>
               </Link>
@@ -119,17 +118,17 @@ export default function Home() {
           {/* Service section starts here */}
           <div className="text-center  py-10 ">
             <div className="flex flex-col mx-auto text-center w-fit items-start ">
-              <p className=" text-2xl md:text-3xl  capitalize font-semibold mb-3">
+              <p className=" text-2xl md:text-3xl  capitalize font-openSansSeven mb-3">
                 what do we do?{" "}
               </p>
               {/* <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " /> */}
             </div>{" "}
-            <p className="text-sm font-medium text-gray-600 md:text-lg">
+            <p className="text-sm font-openSansFive text-gray-600 md:text-lg">
               Services we offer to our custormers
             </p>
             <div className="mt-8">
               <Link href={"/Services"}>
-                <button className="btn-outline-primary hover:bg-blue-900 hover:text-white  rounded-full  ">
+                <button className="btn-outline-primary font-openSansFive hover:bg-blue-900 hover:text-white  rounded-full  ">
                   View All
                 </button>
               </Link>

@@ -23,6 +23,7 @@ function ServiceCard({ id, img, title, description }) {
         className="my-5 text-lg font-medium
       md:font-semibold md:my-4
       lg:text-xl lg:font-bold
+      font-openSansFive
       
       "
       >
@@ -36,6 +37,7 @@ function ServiceCard({ id, img, title, description }) {
       lg:text-base
       text-justify
       line-clamp-4
+      font-openSansSix capitalize
       "
       >
         {description}
@@ -44,13 +46,12 @@ function ServiceCard({ id, img, title, description }) {
         <Link href={`service/${id}`}>
           <button
             className="
-        btn-outline-gray text-black hover:translate-x-1  hover:text-blue-800 flex flex-row justify-center   rounded-md items-center      
+        btn-outline-gray text-black hover:translate-x-1 font-openSansSix hover:text-blue-800 flex flex-row justify-center   rounded-md items-center      
         "
           >
-            Find out more{" "}
+            Find out more
             <span>
-              {" "}
-              <IoIosArrowForward className="ml-2" />
+              <IoIosArrowForward className="ml-2 " />
             </span>
           </button>
         </Link>

@@ -18,9 +18,13 @@ function OurClients() {
   return (
     <div>
       {/* head section  */}
-      <div className="text-center">
-        <h1 className="text-primary">We Have Worked With...</h1>
-        <p className="font-medium text-lg text-gray-800">Our Clients</p>
+      <div className="text-center ">
+        <h1 className="text-primary font-openSansSeven">
+          We Have Worked With...
+        </h1>
+        <p className="font-medium text-lg font-openSansFive  text-gray-800">
+          Our Clients
+        </p>
       </div>
 
       <div className="flex justify-center my-24">

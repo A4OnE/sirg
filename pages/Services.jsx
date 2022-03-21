@@ -68,14 +68,14 @@ function Services() {
           <div
             className="
               flex flex-col justify-center items-center h-52 
-              lg:text-4xl text-primary font-bold text-3xl
+              lg:text-4xl text-primary  text-3xl font-openSansSeven
               "
           >
             Our Services
             {/* <hr className=" border-4 border-black mx-auto w-20 rounded-full mt-2 mb-2" />{" "} */}
             <p
               className="
-                  text-base font-semi-bold pt-4 text-gray-500
+                  text-base font-openSansSix pt-4 text-gray-500
                   "
             >
               We provide best services in e-learning field.
@@ -90,7 +90,6 @@ function Services() {
                  mb-16 
               "
             >
-
               {data.map((val, i) => {
                 let image = `${process.env.Url}/images/${val.img}`;
 

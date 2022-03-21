@@ -90,21 +90,18 @@ function About({ data }) {
             <div className="flex-1 mt-8 mx-5   px-2 ">
               {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
               <div className="flex flex-col mx-auto  lg:mx-0 text-center  w-fi items-start  ">
-                <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
-
+                <p className=" text-2xl md:text-4xl font-openSansSeven  text-blue-700 capitalize font-bold ">
                   who we are?{" "}
                 </p>
                 {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
               </div>
 
-              <p className="w-full my-4  -tracking-tight leading-5 md:leading-7 text-xs md:text-lg">
-
-    
+              <p className="w-full my-4 font-openSansFive -tracking-tight leading-5 md:leading-7 text-xs md:text-lg">
                 {/* {staticAbout.aboutUs} */}
                 VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
                 of dedicated and energetic youth Entreprenuers. Since 2019, we
                 have been working on several fields such as
-                <span className=" ml-1 font-medium  text-justify">
+                <span className=" ml-1 font-openSansSix text-justify">
                   Event Management, Event Orgainzers, Entrepreneurship
                   Development, Business Development Orientation, Motivational
                   Seminars,Skills based training, Vocational trainings,
@@ -131,22 +128,26 @@ function About({ data }) {
 
           {/* our Vision  and our mission sections */}
 
-          <div className="bg-gray-50 p-4 lg:py-16 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 lg:my-24 my-14">
+          <div className="bg-gray-50 p-4  lg:py-16 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 lg:my-24 my-14">
             <div className="">
-              <h1 className="text-5xl lg:text-8xl text-primary">
+              <h1 className="text-5xl font-openSansEight lg:text-8xl text-primary">
                 Our <br /> Mission <br /> & Vision
               </h1>
             </div>
-            <div className="mt-16">
-              <p className="font-bold text-gray-700 text-2xl">Our Vision</p>
-              <p className="my-5 md:my-8 text-gray-800 text-left">
+            <div className="mt-16 ">
+              <p className="font-bold font-openSansSeven text-gray-700 text-2xl">
+                Our Vision
+              </p>
+              <p className="my-5 md:my-8 font-openSansFive text-gray-800 text-left">
                 To establish as a leading company of Nepal in our specific field
                 by connecting, inspiring youths and transforming them to live a
                 life of entrepreneurial on their own terms.
               </p>
 
-              <p className="font-bold text-gray-700 text-2xl">Our Mission</p>
-              <p className="my-5 md:my-8 text-gray-800 text-left">
+              <p className="font-bold font-openSansSeven text-gray-700 text-2xl">
+                Our Mission
+              </p>
+              <p className="my-5 md:my-8 font-openSansFive text-gray-800 text-left">
                 To provide a platform for youths to learn desired skills, assist
                 them in putting those skills to work, and guide in taking
                 control of their dream lives.
@@ -156,14 +157,14 @@ function About({ data }) {
 
           {/* BOD SECTION  */}
           <div>
-            <h1 className="text-primary text-center gap-8 my-14 text-4xl tracking-wider font-bold">
+            <h1 className="text-primary font-openSansSeven text-center gap-8 my-14 text-4xl tracking-wider font-bold">
               Board of Directors
             </h1>
           </div>
           {/* Bod body section */}
           <div className="">
             <Link href={"/Aboutus/BOD"}>
-              <a className=" text-center btn-primary rounded-full flex items-center justify-center w-32 mx-auto">
+              <a className=" text-center font-openSansFive btn-primary rounded-full flex items-center justify-center w-32 mx-auto">
                 view all <BsFillArrowRightCircleFill className="ml-2" />
               </a>
             </Link>

@@ -13,9 +13,13 @@ function ProjectCard({ id, title, desc, img }) {
       </Link>
       <div className="p-4 ">
         <Link href={`/Project/details/${id}`}>
-          <h2 className="text-gray-800 cursor-pointer">{title}</h2>
+          <h2 className="text-gray-800 cursor-pointer font-openSansSeven">
+            {title}
+          </h2>
         </Link>
-        <p className="my-3 line-clamp-4 text-gray-600">{desc}</p>
+        <p className="my-3 line-clamp-4 text-gray-600 font-openSansFive">
+          {desc}
+        </p>
       </div>
     </div>
   );

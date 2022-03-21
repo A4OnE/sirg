@@ -59,14 +59,14 @@ const HappyCustomer = () => {
   h-fit
   mt-10
     md:w-full 
-    lg:w-full lg:mx-10 lg:my-32
+    lg:w-full lg:mx-10 lg:my-32 
     
 
     "
     >
       <div className="ml-8">
         <div className="flex flex-col mx-auto  text-center w-fit items-start ">
-          <p className=" text-2xl md:text-4xl text-primary capitalize  md:font-bold font-semibold my-8 ">
+          <p className=" text-2xl md:text-4xl  text-primary capitalize  md:font-openSansSeven font-openSansFive my-8 ">
             happy customers
           </p>
           {/* <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " /> */}
@@ -84,7 +84,7 @@ const HappyCustomer = () => {
           return (
             <div
               key={i}
-              className="container mx-auto px-4 lg:px-8 grid grid-cols-1 gap-0 m-10
+              className="container mx-auto  px-4 lg:px-8 grid grid-cols-1 gap-0 m-10
       md:grid-cols-1
       lg:grid-cols-3 lg:gap-0 lg:ml-4
       sm:gap-0 sm:text-center
@@ -121,7 +121,7 @@ const HappyCustomer = () => {
                   />
                 </div>
               </div>
-              <div className="lg:col-span-2 lg:ml-28 text-center">
+              <div className="lg:col-span-2  lg:ml-28 text-center">
                 {/* <p className="text-gray-500 capitalize tracking-wider font-bold mb-6 text-3xl
           md:text-2xl md:mb-3 
           lg:text-4xl lg:mb-8 lg:w-1/2 lg:leading-snug
@@ -134,6 +134,7 @@ const HappyCustomer = () => {
           md:w-full
           lg:w-11/12 lg:text-lg
           sm:w-full line-clamp-10
+          font-openSansFive
         
           "
                 >
@@ -141,7 +142,7 @@ const HappyCustomer = () => {
                 </p>
                 <div>
                   <p
-                    className="text-gray-500  capitalize font-bold tg mt-6 text-center
+                    className="text-gray-500 font-openSansSeven capitalize font-bold tg mt-6 text-center
              lg:mt-4  
              md:text-2xl 
              text-base
@@ -149,7 +150,7 @@ const HappyCustomer = () => {
                   >
                     {val.name}
                   </p>
-                  <p className=" text-center text-xs  md:text-lg">
+                  <p className=" text-center font-openSansFive text-xs  md:text-lg">
                     {val.job_title}
                   </p>
                 </div>

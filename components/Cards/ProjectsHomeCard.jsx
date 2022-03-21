@@ -52,14 +52,14 @@ function ProjectsHomeCard() {
                   backgroundPositiony: "10px",
                 }}
               ></div>
-              <div className="my-4 font-bold">
+              <div className="my-4 font-openSansSix">
                 <Link href={`/Project/details/${item.id}`}>
                   <p className="capitalize  text-xl md:text-2xl cursor-pointer">
                     {item.project_title}
                   </p>
                 </Link>
               </div>
-              <div className="text-gray-600 line-clamp-2">
+              <div className="text-gray-600 font-openSansFive line-clamp-2">
                 {item.project_details}
               </div>
             </div>
@@ -70,12 +70,12 @@ function ProjectsHomeCard() {
 
         <div className={`row-start-1 lg:col-start-3`}>
           <div className="flex flex-col lg:mx-0 mx-auto text-center  w-fit items-start ">
-            <p className=" text-2xl md:text-4xl  capitalize font-bold ">
+            <p className=" text-2xl md:text-3xl lg:text-4xl  capitalize font-openSansSeven ">
               our projects
             </p>
             <p className="lg:w-32 md:w-32 w-20 h-1  my-3 lg:my-4 md:bg-blue-600  " />
           </div>
-          <div className="my-2   leading-7 line-clamp-6">
+          <div className="my-2  font-openSansFive leading-7 line-clamp-6">
             <p>
               We have been working on several fields such as Event Management,
               Event Orgainzers, Entrepreneurship Development, Business
@@ -87,7 +87,7 @@ function ProjectsHomeCard() {
 
           <div className="my-4 flex justify-center lg:justify-start  mt-10">
             <Link href={"/Projects"}>
-              <button className="btn-outline-primary hover:bg-blue-900 hover:text-white  rounded-full ">
+              <button className="btn-outline-primary font-openSansFive hover:bg-blue-900 hover:text-white  rounded-full ">
                 View Projects
               </button>
             </Link>

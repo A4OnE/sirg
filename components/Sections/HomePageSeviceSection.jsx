@@ -19,7 +19,7 @@ function HomePageSeviceSection() {
 
   return (
     <div className="">
-      <div className="grid mb-8 md:grid-cols-3 gap-4 pb-8 lg:gap-8">
+      <div className="grid mb-8 md:grid-cols-3   gap-4 pb-8 lg:gap-8">
         {Data.slice(0, 3).map((item, i) => {
           let image = `${process.env.Url}/images/${item.img}`;
           return (

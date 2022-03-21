@@ -98,11 +98,11 @@ const Eventbooking = () => {
       <PageTemplate>
         <div className="container mx-auto px-4  lg:px-8">
           <div className="mx-auto my-24 ">
-            <h1 className="text-primary lg:text-4xl text-3xl font-bold tracking-wider text-center mb-4  ">
+            <h1 className="text-primary font-openSansSeven lg:text-4xl text-3xl font-bold tracking-wider text-center mb-4  ">
               Event Booking
             </h1>
 
-            <p className="text-gray-500  text-center text-lg">
+            <p className="text-gray-500  text-center font-openSansFive text-lg">
               You Can Book all of the upcoming event here
             </p>
 
@@ -115,22 +115,26 @@ const Eventbooking = () => {
           h-full lg:w-2/3 mx-auto bg-primary  mt-8
             text-white p-4 lg:p-6 shadow-lg"
                   >
-                    <p className=" text-2xl md:text-4xl font-bold  tracking-wider ">
+                    <p className=" text-2xl md:text-4xl font-openSansSeven  tracking-wider ">
                       {val.event_title}
                     </p>
                     <div className="mt-4 ">
                       <div className="flex items-center">
                         <ImLocation />
-                        <p className="ml-2">{val.event_location}</p>
+                        <p className="ml-2 font-openSansFour">
+                          {val.event_location}
+                        </p>
                       </div>
-                      <div className="flex items-center my-3">
+                      <div className="flex font-openSansFour items-center my-3">
                         <BsCalendar2DateFill />
                         <p className="ml-2">{val.event_date}</p>
                       </div>
                     </div>
-                    <p className="  leading-7 ">{val.event_details}</p>
+                    <p className="  leading-7 font-openSansFive">
+                      {val.event_details}
+                    </p>
                     <button
-                      className="rounded-full cursor-pointer bg-white text-primary mt-6 w-cover tracking-wider px-5 py-2 font-bold transition hover:opacity-70"
+                      className="rounded-full cursor-pointer font-openSansSeven bg-white text-primary mt-6 w-cover tracking-wider px-5 py-2  transition hover:opacity-70"
                       onClick={() => {
                         showModal(val.id);
                       }}

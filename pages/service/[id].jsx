@@ -4,7 +4,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import PageTemplate from "../../components/Templates/PageTemplate";
 import Head from "next/head";
-
+// import Image from "next/image";
 export async function getServerSideProps(context) {
   // Fetch data from external API
   const { id } = context.query;

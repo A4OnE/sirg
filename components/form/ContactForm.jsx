@@ -36,11 +36,15 @@ function ContactForm() {
   };
   return (
     <div>
-      <h1 className="px-4 py-2">We Want to Hear From You</h1>
+      <h1 className="px-4 font-openSansSeven py-2">We Want to Hear From You</h1>
       <hr />
 
-      <form action="" className="p-4 lg:px-8" onSubmit={handleSubmit(onSubmit)}>
-        <div className=" flex flex-col space-y-2 mt-4">
+      <form
+        action=""
+        className="p-4 font-openSansSix lg:px-8"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <div className=" flex flex-col  space-y-2 mt-4">
           <label htmlFor="name">Full name</label>
           <input
             type="text"
@@ -89,7 +93,7 @@ function ContactForm() {
           )}
         </div>
         {success.length > 0 ? (
-          <p className="bg-green-600 p-2 rounded-md text-white my-4">
+          <p className="bg-green-600 p-2 font-openSansSix rounded-md text-white my-4">
             Your Message has been submited successfully ! Our Team will connect
             with you soon. Thank you for your message.
           </p>
@@ -99,7 +103,7 @@ function ContactForm() {
         <input
           type="submit"
           value={loading ? "LOADING..." : "SUBMIT"}
-          className="btn-primary rounded-md my-8 cursor-pointer"
+          className="btn-primary font-openSansSix rounded-md my-8 cursor-pointer"
         />
       </form>
     </div>

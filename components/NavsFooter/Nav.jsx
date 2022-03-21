@@ -18,7 +18,6 @@ function Nav() {
   const [mobileNav, setMobileNav] = useState(false);
   const [clicked, setClicked] = useState("");
   return (
-
     <div className=" h-full bg-white sticky top-0 left-0  shadow-md">
       <div
         className=" container mx-auto px-4 lg:px-8 
@@ -27,8 +26,10 @@ function Nav() {
       >
         {mobileNav ? (
           <GrFormClose
-            className={`text-xl block   bg-white  translate-x-56 sm:translate-x-40 translate-y-14  md:translate-x-64 z-50 rounded-full ${
-              mobileNav ? "transform rotate-180 duration-500 ease-in-out" : null
+            className={`text-xl block   bg-white  translate-x-56  translate-y-14  md:translate-x-64 z-50 rounded-full ${
+              mobileNav
+                ? "transform hover:rotate-180 duration-500 delay-200 ease-in-out"
+                : null
             } h-11  p-1  w-11 lg:hidden cursor-pointer `}
             onClick={() => {
               setMobileNav(false);
@@ -46,6 +47,7 @@ function Nav() {
         <div className="flex py-2 ">
           <Image
             src={imageLogo}
+            alt="images"
             className="flex items-center justify-items-center"
           />
         </div>
@@ -94,16 +96,16 @@ function Nav() {
       <div
         className={`${mobileNav ? "fixed " : "hidden "}  lg:hidden  flex-col  
         text-whit top-0   justify- left-0 h-full z-40 w-full
-        grid grid-cols-2 md:grid-cols-3
+        grid grid-cols-2 sm:grid-cols-3
         
               `}
       >
-        <div className=" col-span-1  black overflow-y-scroll">
+        <div className=" col-span-1 w-full black overflow-y-scroll">
           {NavItems.map((item, i) => (
             <Link key={i} href={item.to} onClick={() => handleClick}>
               <a
                 className={`text-lg h-10 md:hover:shadow-md my-4   
-                md:hover:bg-white flex items-center  px-5
+                md:hover:bg-white 4 flex items-center  px-5
                                 ${
                                   router.pathname === item.to
                                     ? "text-red-500"
@@ -117,7 +119,7 @@ function Nav() {
           ))}
         </div>
         <div
-          className="transparent  col-span-1 md:col-span-2"
+          className="transparent  col-span-1 sm:col-span-2"
           onClick={() => setMobileNav(false)}
         ></div>
       </div>
