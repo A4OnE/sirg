@@ -28,21 +28,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageTemplate>
-        {show ? (
-          <video
-            ref={nextVideo}
-            autoPlay={show ? true : false}
-            onPause={() => setshow(false)}
-            loop
-            controls
-            style={{ height: "100%" }}
-          >
-            <source src={"aboutus.mp4"} type="video/mp4" />
-          </video>
-        ) : (
-          <HomePageWelcomeSection play={(e) => play(e)} />
-        )}
-
+        <div>
+          {show ? (
+            <video
+              ref={nextVideo}
+              autoPlay={show ? true : false}
+              onPause={() => setshow(false)}
+              loop
+              controls
+              style={{
+                zIndex: -1,
+                height: "100%",
+              }}
+            >
+              <source src={"aboutus.mp4"} type="video/mp4" />
+            </video>
+          ) : (
+            <HomePageWelcomeSection play={(e) => play(e)} />
+          )}
+        </div>
         <div className="container mx-auto px-4 lg:px-8">
           {/* <HomeSlider /> */}
 

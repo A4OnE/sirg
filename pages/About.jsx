@@ -32,18 +32,29 @@ function About({ data }) {
       <PageTemplate>
         <div className="container mx-auto px-4 lg:px-8">
           {/* About us introduction */}
-          <div className=" flex flex-col -z-30 lg:flex-row w-full mt-16 ">
+          <div className=" flex flex-col lg:flex-row w-full mt-16 ">
             <div className="lg:flex-1 ">
-              <div className=" h-96 w-11/12 mx-auto   lg:h-full lg:m-10 flex justify-center items-center">
+              <div
+                className=" h-96 w-11/12 mx-auto  
+                lg:h-full lg:m-10 flex justify-center items-center"
+              >
                 {/* <p className="text-white ">Video modal</p> */}
-                <video autoPlay={true} loop controls style={{ height: "100%" }}>
+                <video
+                  autoPlay={true}
+                  loop
+                  controls
+                  style={{
+                    zIndex: "-1",
+                    height: "100%",
+                  }}
+                >
                   <source src={"aboutus.mp4"} type="video/mp4" />
                 </video>
                 {/* <ReactPlayer  url={require('../images/aboutus.mp4')} /> */}
               </div>
             </div>
             {/* right section  */}
-            <div className="flex-1 mt-10 mx-5   px-2 ">
+            <div className="flex-1 mt-8 mx-5   px-2 ">
               {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
               <div className="flex flex-col mx-auto  lg:mx-0 text-center  w-fi items-start  ">
                 <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
