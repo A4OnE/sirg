@@ -6,8 +6,28 @@ import Image from "next/image";
 import imageLogo from "../../images/Asset 1.png";
 import { GrFormClose } from "react-icons/gr";
 import { useRouter } from "next/router";
+import { fadeInLeft, fadeInRight } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 
 function Nav() {
+  const fadeLeft = {
+    fadeInLeft: {
+      animation: "x 1.6s ",
+      animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
+    },
+  };
+  const fadeLeftt = {
+    fadeInLeft: {
+      animation: "x 1.5s",
+      animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
+    },
+  };
+  const fadeRight = {
+    fadeInRight: {
+      animation: "x 1.6s",
+      animationName: Radium.keyframes(fadeInRight, "animate__fadeInRight"),
+    },
+  };
   const router = useRouter();
   // const [active, setActive] = useState("ALL");
 
@@ -41,8 +61,10 @@ function Nav() {
             onClick={() => {
               setMobileNav(true);
             }}
+            style={fadeLeft.fadeInLeft}
           />
         )}
+
         {/* <h2 className="font-bold">VIP GROUP</h2> */}
         <div className="flex py-2 ">
           <Image
@@ -92,7 +114,6 @@ function Nav() {
         </div>
       </div>
       {/* mobile nav section */}
-
       <div
         className={`${mobileNav ? "fixed " : "hidden "}  lg:hidden  flex-col  
         text-whit top-0   justify- left-0 h-full z-40 w-full
@@ -100,11 +121,15 @@ function Nav() {
         
               `}
       >
-        <div className=" col-span-1 w-full black overflow-y-scroll">
-          {NavItems.map((item, i) => (
-            <Link key={i} href={item.to} onClick={() => handleClick}>
-              <a
-                className={`text-lg h-10 md:hover:shadow-md my-4   
+        <StyleRoot>
+          <div
+            className=" col-span-1 z-50 h-full w-full black overflow-y-scroll"
+            style={fadeLeft.fadeInLeft}
+          >
+            {NavItems.map((item, i) => (
+              <Link key={i} href={item.to} onClick={() => handleClick}>
+                <a
+                  className={`text-lg h-10 md:hover:shadow-md my-4   
                 md:hover:bg-white 4 flex items-center  px-5
                                 ${
                                   router.pathname === item.to
@@ -112,16 +137,21 @@ function Nav() {
                                     : null
                                 }
                                 `}
-              >
-                {item.title}
-              </a>
-            </Link>
-          ))}
-        </div>
-        <div
-          className="transparent  col-span-1 sm:col-span-2"
-          onClick={() => setMobileNav(false)}
-        ></div>
+                >
+                  {item.title}
+                </a>
+              </Link>
+            ))}
+          </div>
+        </StyleRoot>
+        <StyleRoot>
+          <div
+            className="transparent h-full w-screen col-span-1  sm:col-span-2"
+            onClick={() => setMobileNav(false)}
+            // style={fadeRight.fadeInRight}
+            style={fadeLeftt.fadeInLeft}
+          ></div>
+        </StyleRoot>
       </div>
     </div>
   );
