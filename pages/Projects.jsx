@@ -1,10 +1,13 @@
+
 import React, { useState } from "react";
+
 import PageTemplate from "../components/Templates/PageTemplate";
 import { BiCategory } from "react-icons/bi";
 import PageNavInfo from "../components/Page Info/PageNavInfo";
 import ProjectCard from "../components/Cards/ProjectCard";
 import Link from "next/link";
 import ProjectCategory from "../components/Cards/ProjectCategory";
+import Head from "next/head";
 
 export async function getServerSideProps() {
   const [categoryRes, projectRes] = await Promise.all([
@@ -33,7 +36,50 @@ function Projects({ category, project }) {
     setActive(newValue);
   }
   return (
-    <PageTemplate>
+    <div>
+      <Head>
+        <title>Projects</title>
+        {/* primary meta tags  */}
+        <meta name="title" content="Projects of VIP GROUP PVT.LTD." />
+        <meta
+          name="description"
+          content="VIP Group has worked in different projects on diffrent fields. We've categorized our projects based on time i.e. Finished Projects, Running Projects and Upcoming Projects"
+        />
+        <link rel="icon" href="/logo.png" />
+
+        {/* facebook  */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vipgroupnepal.com/Projects" />
+        <meta property="og:title" content="Projects of VIP Group Pvt. Ltd " />
+        <meta
+          property="og:description"
+          content="VIP Group has worked in different projects on diffrent fields. We've categorized our projects based on time i.e. Finished Projects, Running Projects and Upcoming Projects"
+        />
+        <meta
+          property="og:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
+        {/* twitter  */}
+        <meta property="twitter:type" content="website" />
+        <meta
+          property="twitter:url"
+          content="https://vipgroupnepal.com/Projects"
+        />
+        <meta
+          property="twitter:title"
+          content="Projects of VIP Group Pvt. Ltd"
+        />
+        <meta
+          property="twitter:description"
+          content="VIP Group has worked in different projects on diffrent fields. We've categorized our projects based on time i.e. Finished Projects, Running Projects and Upcoming Projects"
+        />
+        <meta
+          property="twitter:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
+      </Head>
+                
+                    <PageTemplate>
       <div className="">
         {/* top section  */}
         <PageNavInfo page={"Projects"} page_nav="Home / Projects" />
@@ -60,31 +106,33 @@ function Projects({ category, project }) {
                     link={`Project/${item.id}`}
                   />
                 ))}
-              </div>
-              {/* category section ends  */}
+        </div>
+                {/* category section ends  */}
 
-              {/* projects section starts  */}
-              <div className="col-span-6 my-10">
-                <div className="grid grid-cols-2 gap-4 lg:gap-8">
-                  {project.map((item) => (
-                    <ProjectCard
-                      key={item.id}
-                      id={item.id}
-                      title={item.project_title}
-                      desc={item.project_s_des}
-                      img={`${process.env.Url}/images/${item.img}`}
-                    />
-                  ))}
+                {/* projects section starts  */}
+                <div className="col-span-6 my-10">
+                  <div className="grid grid-cols-2 gap-4 lg:gap-8">
+                    {project.map((item) => (
+                      <ProjectCard
+                        key={item.id}
+                        id={item.id}
+                        title={item.project_title}
+                        desc={item.project_s_des}
+                        img={`${process.env.Url}/images/${item.img}`}
+                      />
+                    ))}
+                  </div>
                 </div>
+                {/* project section ends  */}
               </div>
-              {/* project section ends  */}
+              {/* grid ends  */}
             </div>
-            {/* grid ends  */}
           </div>
         </div>
-      </div>
-    </PageTemplate>
-  );
+
+      </PageTemplate>
+    </div>
+ );
 }
 
 export default Projects;

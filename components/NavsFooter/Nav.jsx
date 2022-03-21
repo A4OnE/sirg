@@ -18,6 +18,7 @@ function Nav() {
   const [mobileNav, setMobileNav] = useState(false);
   const [clicked, setClicked] = useState("");
   return (
+
     <div className=" h-full bg-white sticky top-0 left-0  shadow-md">
       <div
         className=" container mx-auto px-4 lg:px-8 
@@ -73,7 +74,11 @@ function Nav() {
                     <div className="flex flex-col divide-y-2 justify-center absolute  bg-primary shadow-md w-16 mx-auto border  gap-1 m-2 text-center active:bg-transparent">
                       {i == clicked && item.subNav
                         ? item.subNav.map((val, i) => {
-                            return <Link href={val.to}>{val.title}</Link>;
+                            return (
+                              <Link key={i} href={val.to}>
+                                {val.title}
+                              </Link>
+                            );
                           })
                         : null}
                     </div>

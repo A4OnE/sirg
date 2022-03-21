@@ -21,7 +21,7 @@ function GallerySlider({ data }) {
             <img
               src={`${process.env.Url}/images/${item.img}`}
               className="h-96 lg:h-128 w-full object-cover"
-              srcset=""
+              srcSet=""
             />
           </div>
         ))}

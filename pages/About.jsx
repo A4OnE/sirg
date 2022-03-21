@@ -16,22 +16,55 @@ export async function getServerSideProps() {
   return { props: { data } };
 }
 import BodCard from "../components/Cards/BodCard";
+import AboutVideoSection from "../components/Sections/AboutVideoSection";
 function About({ data }) {
   const [Data, setData] = useState([]);
 
   return (
     <div>
       <Head>
-        <title>About us</title>
+        <title>About Us</title>
+        {/* primary meta tags  */}
+        <meta name="title" content="About VIP GROUP PVT.LTD." />
         <meta
           name="description"
-          content="This is the official site of VIP GROUP PVT.LTd."
+          content="VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company of dedicated and energetic youth Entreprenuers. Since 2019, we have been working on several fields such asEvent Management, Event Orgainzers, Entrepreneurship Development, Business Development Orientation, Motivational Seminars,Skills based training, Vocational trainings, Personality Development trainings, Leadership trainings, Job placements, Website Development & so on."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
+
+        {/* facebook  */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vipgroupnepal.com/About" />
+        <meta property="og:title" content="About VIP Group Pvt. Ltd " />
+        <meta
+          property="og:description"
+          content="VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company of dedicated and energetic youth Entreprenuers. Since 2019, we have been working on several fields such asEvent Management, Event Orgainzers, Entrepreneurship Development, Business Development Orientation, Motivational Seminars,Skills based training, Vocational trainings, Personality Development trainings, Leadership trainings, Job placements, Website Development & so on."
+        />
+        <meta
+          property="og:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
+
+        {/* twitter  */}
+        <meta property="twitter:type" content="website" />
+        <meta
+          property="twitter:url"
+          content="https://vipgroupnepal.com/About"
+        />
+        <meta property="twitter:title" content="About VIP Group Pvt. Ltd" />
+        <meta
+          property="twitter:description"
+          content="VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company of dedicated and energetic youth Entreprenuers. Since 2019, we have been working on several fields such asEvent Management, Event Orgainzers, Entrepreneurship Development, Business Development Orientation, Motivational Seminars,Skills based training, Vocational trainings, Personality Development trainings, Leadership trainings, Job placements, Website Development & so on."
+        />
+        <meta
+          property="twitter:image"
+          content="https://api.vipgroupnepal.com/images/vip.jpg"
+        />
       </Head>
       <PageTemplate>
         <div className="container mx-auto px-4 lg:px-8">
           {/* About us introduction */}
+
           <div className=" flex flex-col lg:flex-row w-full mt-16 ">
             <div className="lg:flex-1 ">
               <div
@@ -58,11 +91,15 @@ function About({ data }) {
               {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
               <div className="flex flex-col mx-auto  lg:mx-0 text-center  w-fi items-start  ">
                 <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
+
                   who we are?{" "}
                 </p>
                 {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
               </div>
+
               <p className="w-full my-4  -tracking-tight leading-5 md:leading-7 text-xs md:text-lg">
+
+    
                 {/* {staticAbout.aboutUs} */}
                 VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
                 of dedicated and energetic youth Entreprenuers. Since 2019, we
@@ -79,9 +116,11 @@ function About({ data }) {
                 opportunities to Earn & also are providing different
                 opportunities for Ownership of Dream life.
               </p>
+
               {/* <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start"> */}
               {/* <Link href={"/Contact"}>
                   <div className="border-2 font-semibold hover:bg-blue-900 hover:text-white  border-blue-700 w-fit flex items-center  px-4 h-10 text-blue-700 rounded-full cursor-pointer">
+
                     Contact us
                   </div>
                 </Link> */}
@@ -131,6 +170,7 @@ function About({ data }) {
             <div className="grid lg:grid-cols-3 gap-8">
               {data.slice(0, 3)?.map((item) => (
                 <BodCard
+                  key={item.id}
                   img={`${process.env.Url}/images/${item.img}`}
                   name={item.name}
                   title={item.job_title}

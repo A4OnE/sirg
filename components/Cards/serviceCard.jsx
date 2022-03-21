@@ -1,6 +1,9 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
-function ServiceCard({ img, title, description }) {
+import { useState } from "react";
+import Link from "next/link";
+function ServiceCard({ id, img, title, description }) {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div className="card rounded-md">
       <div
@@ -32,22 +35,25 @@ function ServiceCard({ img, title, description }) {
       md:text-base
       lg:text-base
       text-justify
-      h-28
       line-clamp-4
       "
       >
         {description}
       </div>
-      <div
-        className="
-      btn-outline-gray flex flex-row justify-center  items-center      
-      "
-      >
-        Find out more{" "}
-        <span>
-          {" "}
-          <IoIosArrowForward className="ml-2" />
-        </span>
+      <div>
+        <Link href={`service/${id}`}>
+          <button
+            className="
+        btn-outline-gray text-black hover:translate-x-1  hover:text-blue-800 flex flex-row justify-center   rounded-md items-center      
+        "
+          >
+            Find out more{" "}
+            <span>
+              {" "}
+              <IoIosArrowForward className="ml-2" />
+            </span>
+          </button>
+        </Link>
       </div>
     </div>
   );

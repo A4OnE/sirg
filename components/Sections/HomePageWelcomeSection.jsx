@@ -1,7 +1,8 @@
 import React from "react";
 import { FaPlay } from "react-icons/fa";
+import Link from "next/link";
 
-function HomePageWelcomeSection(props) {
+function HomePageWelcomeSection() {
   return (
     <div>
       <div
@@ -25,9 +26,9 @@ function HomePageWelcomeSection(props) {
               onClick={props.play}
             >
               <FaPlay className="text-primary" />
+
             </div>
-            <p className="tracking-widest mt-2 font-thin">PLAY NOW</p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

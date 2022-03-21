@@ -144,7 +144,7 @@ function BookingEventModal({ id, close }) {
         <form
           onSubmit={handleSubmit(submit)}
           div
-          className=" grid grid-cols-2   gap-4  "
+          className=" grid grid-cols-1 lg:grid-cols-2   gap-4  "
         >
           {forms.map((val, i) => {
             let named = val.usename;
@@ -183,7 +183,7 @@ function BookingEventModal({ id, close }) {
               </div>
             );
           })}
-          <div className="row-start-5">
+          <div className="lg:row-start-5">
             <input
               type="submit"
               value="SUBMIT"
