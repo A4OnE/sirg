@@ -15,10 +15,14 @@ function Contact() {
       <PageTemplate>
         <div className="">
           {/* starting of top part of contact */}
-          <div className="bg-primary h-48 lg:h-64 md:h-60 w-full py-10">
-            <div className="text-center text-white">
+          <div className="bg-primary h-56 lg:h-64 md:h-60 w-full py-1">
+            <div className="text-center text-white ">
               <h1>CONTACT US</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit .</p>
+              <p className="text-xs md:text-base lg:text-lg">
+                "VIP GROUP NEPAL is the company for the people so we'd like to
+                hear from you. Write to us about your thoughts or any issues and
+                we will endeavor to reply to your message as soon as possible. "
+              </p>
             </div>
           </div>
           {/*ending of  top part of contact */}

@@ -36,9 +36,8 @@ function ContactForm() {
   };
   return (
     <div>
-      <h1 className="p-2">Drop us a line</h1>
+      <h1 className="px-4 py-2">We Want to Hear From You</h1>
       <hr />
-
 
       <form action="" className="p-4 lg:px-8" onSubmit={handleSubmit(onSubmit)}>
         <div className=" flex flex-col space-y-2 mt-4">
@@ -50,9 +49,7 @@ function ContactForm() {
             {...register("full_name", { required: true })}
           />
           {errors.full_name && (
-            <span className="text-red-600 animate-bounce">
-              Full name is required
-            </span>
+            <span className="text-red-600 ">Full name is required</span>
           )}
         </div>
         <div className=" flex flex-col space-y-2 mt-4">
@@ -64,9 +61,7 @@ function ContactForm() {
             {...register("phone", { required: true })}
           />
           {errors.phone && (
-            <span className="text-red-600 animate-bounce">
-              Phone is required
-            </span>
+            <span className="text-red-600 ">Phone is required</span>
           )}
         </div>
         <div className=" flex flex-col space-y-2 mt-4">
@@ -78,9 +73,7 @@ function ContactForm() {
             {...register("email", { required: true })}
           />
           {errors.email && (
-            <span className="text-red-600 animate-bounce">
-              Email is required
-            </span>
+            <span className="text-red-600 ">Email is required</span>
           )}
         </div>
         <div className=" flex flex-col space-y-2 mt-4">
@@ -92,9 +85,7 @@ function ContactForm() {
             {...register("message", { required: true })}
           />
           {errors.message && (
-            <span className="text-red-600 animate-bounce">
-              Message is required
-            </span>
+            <span className="text-red-600 ">Message is required</span>
           )}
         </div>
         {success.length > 0 ? (
@@ -109,7 +100,6 @@ function ContactForm() {
           type="submit"
           value={loading ? "LOADING..." : "SUBMIT"}
           className="btn-primary rounded-md my-8 cursor-pointer"
-
         />
       </form>
     </div>

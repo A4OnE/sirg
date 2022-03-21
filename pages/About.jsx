@@ -32,9 +32,9 @@ function About({ data }) {
       <PageTemplate>
         <div className="container mx-auto px-4 lg:px-8">
           {/* About us introduction */}
-          <div className=" flex flex-col lg:flex-row w-full mt-24 ">
+          <div className=" flex flex-col -z-30 lg:flex-row w-full mt-16 ">
             <div className="lg:flex-1 ">
-              <div className=" h-96 lg:h-full lg:m-10 flex justify-center items-center">
+              <div className=" h-96 w-11/12 mx-auto   lg:h-full lg:m-10 flex justify-center items-center">
                 {/* <p className="text-white ">Video modal</p> */}
                 <video autoPlay={true} loop controls style={{ height: "100%" }}>
                   <source src={"aboutus.mp4"} type="video/mp4" />
@@ -43,15 +43,15 @@ function About({ data }) {
               </div>
             </div>
             {/* right section  */}
-            <div className="flex-1 mt-10 mx-5   p-2">
+            <div className="flex-1 mt-10 mx-5   px-2 ">
               {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
-              <div className="flex flex-col mx-auto  lg:mx-0 text-center  w-fit items-start  ">
+              <div className="flex flex-col mx-auto  lg:mx-0 text-center  w-fi items-start  ">
                 <p className=" text-2xl md:text-4xl text-blue-700 capitalize font-bold ">
                   who we are?{" "}
                 </p>
                 {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
               </div>
-              <p className="w-full my-4  -tracking-tight leading-7 lg:leading-7 text-lg">
+              <p className="w-full my-4  -tracking-tight leading-5 md:leading-7 text-xs md:text-lg">
                 {/* {staticAbout.aboutUs} */}
                 VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
                 of dedicated and energetic youth Entreprenuers. Since 2019, we
@@ -68,41 +68,40 @@ function About({ data }) {
                 opportunities to Earn & also are providing different
                 opportunities for Ownership of Dream life.
               </p>
-              <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start">
-                <Link href={"/Contact"}>
-                  <div className="border-2 font-semibold border-blue-700 w-fit flex items-center  px-4 h-10 text-blue-700 rounded-full cursor-pointer">
+              {/* <div className="pt-10  h-fit flex justify-center md:justify-center sm:justify-center lg:justify-start"> */}
+              {/* <Link href={"/Contact"}>
+                  <div className="border-2 font-semibold hover:bg-blue-900 hover:text-white  border-blue-700 w-fit flex items-center  px-4 h-10 text-blue-700 rounded-full cursor-pointer">
                     Contact us
                   </div>
-                </Link>
-              </div>
+                </Link> */}
+              {/* </div> */}
             </div>
             {/* right section ends  */}
           </div>
 
           {/* our Vision  and our mission sections */}
 
-          <div className="bg-gray-50 p-4 lg:p-24 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 my-24">
+          <div className="bg-gray-50 p-4 lg:py-16 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 lg:my-24 my-14">
             <div className="">
               <h1 className="text-5xl lg:text-8xl text-primary">
-                Our <br /> Mission <br /> & Vision gv
+                Our <br /> Mission <br /> & Vision
               </h1>
             </div>
             <div className="mt-16">
               <p className="font-bold text-gray-700 text-2xl">Our Vision</p>
-              <p className="my-8 text-gray-800 text-justify">
+              <p className="my-5 md:my-8 text-gray-800 text-left">
                 To establish as a leading company of Nepal in our specific field
                 by connecting, inspiring youths and transforming them to live a
                 life of entrepreneurial on their own terms.
               </p>
 
               <p className="font-bold text-gray-700 text-2xl">Our Mission</p>
-              <p className="my-8 text-gray-800 text-justify">
+              <p className="my-5 md:my-8 text-gray-800 text-left">
                 To provide a platform for youths to learn desired skills, assist
                 them in putting those skills to work, and guide in taking
-                control of their dream lives.{" "}
+                control of their dream lives.
               </p>
             </div>
-
           </div>
 
           {/* BOD SECTION  */}

@@ -10,6 +10,7 @@ $Dark: #0c120c;
 .bg-primary {
   background-color: $primaryColor;
 }
+
 .bg-primary-yellow {
   background-color: $primaryYellow;
 }
@@ -109,6 +110,7 @@ ol {
     transition: all 0.2s;
   }
 }
+
 .btn-primary {
   @include btn($primaryColor, white);
 }

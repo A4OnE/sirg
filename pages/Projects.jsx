@@ -1,5 +1,4 @@
-
-import React from "react";
+import React, { useState } from "react";
 import PageTemplate from "../components/Templates/PageTemplate";
 import { BiCategory } from "react-icons/bi";
 import PageNavInfo from "../components/Page Info/PageNavInfo";
@@ -20,6 +19,19 @@ export async function getServerSideProps() {
 }
 
 function Projects({ category, project }) {
+  const [active, setActive] = useState("All");
+  // const handleClickk = () => {
+  //   // if(active){
+
+  //   // }
+  //   setActive(name);
+  //   alert("hh");
+  // };
+
+  function handleChange(newValue) {
+    alert(newValue);
+    setActive(newValue);
+  }
   return (
     <PageTemplate>
       <div className="">
@@ -40,6 +52,10 @@ function Projects({ category, project }) {
                 {category.map((item) => (
                   <ProjectCategory
                     key={item.id}
+                    ided={item.id}
+                    active={item.id}
+                    values={handleChange}
+                    handleClick={() => handleClickk()}
                     category={item.type}
                     link={`Project/${item.id}`}
                   />
@@ -66,7 +82,6 @@ function Projects({ category, project }) {
             {/* grid ends  */}
           </div>
         </div>
-
       </div>
     </PageTemplate>
   );

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ServiceCard from "../components/Cards/serviceCard";
 import PageTemplate from "../components/Templates/PageTemplate";
 import axios from "../AXIOS/Axios-create";
+import data from "../components/NavsFooter/fakedata.json";
 function Services() {
   const [Data, setData] = useState([]);
   const getProjects = () => {
@@ -56,7 +57,7 @@ function Services() {
                  mb-16 
               "
             >
-              {Data.map((val, i) => {
+              {data.map((val, i) => {
                 let image = `${process.env.Url}/images/${val.img}`;
                 return (
                   <ServiceCard
@@ -66,6 +67,7 @@ function Services() {
                   />
                 );
               })}
+
               {/* <ServiceCard />
               <ServiceCard />
               <ServiceCard /> */}

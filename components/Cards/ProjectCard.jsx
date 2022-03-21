@@ -11,7 +11,7 @@ function ProjectCard({ id, title, desc, img }) {
           className="h-72 w-full object-cover cursor-pointer"
         />
       </Link>
-      <div className="p-4">
+      <div className="p-4 ">
         <Link href={`/Project/details/${id}`}>
           <h2 className="text-gray-800 cursor-pointer">{title}</h2>
         </Link>

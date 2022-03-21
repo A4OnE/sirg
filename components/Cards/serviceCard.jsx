@@ -1,6 +1,6 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
-function ServiceCard({img,title,description}) {
+function ServiceCard({ img, title, description }) {
   return (
     <div className="card rounded-md">
       <div
@@ -9,13 +9,12 @@ function ServiceCard({img,title,description}) {
       md:h-28 md:w-28 
       lg:h-32 lg:w-32
       "
-      style={{
-        background:`url(${img})`,
-        backgroundSize:'cover',
-        backgroundPosition:'center',
-        backgroundRepeat:'no-repeat'
-      }}
-        
+        style={{
+          background: `url(${img})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       ></div>
       <p
         className="my-5 text-lg font-medium
@@ -24,10 +23,11 @@ function ServiceCard({img,title,description}) {
       
       "
       >
-       {title}
+        {title}
       </p>
       <div
         className="
+        
       mb-6 text-sm 
       md:text-base
       lg:text-base
