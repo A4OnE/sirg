@@ -30,7 +30,7 @@ function ProjectsHomeCard() {
   ];
   return (
     <div>
-      <div className={`grid md:grid-cols-3  gap-10   lg:gap-8 my-48`}>
+      <div className={`grid md:grid-cols-3  gap-10   lg:gap-8 my-28`}>
         {/* left section of projects card  */}
         {Data.slice(0, 2).map((item, i) => {
           let image = `${process.env.Url}/images/${item.img}`;
@@ -87,7 +87,7 @@ function ProjectsHomeCard() {
 
           <div className="my-4 flex justify-center lg:justify-start  mt-10">
             <Link href={"/Projects"}>
-              <button className="btn-outline-primary rounded-full ">
+              <button className="btn-outline-primary hover:bg-blue-900 hover:text-white  rounded-full ">
                 View Projects
               </button>
             </Link>

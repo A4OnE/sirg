@@ -10,6 +10,7 @@ $Dark: #0c120c;
 .bg-primary {
   background-color: $primaryColor;
 }
+
 .bg-primary-yellow {
   background-color: $primaryYellow;
 }
@@ -109,9 +110,11 @@ ol {
     transition: all 0.2s;
   }
 }
+
 .btn-primary {
   @include btn($primaryColor, white);
 }
+
 .btn-secondary {
   @include btn($GrayD, black);
 }
@@ -164,4 +167,10 @@ body::-webkit-scrollbar-thumb {
   -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+.black {
+  background-color: rgb(208, 216, 218);
+}
+.transparent {
+  background-color: rgba(75, 74, 74, 0.3);
 }

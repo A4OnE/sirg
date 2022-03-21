@@ -30,6 +30,7 @@ function ServiceCard({ id, img, title, description }) {
       </p>
       <div
         className="
+        
       mb-6 text-sm 
       md:text-base
       lg:text-base

@@ -1,39 +1,38 @@
-
 [
-    {
-        "to": "/",
-        "id":"1",
-        "title": "Home"
-    },
-    {
-        "to": "/About",
-        "id":"2",
-        "title": "About"
-    },
-    {
-        "to": "/Projects",
-        "id":"3",
-        "title": "Projects"
-    },
-    {
-        "to": "/Events",
-        "id":"4",
-        "title": "Events"
-    },
-   
-    {
-        "to": "/Services",
-        "id":"6",
-        "title": "Services"
-    },
-    {
-        "to": "/Eventbooking",
-        "id":"7",
-        "title": "Event Booking"
-    },
-    {
-        "to": "/Contact",
-        "id":"8",
-        "title": "Contact"
-    }
+  {
+    "to": "/",
+    "id": "1",
+    "title": "Home"
+  },
+  {
+    "to": "/About",
+    "id": "2",
+    "title": "About Us"
+  },
+  {
+    "to": "/Projects",
+    "id": "3",
+    "title": "Projects"
+  },
+  {
+    "to": "/Events",
+    "id": "4",
+    "title": "Events"
+  },
+
+  {
+    "to": "/Services",
+    "id": "6",
+    "title": "Services"
+  },
+  {
+    "to": "/Eventbooking",
+    "id": "7",
+    "title": "Event Booking"
+  },
+  {
+    "to": "/Contact",
+    "id": "8",
+    "title": "Contact us"
+  }
 ]

@@ -17,7 +17,7 @@ export default function Home() {
     // nextVideo.play();
   };
   return (
-    <div>
+    <div className="">
       <Head>
         <title>Vip Group</title>
         {/* primary meta tags  */}
@@ -64,14 +64,33 @@ export default function Home() {
         />
       </Head>
       <PageTemplate>
-        <HomePageWelcomeSection />
+
+        <div>
+          {show ? (
+            <video
+              ref={nextVideo}
+              autoPlay={show ? true : false}
+              onPause={() => setshow(false)}
+              loop
+              controls
+              style={{
+                zIndex: -1,
+                height: "100%",
+              }}
+            >
+              <source src={"aboutus.mp4"} type="video/mp4" />
+            </video>
+          ) : (
+            <HomePageWelcomeSection play={(e) => play(e)} />
+          )}
+        </div>
 
         <div className="container mx-auto px-4 lg:px-8">
           {/* <HomeSlider /> */}
 
           {/* about us section starts  */}
           <div
-            className="text-center  my-48  py-8 md:py-10 "
+            className="text-center  my-24  py-8 md:py-10 "
             style={{ backgroundImage: `url(${background})` }}
           >
             <div className=" text-left ">
@@ -79,7 +98,7 @@ export default function Home() {
                 <p className=" text-2xl md:text-4xl  capitalize font-bold ">
                   about us
                 </p>
-                <p className="lg:w-80 lg:my-3 md:w-56 w-36 h-1  my-1 md:my-2 border-2 bg-gray-300  " />
+                <p className="lg:w-80 lg:my-3 md:w-56 w-36 h-1  my-1 md:my-2 rounded-md bg-blue-600  " />
               </div>
               <p className="my-5 md:my-5  md:text-center  mx-auto w-9/12 leading-8 lg:p-5 line-clamp-6  md:line-clamp-4 lg:line-clamp-6">
                 {staticAbout.aboutUs}
@@ -87,7 +106,7 @@ export default function Home() {
             </div>
             <div className="pt-5 ">
               <Link href={"/About"}>
-                <button className="btn-outline-primary rounded-full">
+                <button className="btn-outline-primary hover:bg-blue-900 hover:text-white  rounded-full">
                   More About Us
                 </button>
               </Link>
@@ -98,7 +117,7 @@ export default function Home() {
 
           {/* about us section ends  */}
           {/* Service section starts here */}
-          <div className="text-center  my-48 ">
+          <div className="text-center  py-10 ">
             <div className="flex flex-col mx-auto text-center w-fit items-start ">
               <p className=" text-2xl md:text-3xl  capitalize font-semibold mb-3">
                 what do we do?{" "}
@@ -110,7 +129,7 @@ export default function Home() {
             </p>
             <div className="mt-8">
               <Link href={"/Services"}>
-                <button className="btn-outline-primary rounded-full  ">
+                <button className="btn-outline-primary hover:bg-blue-900 hover:text-white  rounded-full  ">
                   View All
                 </button>
               </Link>
