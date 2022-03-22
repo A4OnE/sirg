@@ -90,7 +90,7 @@ function About({ data }) {
             <div className="flex-1 mt-8 mx-5   px-2 ">
               {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
               <div className="flex flex-col mx-auto  lg:mx-0 text-center  w-fi items-start  ">
-                <p className=" text-2xl md:text-4xl font-openSansSeven  text-blue-700 capitalize font-bold ">
+                <p className=" text-2xl md:text-4xl font-openSansEight  text-primary capitalize font-bold ">
                   who we are?{" "}
                 </p>
                 {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
@@ -136,21 +136,20 @@ function About({ data }) {
             </div>
             <div className="mt-16 ">
               <p className="font-bold font-openSansSeven text-gray-700 text-2xl">
-                Our Vision
-              </p>
-              <p className="my-5 md:my-8 font-openSansFive text-gray-800 text-left">
-                To establish as a leading company of Nepal in our specific field
-                by connecting, inspiring youths and transforming them to live a
-                life of entrepreneurial on their own terms.
-              </p>
-
-              <p className="font-bold font-openSansSeven text-gray-700 text-2xl">
                 Our Mission
               </p>
               <p className="my-5 md:my-8 font-openSansFive text-gray-800 text-left">
                 To provide a platform for youths to learn desired skills, assist
                 them in putting those skills to work, and guide in taking
                 control of their dream lives.
+              </p>
+              <p className="font-bold font-openSansSeven text-gray-700 text-2xl">
+                Our Vision
+              </p>
+              <p className="my-5 md:my-8 font-openSansFive text-gray-800 text-left">
+                To establish as a leading company of Nepal in our specific field
+                by connecting, inspiring youths and transforming them to live a
+                life of entrepreneurial on their own terms.
               </p>
             </div>
           </div>

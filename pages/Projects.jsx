@@ -92,7 +92,7 @@ function Projects({ category, project }) {
                     <BiCategory />{" "}
                     <p className="font-openSansEight">Categories</p>
                   </div>
-                  <Link href={`/Projects`}>
+                  <Link href={`/Projects`} passHref>
                     <p className="cursor-pointer font-openSansSeven text-xl">
                       All
                     </p>

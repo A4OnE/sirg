@@ -20,9 +20,9 @@ function ProjectCategory({
         `}
         // onClick={() => values(category)}
       >
-        <Link href={`${link}`}>
+        <Link href={`${link}`} passHref>
           <p className={`cursor-pointer font-openSansFive`}>{category}</p>
-        </Link>{" "}
+        </Link>
       </div>
     </div>
   );

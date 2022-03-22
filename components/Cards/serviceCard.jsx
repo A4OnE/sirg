@@ -43,7 +43,7 @@ function ServiceCard({ id, img, title, description }) {
         {description}
       </div>
       <div>
-        <Link href={`service/${id}`}>
+        <Link href={`service/${id}`} passHref>
           <button
             className="
         btn-outline-gray text-black hover:translate-x-1 font-openSansSix hover:text-blue-800 flex flex-row justify-center   rounded-md items-center      

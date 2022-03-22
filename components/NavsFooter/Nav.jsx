@@ -3,7 +3,7 @@ import NavItems from "./Navigations.json";
 import { FaBars } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import imageLogo from "../../images/Asset 1.png";
+import imageLogo from "../../images/vipLogo.jpg";
 import { GrFormClose } from "react-icons/gr";
 import { useRouter } from "next/router";
 import { fadeInLeft, fadeInRight } from "react-animations";
@@ -39,15 +39,15 @@ function Nav() {
   const [clicked, setClicked] = useState("");
 
   return (
-    <div className=" h-full bg-white sticky top-0 left-0  shadow-md">
+    <div className=" h-full bg-white   text-primary z-10 sticky top-0 left-0  shadow-md">
       <div
         className=" container mx-auto px-4 lg:px-8 
         
-       text-whit flex items-center justify-between "
+       text-whit flex items-center  lg:justify-between "
       >
         {mobileNav ? (
           <GrFormClose
-            className={`text-xl block  shadow-md border bg-white  translate-x-52  translate-y-8  md:translate-x-64 z-50 rounded-full ${
+            className={`text-xl block  shadow-md border bg-white  translate-x-52  translate-y-  md:translate-x-64 z-50 rounded-full ${
               mobileNav
                 ? "transform hover:rotate-180 duration-500 delay-200 animate-ulse ease-in-out"
                 : null
@@ -66,12 +66,21 @@ function Nav() {
         )}
 
         {/* <h2 className="font-bold">VIP GROUP</h2> */}
-        <div className="flex py-2 ">
-          <Image
-            src={imageLogo}
-            alt="images"
-            className="flex items-center justify-items-center"
-          />
+        <div className="flex py-2   w-fit mx-auto lg:mx-0  items-center justify-center">
+          <div className="w-36 h-16 relative  ">
+            <Image
+              src={imageLogo}
+              width={800}
+              height={80}
+              layout="fill"
+              alt="images"
+              sizes="min-width(600px) 50vh"
+              quality={30}
+              objectFit="revert"
+              objectPosition={"bottom center"}
+              // className="flex items-center justify-items-center"
+            />
+          </div>
         </div>
 
         <div className="hidden  lg:flex flex-col lg:flex-row  items-center space-x-6">
@@ -80,8 +89,12 @@ function Nav() {
               return (
                 <Link key={i} href={item.to}>
                   <a
-                    className={`text-lg  
-                    ${item.to === router.route ? "text-red-500" : null}
+                    className={`text-lg  hover:scale-105   
+                    ${
+                      item.to === router.route
+                        ? "border-b-2 border-black"
+                        : null
+                    }
                     
                     `}
                   >
@@ -115,25 +128,25 @@ function Nav() {
       </div>
       {/* mobile nav section */}
       <div
-        className={`${mobileNav ? "fixed " : "hidden "}  lg:hidden  flex-col  
-        text-whit top-0   justify- left-0 h-full z-40 w-full
+        className={`${mobileNav ? "fixed  " : "hidden "}  lg:hidden  flex-col  
+        text-whit    justify- left-0 h-full z-40 w-full
         grid grid-cols-2 sm:grid-cols-3
         
               `}
       >
         <StyleRoot>
           <div
-            className=" col-span-1 z-50 h-full w-full black overflow-y-scroll"
+            className=" col-span-1 z-50  text-primary h-full w-full  py-5 bg-gray-50 shadow-xl "
             style={fadeLeft.fadeInLeft}
           >
             {NavItems.map((item, i) => (
               <Link key={i} href={item.to} onClick={() => handleClick}>
                 <a
-                  className={`text-lg h-10 md:hover:shadow-md my-4   
-                md:hover:bg-white 4 flex items-center  px-5
+                  className={`text-lg font-openSansSix h-10  
+                 flex items-center hover:scale-105    m-5
                                 ${
                                   router.pathname === item.to
-                                    ? "text-red-500"
+                                    ? " text-black font-openSansFour"
                                     : null
                                 }
                                 `}
@@ -146,7 +159,7 @@ function Nav() {
         </StyleRoot>
         <StyleRoot>
           <div
-            className="transparent h-full w-screen col-span-1  sm:col-span-2"
+            className="   h-full w-screen col-span-1  sm:col-span-2"
             onClick={() => setMobileNav(false)}
             // style={fadeRight.fadeInRight}
             style={fadeLeftt.fadeInLeft}
