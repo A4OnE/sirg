@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import axios from "../../AXIOS/Axios-create";
@@ -99,16 +100,16 @@ const HappyCustomer = () => {
 
         "
               >
-                <img
+                <Image
                   src={image}
-                  alt=""
-                  className="
-            h-48 w-48
-          md:w-80 md:h-80
-          lg:h-92 lg:w-92
-          rounded-full
-
-          "
+                  alt="image"
+                  srcSet=""
+                  height={400}
+                  width={400}
+                  layout="intrinsic"
+                  objectPosition="center"
+                  quality={30}
+                  className="rounded-full"
                 />
                 <div className="flex mt-4">
                   <FaLongArrowAltLeft

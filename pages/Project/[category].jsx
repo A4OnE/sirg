@@ -34,7 +34,7 @@ function Projectscategory({ categories, project }) {
                 <div className="flex items-center space-x-4 font-bold text-xl mb-8">
                   <BiCategory /> <p>Categories</p>
                 </div>
-                <Link href={`/Projects`}>
+                <Link href={`/Projects`} passHref>
                   <p className="cursor-pointer font-medium text-xl">All</p>
                 </Link>
                 {categories.map((item) => (

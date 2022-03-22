@@ -12,13 +12,13 @@ import Radium, { StyleRoot } from "radium";
 function Nav() {
   const fadeLeft = {
     fadeInLeft: {
-      animation: "x 0.6s ",
+      animation: "x 1s ",
       animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
     },
   };
   const fadeLeftt = {
     fadeInLeft: {
-      animation: "x 0.6s",
+      animation: "x 1s",
       animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
     },
   };
@@ -39,7 +39,7 @@ function Nav() {
   const [clicked, setClicked] = useState("");
 
   return (
-    <div className=" h-full bg-white   text-primary z-10 sticky top-0 left-0  shadow-md">
+    <div className=" h-full bg-white   text-primary z-10 sticky top-0  left-0  shadow-md">
       <div
         className=" container mx-auto px-4 lg:px-8 
         
@@ -128,8 +128,8 @@ function Nav() {
       </div>
       {/* mobile nav section */}
       <div
-        className={`${mobileNav ? "fixed  " : "hidden "}  lg:hidden  flex-col  
-        text-whit    justify- left-0 h-full z-40 w-full
+        className={`${mobileNav ? "fixed  " : "  hidden"}  lg:hidden  flex-col  
+        text-whit  top-0  transparent left-0 h-screen z-40 w-full
         grid grid-cols-2 sm:grid-cols-3
         
               `}
@@ -140,7 +140,7 @@ function Nav() {
             style={fadeLeft.fadeInLeft}
           >
             {NavItems.map((item, i) => (
-              <Link key={i} href={item.to} onClick={() => handleClick}>
+              <Link key={i} href={item.to}>
                 <a
                   className={`text-lg font-openSansSix h-10  
                  flex items-center hover:scale-105    m-5
@@ -159,10 +159,10 @@ function Nav() {
         </StyleRoot>
         <StyleRoot>
           <div
-            className="   h-full w-screen col-span-1  sm:col-span-2"
+            className="    h-full w-screen col-span-1  sm:col-span-2"
             onClick={() => setMobileNav(false)}
             // style={fadeRight.fadeInRight}
-            style={fadeLeftt.fadeInLeft}
+            // style={fadeLeftt.fadeInLeft}
           ></div>
         </StyleRoot>
       </div>

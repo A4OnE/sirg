@@ -97,7 +97,7 @@ export default function Home() {
                 <p className=" text-2xl md:text-4xl  capitalize font-openSansSeven">
                   about us
                 </p>
-                <p className="lg:w-64 lg:my-3 md:w-56 w-36 h-1  my-1 md:my-2 rounded-md bg-blue-600  " />
+                <p className="lg:w-64 lg:my-3 md:w-56 w-36 h-1  my-1 md:my-2 rounded-md bg-primary  " />
               </div>
               <p className="my-5 md:my-3  lg:text-center  mx-auto md:w-11/12 lg:w-9/12 leading-8 lg:p-5 line-clamp-6 font-openSansFive  md:line-clamp-4 lg:line-clamp-6">
                 {staticAbout.aboutUs}

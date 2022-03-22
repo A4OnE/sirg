@@ -105,7 +105,7 @@ function ProjectsHomeCard({ id }) {
             <p className=" text-2xl md:text-3xl lg:text-4xl  capitalize font-openSansSeven ">
               our projects
             </p>
-            <p className="lg:w-64 lg:my-3 md:w-56 w-36 h-1  my-1 md:my-2 rounded-md bg-blue-600  " />
+            <p className="lg:w-64 lg:my-3 md:w-56 w-44 h-1  my-1 md:my-2 rounded-md bg-primary  " />
 
             {/* <p className="lg:w-56 md:w-32 w-20 h-1  my-3 lg:my-4 md:bg-blue-600  " /> */}
           </div>
