@@ -2,7 +2,7 @@ import React from "react";
 import { FaPlay } from "react-icons/fa";
 import Link from "next/link";
 
-function HomePageWelcomeSection() {
+function HomePageWelcomeSection(props) {
   return (
     <div>
       <div
@@ -12,11 +12,16 @@ function HomePageWelcomeSection() {
             "linear-gradient(0deg, rgba(2,0,36,0.8995973389355743) 20%, rgba(1,85,124,0.6979166666666667) 55%, rgba(0,179,221,0.3029586834733894) 80%, rgba(0,212,255,0) 100%), url(https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
         }}
       >
-        <div className="text-center">
-          <h1 className=" text-6xl md:text-8xl font-bold">VIP GROUP</h1>
-          <p className="text-xl font-semibold -mt-8">Slogon Goes Here !</p>
+        <div className="text-center flex flex-col justify-center items-center  h-full ">
+          <h1 className=" text-2xl md:text-5xl font-openSansEight">
+            {" "}
+            WELCOME TO VIP GROUP
+          </h1>
+          <p className="text-xl font-semibold -mt-2 md:-mt-8">
+            Slogon Goes Here !
+          </p>
           <div
-            className="flex flex-col items-center my-8 
+            className="flex flex-col items-center my-4 md:my-8 
           justify-center "
           >
             <div
@@ -26,9 +31,8 @@ function HomePageWelcomeSection() {
               onClick={props.play}
             >
               <FaPlay className="text-primary" />
-
             </div>
-          </Link>
+          </div>
         </div>
       </div>
     </div>

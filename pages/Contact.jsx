@@ -53,15 +53,15 @@ function Contact() {
         />
       </Head>
       <PageTemplate>
-        <div className="">
+        <div className="font-openSansFive ">
           {/* starting of top part of contact */}
-          <div className="bg-primary h-56 lg:h-64 md:h-60 w-full py-1">
+          <div className="bg-primary h-60 lg:h-64 w-full py-1">
             <div className="text-center text-white ">
               <h1>CONTACT US</h1>
-              <p className="text-xs md:text-base lg:text-lg">
-                "VIP GROUP NEPAL is the company for the people so we'd like to
+              <p className=" text-xs font-openSansFive md:text-sm w-11/12 md:w-10/12 lg:w-8/12 mx-auto lg:text-lg">
+                VIP GROUP NEPAL is the company for the people so wed like to
                 hear from you. Write to us about your thoughts or any issues and
-                we will endeavor to reply to your message as soon as possible. "
+                we will endeavor to reply to your message as soon as possible.
               </p>
             </div>
           </div>
@@ -74,18 +74,18 @@ function Contact() {
               {/* left sections starts here */}
               <div className="lg:border-r-2">
                 <div className="p-4 lg:px-12">
-                  <h1>Contact Information</h1>
+                  <h1 className="font-openSansSeven">Contact Information</h1>
                   <hr />
-                  <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
+                  <div className="flex space-x-4 my-8 font-openSansSix lg:my-12 text-xl lg:text-2xl items-center">
                     <IoCall />
                     <p>+977-9857074929</p>
                     <p></p>
                   </div>
-                  <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
+                  <div className="flex space-x-4 my-8 font-openSansSix  lg:my-12 text-xl lg:text-2xl font-items-center">
                     <AiOutlineMail />
-                    <p>Cvipgroup@gmail.com</p>
+                    <a href="">info@vipgroupnepal.com</a>
                   </div>
-                  <div className="flex space-x-4 my-8 lg:my-12 text-xl lg:text-2xl items-center">
+                  <div className="flex space-x-4 my-8 lg:my-12 font-openSansSix  text-xl lg:text-2xl items-center">
                     <BiCurrentLocation />
                     <p>Butwal Rupandehi</p>
                   </div>

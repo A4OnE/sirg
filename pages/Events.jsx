@@ -66,10 +66,10 @@ function Events(props) {
       </Head>
       <PageTemplate>
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-primary text-center text-6xl font-bold mt-4 md:mt-7 lg:mt-12 py-7">
+          <div className="text-primary text-center text-6xl font-openSansSeven mt-4 md:mt-7 lg:mt-12 mb-3">
             Events
           </div>
-          <p className="text-gray-800 font-medium text-center">
+          <p className="text-gray-800 font-openSansSeven lg:text-lg text-center">
             All the events done by VIP Group
           </p>
 

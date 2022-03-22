@@ -1,4 +1,5 @@
 import axios from "axios";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 function OurClients() {
@@ -18,9 +19,13 @@ function OurClients() {
   return (
     <div>
       {/* head section  */}
-      <div className="text-center">
-        <h1 className="text-primary">We Have Worked With...</h1>
-        <p className="font-medium text-lg text-gray-800">Our Clients</p>
+      <div className="text-center ">
+        <h1 className="text-primary font-openSansSeven">
+          We Have Worked With...
+        </h1>
+        <p className="font-medium text-lg font-openSansFive  text-gray-800">
+          Our Clients
+        </p>
       </div>
 
       <div className="flex justify-center my-24">
@@ -29,9 +34,15 @@ function OurClients() {
           {data.map((item) => (
             <div className="mx-auto" key={item.id}>
               <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <img
+                <Image
                   src={`${process.env.Url}/images/${item.img}`}
                   alt={item.id}
+                  srcSet=""
+                  height={300}
+                  width={300}
+                  layout="intrinsic"
+                  objectPosition="center"
+                  quality={30}
                 />
               </a>
             </div>

@@ -15,14 +15,14 @@ function ProjectCategory({
     <div>
       {/* router.query.category */}
       <div
-        className={`flex flex-col space-y-4 hover:scale-105 transition delay-600 ease-in-out font-medium my-4 text-lg
+        className={`flex flex-col space-y-4 lg:hover:scale-105 transition delay-300 duration-200 ease-in-out font-medium my-4 text-lg
   ${link === router.asPath ? "text-red-500 " : null}
         `}
         // onClick={() => values(category)}
       >
-        <Link href={`${link}`}>
-          <p className={`cursor-pointer`}>{category}</p>
-        </Link>{" "}
+        <Link href={`${link}`} passHref>
+          <p className={`cursor-pointer font-openSansFive`}>{category}</p>
+        </Link>
       </div>
     </div>
   );

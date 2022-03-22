@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 import PageTemplate from "../components/Templates/PageTemplate";
@@ -78,40 +77,44 @@ function Projects({ category, project }) {
           content="https://api.vipgroupnepal.com/images/vip.jpg"
         />
       </Head>
-                
-                    <PageTemplate>
-      <div className="">
-        {/* top section  */}
-        <PageNavInfo page={"Projects"} page_nav="Home / Projects" />
-        <div>
-          <div className="container mx-auto my-6 px-4 lg:px-8">
-            {/* top grid for category and project starts  */}
-            <div className="lg:grid lg:grid-cols-8 lg:gap-8">
-              {/* category section  */}
-              <div className="col-span-2 my-8 p-4 lg:p-6 bg-gray-100">
-                <div className="flex items-center space-x-4 font-bold text-xl mb-8">
-                  <BiCategory /> <p>Categories</p>
+
+      <PageTemplate>
+        <div className="">
+          {/* top section  */}
+          <PageNavInfo page={"Projects"} page_nav="Home / Projects" />
+          <div>
+            <div className="container mx-auto my-6 px-4 lg:px-8">
+              {/* top grid for category and project starts  */}
+              <div className="lg:grid lg:grid-cols-8 lg:gap-8">
+                {/* category section  */}
+                <div className="col-span-2 my-8 p-4 lg:p-6 bg-gray-100">
+                  <div className="flex items-center space-x-4  text-xl mb-8">
+                    <BiCategory />{" "}
+                    <p className="font-openSansEight">Categories</p>
+                  </div>
+                  <Link href={`/Projects`} passHref>
+                    <p className="cursor-pointer font-openSansSeven text-xl">
+                      All
+                    </p>
+                  </Link>
+
+                  {category.map((item) => (
+                    <ProjectCategory
+                      key={item.id}
+                      ided={item.id}
+                      active={item.id}
+                      values={handleChange}
+                      handleClick={() => handleClickk()}
+                      category={item.type}
+                      link={`Project/${item.id}`}
+                    />
+                  ))}
                 </div>
-                <Link href={`/Projects`}>
-                  <p className="cursor-pointer font-bold text-xl">All</p>
-                </Link>
-                {category.map((item) => (
-                  <ProjectCategory
-                    key={item.id}
-                    ided={item.id}
-                    active={item.id}
-                    values={handleChange}
-                    handleClick={() => handleClickk()}
-                    category={item.type}
-                    link={`Project/${item.id}`}
-                  />
-                ))}
-        </div>
                 {/* category section ends  */}
 
                 {/* projects section starts  */}
                 <div className="col-span-6 my-10">
-                  <div className="grid grid-cols-2 gap-4 lg:gap-8">
+                  <div className="grid grid-cols-2 gap-4  lg:gap-8 ">
                     {project.map((item) => (
                       <ProjectCard
                         key={item.id}
@@ -129,10 +132,9 @@ function Projects({ category, project }) {
             </div>
           </div>
         </div>
-
       </PageTemplate>
     </div>
- );
+  );
 }
 
 export default Projects;

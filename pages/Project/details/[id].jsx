@@ -1,6 +1,7 @@
 import React from "react";
 import PageTemplate from "../../../components/Templates/PageTemplate";
 import Head from "next/head";
+import Image from "next/image";
 
 export async function getServerSideProps(context) {
   // Fetch data from external API
@@ -59,18 +60,30 @@ function projectdetails({ data }) {
         />
       </Head>
       <PageTemplate>
-        <div className="bg-gray-50">
+        <div className="bg-gray-50 ">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="lg:w-2/3 mx-auto bg-gray-50 lg:p-4">
+            <div className="lg:w-2/3  mx-auto bg-gray-50 lg:p-4">
               {data.project?.map((item) => (
-                <div key={item.id}>
-                  <h1 className="my-8">{item.project_title}</h1>
-                  <img
-                    src={`${process.env.Url}/images/${item.img}`}
-                    alt={item.project_title}
-                    className="my-8 w-full"
-                  />
-                  <p className="my-8 text-xl">{item.project_details}</p>
+                <div key={item.id} className="w-10/12 mx-auto">
+                  <h1 className="my-6 font-openSansSeven">
+                    {item.project_title}
+                  </h1>
+                  <div className="">
+                    <Image
+                      src={`${process.env.Url}/images/${item.img}`}
+                      height={400}
+                      width={800}
+                      layout="intrinsic"
+                      // objectFit="cover"
+                      objectPosition="center"
+                      quality={30}
+                      alt={item.project_title}
+                    />
+                  </div>
+
+                  <p className="my-6  text-xl font-openSansFive">
+                    {item.project_details}
+                  </p>
                 </div>
               ))}
             </div>

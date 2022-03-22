@@ -4,7 +4,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import PageTemplate from "../../components/Templates/PageTemplate";
 import Head from "next/head";
-
+import Image from "next/image";
+// import Image from "next/image";
 export async function getServerSideProps(context) {
   // Fetch data from external API
   const { id } = context.query;
@@ -70,20 +71,27 @@ function ServiceDetails(props) {
       </Head>
       <PageTemplate>
         <div className="bg-gray-100">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center py-8">
+          <div className="container  px-4 lg:px-8">
+            <div className="text-center lg:w-2/3 mx-auto py-8">
               {data.map((item) => (
-                <div className="text-center" key={item.id}>
-                  <h1 className="py-4">{item.service_title}</h1>
+                <div className="text-center w-10/12 mx-auto" key={item.id}>
+                  <h1 className="py-4 font-openSansSeven">
+                    {item.service_title}
+                  </h1>
                   <div className="">
-                    <img
+                    <Image
                       src={`${process.env.Url}/images/${item.img}`}
-                      alt=""
+                      alt="image"
                       srcSet=""
-                      className="mx-auto border-2 border-black p-2 bg-white"
+                      height={400}
+                      width={800}
+                      layout="intrinsic"
+                      // objectFit="center"
+                      objectPosition="center"
+                      quality={30}
                     />
                   </div>
-                  <div className="my-4 lg:w-1/2 card bg-white mx-auto p-4 text-justify">
+                  <div className="   font-openSansFive  mx-auto py-6 text-justify">
                     {item.service_details}
                   </div>
                 </div>
