@@ -2,42 +2,38 @@ import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 function ServiceCard({ id, img, title, description }) {
   const [openModal, setOpenModal] = useState(false);
   return (
-    <div className="card rounded-md">
+    <div className="card rounded-md space-y-2 sm:space-y-3 lg:space-y-4">
       <div
-        className="
-      h-24 w-24 box-content rounded-full 
-      md:h-28 md:w-28 
-      lg:h-32 lg:w-32
-      "
-        style={{
-          background: `url(${img})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      ></div>
-      <p
-        className="my-5 text-lg font-medium
-      md:font-semibold md:my-4
-      lg:text-xl lg:font-bold
-      font-openSansFive
-      
-      "
+        className=""
+        // style={{
+        //   background: `url(${img})`,
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   backgroundRepeat: "no-repeat",
+        // }}
       >
-        {title}
-      </p>
+        <Image
+          src={img}
+          alt="image"
+          srcSet=""
+          height={150}
+          width={150}
+          layout="intrinsic"
+          // objectFit="center"
+          objectPosition="center"
+          quality={30}
+          className="rounded-full"
+        />
+      </div>
+      <p className=" font-openSansSeven">{title}</p>
       <div
         className="
-        
-      mb-6 text-sm 
-      md:text-base
-      lg:text-base
-      text-justify
-      line-clamp-4
-      font-openSansSix capitalize
+      line-clamp-3
+       font-openSansFive
       "
       >
         {description}
@@ -46,7 +42,7 @@ function ServiceCard({ id, img, title, description }) {
         <Link href={`service/${id}`} passHref>
           <button
             className="
-        btn-outline-gray text-black hover:translate-x-1 font-openSansSix hover:text-blue-800 flex flex-row justify-center   rounded-md items-center      
+        btn-outline-gray text-black hover:translate-x-1 font-openSansSix hover:text-blue-900 flex flex-row justify-center   rounded-md items-center      
         "
           >
             Find out more

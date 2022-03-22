@@ -55,10 +55,10 @@ function Contact() {
       <PageTemplate>
         <div className="font-openSansFive ">
           {/* starting of top part of contact */}
-          <div className="bg-primary h-56 lg:h-64 md:h-60 w-full py-1">
+          <div className="bg-primary h-60 lg:h-64 w-full py-1">
             <div className="text-center text-white ">
               <h1>CONTACT US</h1>
-              <p className="text-xs md:text-base w-11/12 sm:w-9/12 lg:w-10/12 mx-auto lg:text-lg">
+              <p className=" text-xs font-openSansFive md:text-sm w-11/12 md:w-10/12 lg:w-8/12 mx-auto lg:text-lg">
                 VIP GROUP NEPAL is the company for the people so wed like to
                 hear from you. Write to us about your thoughts or any issues and
                 we will endeavor to reply to your message as soon as possible.
