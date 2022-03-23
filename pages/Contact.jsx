@@ -59,7 +59,7 @@ function Contact() {
             <div className="text-center text-white ">
               <h1>CONTACT US</h1>
               <p className=" text-xs font-openSansFive md:text-sm w-11/12 md:w-10/12 lg:w-8/12 mx-auto lg:text-lg">
-                VIP GROUP NEPAL is the company for the people so we'd like to
+                VIP GROUP NEPAL is the company for the people so we would like to
                 hear from you. Write to us about your thoughts or any issues and
                 we will endeavor to reply to your message as soon as possible.
               </p>
