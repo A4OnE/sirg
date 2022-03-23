@@ -1,19 +1,28 @@
 import React from "react";
-
+import Image from "next/image";
 function BodCard({ img, title, name }) {
   return (
-    <div>
-      <div className="shadow-md m-10">
-        <img
-          src={img}
-          className="  mx-auto h-96 mb-6 mt-6 object-cover rounded-md"
-          srcSet=""
-        />
-        <div className="py-6">
-          <p className="text-2xl fond-bold text-center tracking-wider gap-2">
+    <div className="py-10  ">
+      <div className="shadow-sm shadow-gray-500 rounded-lg hover:scale-105      py-8 md:w-8/12 cursor-pointer lg:w-11/12 mx-auto  h-full    ">
+        <div className="w-11/12 hover:bg-black rounded-md   hover:opacity-90   mx-auto ">
+          <Image
+            src={img}
+            alt="image"
+            srcSet=""
+            height={100}
+            width={80}
+            layout="responsive"
+            objectFit="cover"
+            objectPosition="center"
+            quality={30}
+            className="rounded-md hover:opacity-75 "
+          />
+        </div>
+        <div className="">
+          <p className="text-2xl font-openSansSix text-center py-2  gap-2">
             {name}
           </p>
-          <p className="text-xl font-thin text-center mt-2 tracking-wider gap-2">
+          <p className="text-lg font-openSansFive  text-center gap-2">
             {title}
           </p>
         </div>

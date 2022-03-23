@@ -7,6 +7,7 @@ import ProjectCard from "../components/Cards/ProjectCard";
 import Link from "next/link";
 import ProjectCategory from "../components/Cards/ProjectCategory";
 import Head from "next/head";
+import { RiArrowDownSFill } from "react-icons/ri";
 
 export async function getServerSideProps() {
   const [categoryRes, projectRes] = await Promise.all([
@@ -21,7 +22,7 @@ export async function getServerSideProps() {
 }
 
 function Projects({ category, project }) {
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState(false);
   // const handleClickk = () => {
   //   // if(active){
 
@@ -91,7 +92,11 @@ function Projects({ category, project }) {
                   <div className="flex items-center space-x-4  text-xl mb-8">
                     <BiCategory />{" "}
                     <p className="font-openSansEight">Categories</p>
+                    <div>
+                      <RiArrowDownSFill />
+                    </div>
                   </div>
+
                   <Link href={`/Projects`} passHref>
                     <p className="cursor-pointer font-openSansSeven text-xl">
                       All

@@ -8,8 +8,8 @@ function ProjectCard({ id, title, desc, img }) {
         <Image
           src={img}
           layout="responsive"
-          height={80}
-          width={100}
+          height={100}
+          width={200}
           quality={30}
           objectFit="cover"
           objectPosition="center"

@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 function ServiHomeCard({ id, img, title, description }) {
   return (
-    <div className="mt-1 md:text-center px-1 flex flex-col justify-around ">
-      <div className="h-56 ">
+    <div className=" md:text-center px-1 flex flex-col justify-around ">
+      <div className=" ">
         <Image
           src={img}
           alt="image"
           srcSet=""
-          height={400}
+          height={500}
           width={800}
           layout="intrinsic"
           objectFit="contain"
@@ -17,8 +17,8 @@ function ServiHomeCard({ id, img, title, description }) {
           quality={30}
         />
       </div>
-      <h1 className="text-lg lg:text-2xl font-openSansSix font-normal text-left h-16  flex justify-start items-center ">
-        {/* {title} */}
+      <h1 className="text-lg lg:text-2xl font-openSansSix font-normal text-left   flex justify-start items-center ">
+        {title}
       </h1>
       <p className=" line-clamp-5 text-left font-openSansFive text-gray-600">
         {description}

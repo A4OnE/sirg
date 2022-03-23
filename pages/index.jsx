@@ -116,7 +116,7 @@ export default function Home() {
 
           {/* about us section ends  */}
           {/* Service section starts here */}
-          <div className="text-center  py-10 ">
+          <div className="text-center  pt-14 pb-10 ">
             <div className="flex flex-col mx-auto text-center w-fit items-start ">
               <p className=" text-2xl md:text-3xl  capitalize font-openSansSeven mb-1">
                 what do we do?{" "}

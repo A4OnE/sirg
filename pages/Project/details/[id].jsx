@@ -61,19 +61,19 @@ function projectdetails({ data }) {
       </Head>
       <PageTemplate>
         <div className="bg-gray-50 ">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="lg:w-2/3  mx-auto bg-gray-50 lg:p-4">
+          <div className="container  px-4 lg:px-8">
+            <div className=" text-center bg-gray-50 lg:p-4">
               {data.project?.map((item) => (
-                <div key={item.id} className="w-10/12 mx-auto">
-                  <h1 className="my-6 font-openSansSeven">
+                <div key={item.id} className=" mx-auto">
+                  <h1 className="my-6 mx-auto font-openSansSeven">
                     {item.project_title}
                   </h1>
-                  <div className="">
+                  <div className="w-9/12 lg:w-6/12 mx-auto">
                     <Image
                       src={`${process.env.Url}/images/${item.img}`}
-                      height={400}
-                      width={800}
-                      layout="intrinsic"
+                      height={60}
+                      width={150}
+                      layout="responsive"
                       // objectFit="cover"
                       objectPosition="center"
                       quality={30}
@@ -81,7 +81,7 @@ function projectdetails({ data }) {
                     />
                   </div>
 
-                  <p className="my-6  text-xl font-openSansFive">
+                  <p className="my-6 w-10/12 lg:w-8/12 mx-auto text-lg font-openSansSix">
                     {item.project_details}
                   </p>
                 </div>

@@ -72,26 +72,24 @@ function ServiceDetails(props) {
       <PageTemplate>
         <div className="bg-gray-100">
           <div className="container  px-4 lg:px-8">
-            <div className="text-center lg:w-2/3 mx-auto py-8">
+            <div className="py-1">
               {data.map((item) => (
-                <div className="text-center w-10/12 mx-auto" key={item.id}>
-                  <h1 className="py-4 font-openSansSeven">
-                    {item.service_title}
-                  </h1>
+                <div className="text-center " key={item.id}>
+                  <h1 className=" font-openSansSeven">{item.service_title}</h1>
                   <div className="">
                     <Image
                       src={`${process.env.Url}/images/${item.img}`}
                       alt="image"
                       srcSet=""
                       height={400}
-                      width={800}
+                      width={600}
                       layout="intrinsic"
                       // objectFit="center"
                       objectPosition="center"
                       quality={30}
                     />
                   </div>
-                  <div className="   font-openSansFive  mx-auto py-6 text-justify">
+                  <div className="   font-openSansSix w-9/12 mx-auto py-6 text-base">
                     {item.service_details}
                   </div>
                 </div>

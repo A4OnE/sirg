@@ -36,7 +36,7 @@ function ContactForm() {
   };
   return (
     <div>
-      <h1 className="px-4  capitalize font-openSansSeven py-2">
+      <h1 className="px-4 text-lg  md:text-xl lg:text-2xl   capitalize font-openSansSeven py-2">
         we want to hear from you
       </h1>
       <hr />

@@ -111,16 +111,16 @@ function ProjectsHomeCard({ id }) {
           </div>
 
           <div className="  font-openSansFive leading-7 line-clamp-6">
-            <p className="  lg:text-center py-3 lg:py-0 mx-auto w-11/12 lg:w-9/12 leading-8 lg:p-5 line-clamp-6 font-openSansFive  md:line-clamp-4 lg:line-clamp-6">
-              We have been working on several fields such as Event Management,
-              Event Orgainzers, Entrepreneurship Development, Business
-              Development Orientation, Motivational Seminars,Skills based
-              training, Vocational trainings, Personality Development trainings,
-              Leadership trainings, Job placements & so on.
+            <p className="  lg:text-center py-3 lg:py-8 mx-auto w-11/12 lg:w-9/12 leading-8 line-clamp-6 font-openSansFive  md:line-clamp-4 lg:line-clamp-6">
+              We have been working on several fields such as event management,
+              event organizer, entrepreneurship development, business
+              development orientation, motivational seminar, skill based
+              training, vocational training, personality development training,
+              leadership training, job placement & so on.
             </p>
           </div>
 
-          <div className=" my-3 lg:my-4  py-2 lg:py-8  flex justify-center lg:justify-center  ">
+          <div className=" my-3 lg:my-4  py-2 lg:py-0  flex justify-center lg:justify-center  ">
             <Link href={`/Projects`} passHref>
               <button className="btn-primary font-openSansFive  hover:text-white  rounded-full ">
                 View Projects
