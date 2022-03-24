@@ -4,6 +4,7 @@ import Image from "next/image";
 function ProjectCard({ id, title, desc, img }) {
   return (
     <div className="bg-white shadow-lg transition transform hover:shadow-xl hover:scale-105">
+      {" "}
       <Link href={`/Project/details/${id}`} passHref>
         <Image
           src={img}

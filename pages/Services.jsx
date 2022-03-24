@@ -65,19 +65,10 @@ function Services() {
       </Head>
       <PageTemplate>
         <div className="bg-gray flex flex-col ">
-          <div
-            className="
-              flex flex-col justify-center items-center h-52 
-              lg:text-4xl text-primary  text-3xl font-openSansSeven
-              "
-          >
+          <div className="text-primary text-center text-2xl md:text-5xl font-openSansSeven mt-4 md:mt-7 lg:mt-12 mb-3">
             Our Services
             {/* <hr className=" border-4 border-black mx-auto w-20 rounded-full mt-2 mb-2" />{" "} */}
-            <p
-              className="
-                  text-base font-openSansSix pt-4 text-gray-500
-                  "
-            >
+            <p className=" text-xs sm:text-base font-openSansSix  pb-24 pt-2 lg:pt-4 text-gray-500 ">
               We provide best services in e-learning field.
             </p>
           </div>

@@ -29,7 +29,9 @@ function ServiceCard({ id, img, title, description }) {
           className="rounded-full"
         />
       </div>
-      <p className=" font-openSansSeven">{title}</p>
+      <Link href={`service/${id}`} passHref>
+        <p className=" font-openSansSeven cursor-pointer">{title}</p>
+      </Link>
       <div
         className="
       line-clamp-3

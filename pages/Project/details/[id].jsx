@@ -2,7 +2,8 @@ import React from "react";
 import PageTemplate from "../../../components/Templates/PageTemplate";
 import Head from "next/head";
 import Image from "next/image";
-
+import Link from "next/link";
+import { MdKeyboardBackspace } from "react-icons/md";
 export async function getServerSideProps(context) {
   // Fetch data from external API
   const { id } = context.query;
@@ -62,13 +63,18 @@ function projectdetails({ data }) {
       <PageTemplate>
         <div className="bg-gray-50 ">
           <div className="container  px-4 lg:px-8">
-            <div className=" text-center bg-gray-50 lg:p-4">
+            <Link href={`/Projects`} passHref>
+              <div className="p-4">
+                <MdKeyboardBackspace className="w-10 h-10 text-gray-700 " />
+              </div>
+            </Link>
+            <div className=" sm:text-center bg-gray-50">
               {data.project?.map((item) => (
                 <div key={item.id} className=" mx-auto">
-                  <h1 className="my-6 mx-auto font-openSansSeven">
+                  <h1 className="my-6 mx-auto w-10/12 font-openSansSeven">
                     {item.project_title}
                   </h1>
-                  <div className="w-9/12 lg:w-6/12 mx-auto">
+                  <div className="w-10/12 lg:w-6/12 mx-auto">
                     <Image
                       src={`${process.env.Url}/images/${item.img}`}
                       height={60}
@@ -81,7 +87,7 @@ function projectdetails({ data }) {
                     />
                   </div>
 
-                  <p className="my-6 w-10/12 lg:w-8/12 mx-auto text-lg font-openSansSix">
+                  <p className="my-6 w-10/12 lg:w-8/12 mx-auto text-lg  font-openSansFive sm:font-openSansSix">
                     {item.project_details}
                   </p>
                 </div>

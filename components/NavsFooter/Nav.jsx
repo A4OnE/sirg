@@ -10,25 +10,25 @@ import { fadeInLeft, fadeInRight } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 
 function Nav() {
+  const router = useRouter();
   const fadeLeft = {
     fadeInLeft: {
       animation: "x 1s ",
       animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
     },
   };
-  const fadeLeftt = {
-    fadeInLeft: {
-      animation: "x 1s",
-      animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
-    },
-  };
-  const fadeRight = {
-    fadeInRight: {
-      animation: "x 1.6s",
-      animationName: Radium.keyframes(fadeInRight, "animate__fadeInRight"),
-    },
-  };
-  const router = useRouter();
+  // const fadeLeftt = {
+  //   fadeInLeft: {
+  //     animation: "x 1s",
+  //     animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
+  //   },
+  // };
+  // const fadeRight = {
+  //   fadeInRight: {
+  //     animation: "x 1.6s",
+  //     animationName: Radium.keyframes(fadeInRight, "animate__fadeInRight"),
+  //   },
+  // };
   // const [active, setActive] = useState("ALL");
 
   // function handleClick(newValue) {
@@ -67,20 +67,22 @@ function Nav() {
 
         {/* <h2 className="font-bold">VIP GROUP</h2> */}
         <div className="flex py-2   w-fit mx-auto lg:mx-0  items-center justify-center">
-          <div className="w-36 h-16 relative  ">
-            <Image
-              src={imageLogo}
-              width={800}
-              height={80}
-              layout="fill"
-              alt="images"
-              sizes="min-width(600px) 50vh"
-              quality={30}
-              objectFit="revert"
-              objectPosition={"bottom center"}
-              // className="flex items-center justify-items-center"
-            />
-          </div>
+          <Link href={"/"} passHref>
+            <div className="w-36 h-16 relative  ">
+              <Image
+                src={imageLogo}
+                width={800}
+                height={80}
+                layout="fill"
+                alt="images"
+                sizes="min-width(600px) 50vh"
+                quality={30}
+                objectFit="revert"
+                objectPosition={"bottom center"}
+                // className="flex items-center justify-items-center"
+              />
+            </div>
+          </Link>
         </div>
 
         <div className="hidden  lg:flex flex-col lg:flex-row  items-center space-x-6">
@@ -129,7 +131,7 @@ function Nav() {
       {/* mobile nav section */}
       <div
         className={`${mobileNav ? "fixed  " : "  hidden"}  lg:hidden  flex-col  
-        text-whit  top-0  transparent left-0 h-screen z-40 w-full
+        text-whit  top-0  transparent left-0 h-screen z-40 w-96 sm:w-full
         grid grid-cols-2 sm:grid-cols-3
         
               `}

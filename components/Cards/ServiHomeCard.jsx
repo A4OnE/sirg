@@ -17,9 +17,11 @@ function ServiHomeCard({ id, img, title, description }) {
           quality={30}
         />
       </div>
-      <h1 className="text-lg lg:text-2xl font-openSansSix font-normal text-left   flex justify-start items-center ">
-        {title}
-      </h1>
+      <Link href={`service/${id}`} passHref>
+        <h1 className=" cursor-pointer text-lg lg:text-2xl font-openSansSix font-normal text-left   flex justify-start items-center ">
+          {title}
+        </h1>
+      </Link>
       <p className=" line-clamp-5 text-left font-openSansFive text-gray-600">
         {description}
       </p>

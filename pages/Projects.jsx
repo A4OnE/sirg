@@ -7,7 +7,7 @@ import ProjectCard from "../components/Cards/ProjectCard";
 import Link from "next/link";
 import ProjectCategory from "../components/Cards/ProjectCategory";
 import Head from "next/head";
-import { RiArrowDownSFill } from "react-icons/ri";
+import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
 
 export async function getServerSideProps() {
   const [categoryRes, projectRes] = await Promise.all([
@@ -22,7 +22,7 @@ export async function getServerSideProps() {
 }
 
 function Projects({ category, project }) {
-  const [active, setActive] = useState(false);
+  const [showCategories, setShowCategories] = useState(false);
   // const handleClickk = () => {
   //   // if(active){
 
@@ -89,11 +89,18 @@ function Projects({ category, project }) {
               <div className="lg:grid lg:grid-cols-8 lg:gap-8">
                 {/* category section  */}
                 <div className="col-span-2 my-8 p-4 lg:p-6 bg-gray-100">
-                  <div className="flex items-center space-x-4  text-xl mb-8">
-                    <BiCategory />{" "}
+                  <div
+                    className="flex items-center space-x-4  text-xl mb-8"
+                    onClick={() => setShowCategories(!showCategories)}
+                  >
+                    <BiCategory />
                     <p className="font-openSansEight">Categories</p>
                     <div>
-                      <RiArrowDownSFill />
+                      {showCategories ? (
+                        <RiArrowUpSFill className="text-red-600 h-7 w-7" />
+                      ) : (
+                        <RiArrowDownSFill className="h-7 w-7" />
+                      )}
                     </div>
                   </div>
 
@@ -103,17 +110,18 @@ function Projects({ category, project }) {
                     </p>
                   </Link>
 
-                  {category.map((item) => (
-                    <ProjectCategory
-                      key={item.id}
-                      ided={item.id}
-                      active={item.id}
-                      values={handleChange}
-                      handleClick={() => handleClickk()}
-                      category={item.type}
-                      link={`Project/${item.id}`}
-                    />
-                  ))}
+                  {showCategories
+                    ? category.map((item) => (
+                        <ProjectCategory
+                          key={item.id}
+                          // ided={item.id}
+                          // values={handleChange}
+                          handleClick={() => handleClickk()}
+                          category={item.type}
+                          link={`Project/${item.id}`}
+                        />
+                      ))
+                    : null}
                 </div>
                 {/* category section ends  */}
 

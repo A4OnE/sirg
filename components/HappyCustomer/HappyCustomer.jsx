@@ -97,18 +97,20 @@ const HappyCustomer = () => {
 
         "
               >
-                <Image
-                  src={image}
-                  alt="image"
-                  srcSet=""
-                  height={500}
-                  width={500}
-                  // layout="responsive"
-                  objectFit="cover"
-                  objectPosition="center"
-                  quality={30}
-                  className="rounded-full"
-                />
+                <div className="w-56 md:px-2 sm:w-64 md:w-96 h-fit">
+                  <Image
+                    src={image}
+                    alt="image"
+                    height={200}
+                    width={200}
+                    layout="responsive"
+                    loading="lazy"
+                    objectFit="cover"
+                    objectPosition="center"
+                    quality={30}
+                    className="rounded-full  "
+                  />
+                </div>
                 <div className="flex mt-4">
                   <FaLongArrowAltLeft
                     onClick={() => PrevData(i)}
