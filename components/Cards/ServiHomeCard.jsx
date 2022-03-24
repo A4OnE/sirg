@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function ServiHomeCard({ id, img, title, description }) {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
+
   return (
-    <div className=" md:text-center px-1 flex flex-col justify-around ">
+    <div
+      className=" md:text-center px-1 flex flex-col justify-around "
+      data-aos="fade-right"
+    >
       <div className=" ">
         <Image
           src={img}

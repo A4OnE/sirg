@@ -39,7 +39,7 @@ function Nav() {
   const [clicked, setClicked] = useState("");
 
   return (
-    <div className=" h-full bg-white   text-primary z-10 sticky top-0  left-0  shadow-md">
+    <div className=" h-full bg-white   text-primary z-20 sticky top-0  left-0  shadow-md">
       <div
         className=" container mx-auto px-4 lg:px-8 
         

@@ -8,6 +8,8 @@ import Link from "next/link";
 import ProjectCategory from "../components/Cards/ProjectCategory";
 import Head from "next/head";
 import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
+import { fadeInDown, fadeInLeft, fadeInRight } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 
 export async function getServerSideProps() {
   const [categoryRes, projectRes] = await Promise.all([
@@ -35,6 +37,18 @@ function Projects({ category, project }) {
     alert(newValue);
     setActive(newValue);
   }
+  const fadeLeft = {
+    fadeInLeft: {
+      animation: "x 0.7s ",
+      animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
+    },
+  };
+  const fadeRight = {
+    fadeInRight: {
+      animation: "x 0.5s ",
+      animationName: Radium.keyframes(fadeInRight, "animate__fadeInRight"),
+    },
+  };
   return (
     <div>
       <Head>
@@ -80,24 +94,32 @@ function Projects({ category, project }) {
       </Head>
 
       <PageTemplate>
-        <div className="">
+        <div className="pb-14">
           {/* top section  */}
           <PageNavInfo page={"Projects"} page_nav="Home / Projects" />
           <div>
-            <div className="container mx-auto my-6 px-4 lg:px-8">
+            <div className="container mx-auto my-6 px-1 sm:px-2 md:px-4 lg:px-8">
               {/* top grid for category and project starts  */}
               <div className="lg:grid lg:grid-cols-8 lg:gap-8">
                 {/* category section  */}
                 <div className="lg:col-span-2 my-8 p-4 lg:p-6  ">
                   <div
-                    className="flex bg-gray-100  items-center space-x-4  text-xl mb-8"
+                    className="flex bg-white w-56 sm:w-64 items-center space-x-4 shadow-sm p-2 shadow-gray-500  text-xl "
                     onClick={() => setShowCategories(!showCategories)}
                   >
-                    <BiCategory />
-                    <p className="font-openSansEight ">Categories</p>
+                    <BiCategory
+                      className={`${showCategories ? "text-primary" : null}`}
+                    />
+                    <p
+                      className={`font-openSansEight ${
+                        showCategories ? "text-primary " : null
+                      } `}
+                    >
+                      Categories
+                    </p>
                     <div>
                       {showCategories ? (
-                        <RiArrowUpSFill className="text-red-600  h-7 w-7" />
+                        <RiArrowUpSFill className={`text-primary h-7 w-7`} />
                       ) : (
                         <RiArrowDownSFill className="h-7 w-7" />
                       )}
@@ -105,39 +127,51 @@ function Projects({ category, project }) {
                   </div>
 
                   <Link href={`/Projects`} passHref>
-                    <p className="cursor-pointer font-openSansSeven text-xl">
-                      All
+                    <p className="cursor-pointer font-openSansSeven  text-xl">
+                      {/* All */}
                     </p>
                   </Link>
-
-                  {showCategories
-                    ? category.map((item) => (
-                        <ProjectCategory
-                          key={item.id}
-                          // ided={item.id}
-                          // values={handleChange}
-                          handleClick={() => handleClickk()}
-                          category={item.type}
-                          link={`Project/${item.id}`}
-                        />
-                      ))
-                    : null}
+                  <StyleRoot>
+                    {showCategories ? (
+                      <div
+                        className="bg-white w-56 sm:w-64 absolute z-10 shadow-sm shadow-gray-500  p-2 sm:p-5"
+                        // style={fadeDown.fadeInDown}
+                        style={fadeLeft.fadeInLeft}
+                      >
+                        {category.map((item) => (
+                          <ProjectCategory
+                            key={item.id}
+                            // ided={item.id}
+                            // values={handleChange}
+                            handleClick={() => handleClickk()}
+                            category={item.type}
+                            link={`Project/${item.id}`}
+                          />
+                        ))}
+                      </div>
+                    ) : null}
+                  </StyleRoot>
                 </div>
                 {/* category section ends  */}
 
                 {/* projects section starts  */}
-                <div className="lg:col-span-6 my-10">
-                  <div className="grid sm:grid-cols-2 gap-6  lg:gap-8 ">
-                    {project.map((item) => (
-                      <ProjectCard
-                        key={item.id}
-                        id={item.id}
-                        title={item.project_title}
-                        desc={item.project_s_des}
-                        img={`${process.env.Url}/images/${item.img}`}
-                      />
-                    ))}
-                  </div>
+                <div className="lg:col-span-6 ">
+                  <StyleRoot>
+                    <div
+                      className="grid sm:grid-cols-2 gap-6   lg:gap-8 "
+                      style={fadeRight.fadeInRight}
+                    >
+                      {project.map((item) => (
+                        <ProjectCard
+                          key={item.id}
+                          id={item.id}
+                          title={item.project_title}
+                          desc={item.project_s_des}
+                          img={`${process.env.Url}/images/${item.img}`}
+                        />
+                      ))}
+                    </div>
+                  </StyleRoot>
                 </div>
                 {/* project section ends  */}
               </div>

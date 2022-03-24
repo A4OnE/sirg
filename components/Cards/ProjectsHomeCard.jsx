@@ -2,6 +2,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import axios from "../../AXIOS/Axios-create";
 import Image from "next/image";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function ProjectsHomeCard({ id }) {
   const [Data, setData] = useState([]);
   const getProjects = () => {
@@ -16,7 +18,9 @@ function ProjectsHomeCard({ id }) {
   useEffect(() => {
     getProjects();
   }, []);
-
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   const data = [
     {
       title: "project one",
@@ -46,7 +50,9 @@ function ProjectsHomeCard({ id }) {
               <div
                 className={` flex flex-col space-y-3 md:space-y-5   my-4 pb-10
            }
+           data-aos=""
           `}
+                data-aos="fade-down"
                 key={i}
                 id={item.id}
               >
@@ -100,7 +106,7 @@ function ProjectsHomeCard({ id }) {
         {/* left section of projects card ends */}
         {/* rigt side of our project section  */}
 
-        <div className={`col-span-2  row-start-1 py-2 `}>
+        <div className={`col-span-2  row-start-1 py-2 `} data-aos="fade-up">
           <div className="flex flex-col  mx-auto text-center py-4 md:py-0  w-fit  ">
             <p className=" text-2xl md:text-3xl lg:text-4xl  capitalize font-openSansSeven ">
               our projects
