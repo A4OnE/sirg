@@ -88,16 +88,16 @@ function Projects({ category, project }) {
               {/* top grid for category and project starts  */}
               <div className="lg:grid lg:grid-cols-8 lg:gap-8">
                 {/* category section  */}
-                <div className="col-span-2 my-8 p-4 lg:p-6 bg-gray-100">
+                <div className="lg:col-span-2 my-8 p-4 lg:p-6  ">
                   <div
-                    className="flex items-center space-x-4  text-xl mb-8"
+                    className="flex bg-gray-100  items-center space-x-4  text-xl mb-8"
                     onClick={() => setShowCategories(!showCategories)}
                   >
                     <BiCategory />
-                    <p className="font-openSansEight">Categories</p>
+                    <p className="font-openSansEight ">Categories</p>
                     <div>
                       {showCategories ? (
-                        <RiArrowUpSFill className="text-red-600 h-7 w-7" />
+                        <RiArrowUpSFill className="text-red-600  h-7 w-7" />
                       ) : (
                         <RiArrowDownSFill className="h-7 w-7" />
                       )}
@@ -126,8 +126,8 @@ function Projects({ category, project }) {
                 {/* category section ends  */}
 
                 {/* projects section starts  */}
-                <div className="col-span-6 my-10">
-                  <div className="grid grid-cols-2 gap-4  lg:gap-8 ">
+                <div className="lg:col-span-6 my-10">
+                  <div className="grid sm:grid-cols-2 gap-6  lg:gap-8 ">
                     {project.map((item) => (
                       <ProjectCard
                         key={item.id}

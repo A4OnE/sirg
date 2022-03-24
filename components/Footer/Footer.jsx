@@ -3,16 +3,15 @@ import React from "react";
 import NavItems from "../NavsFooter/Navigations.json";
 import SocialMedia from "../PageEssentials/SocialMedia";
 import Image from "next/image";
-import imageLogo from "../../images/vipLogo.jpg";
+import imageLogo from "../../images/vipV2_1.webp";
 import { IoCall } from "react-icons/io5";
 import { BiCurrentLocation } from "react-icons/bi";
 import { IoMdMail } from "react-icons/io";
 function Footer() {
   return (
     <div className="bg-gray-800  pt-16 lg:pt-24 pb-10 text-white">
-      {/* <h1>VIP GROUP</h1> */}
-      <div className="grid sm:grid-cols-3   items-center sm:justify-items-center">
-        <div className="col-span-2 sm:col-span-1   ">
+      <div className="grid sm:grid-cols-12  items-center  mx-4 sm:mx-0 sm:justify-items-center">
+        <div className="col-span-2 sm:col-span-5 z-50  w-full flex  sm:justify-end  ">
           <div className="p-4 lg:px-12">
             <p className="font-openSansSix  text-center border-b-2 sm:mx-auto md:mx-0 w-fit text-xs md:text-xl lg:text-2xl">
               Contact Information
@@ -33,23 +32,27 @@ function Footer() {
           </div>
         </div>
         <Link href={"/"} passHref>
-          <div className="sm:w-36 w-28 sm:h-56 relative row-start-2 sm:row-start-1 sm:col-start-2 col-span-2 sm:col-span-1  mx-4 sm:mx-14  ">
+          <div
+            className="sm:w-36 lg:w-8/12 cursor-pointer sm:h-80 lg:h-96 relative row-start-3 sm:row-start-1 
+          sm:col-start-6  sm:col-span-2   sm:mx-14  "
+          >
             <Image
               src={imageLogo}
-              width={800}
-              height={500}
+              width={"100%"}
+              height={"80%"}
               layout="responsive"
               alt="images"
-              sizes="min-width(600px) 50vh"
-              quality={30}
-              objectFit="cover"
+              sizes="100vw"
+              quality={60}
+              // objectFit="cover"
               objectPosition={" center"}
               className=" bg-gray-800  "
             />
           </div>
         </Link>
-        <div className=" col-span-2  sm:col-span-1">
-          <div className="flex p-4 flex-col capitalize items-start ">
+
+        <div className="  w-full flex z-50 justify-start      sm:col-span-5">
+          <div className="flex p-4 flex-col capitalize items-start sm:mx-5 lg:mx-10">
             <div className="font-openSansSix  my-1  border-b-2 w-fit text-sm md:text-xl lg:text-2xl">
               quick links
             </div>

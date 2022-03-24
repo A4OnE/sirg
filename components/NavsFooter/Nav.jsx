@@ -68,7 +68,7 @@ function Nav() {
         {/* <h2 className="font-bold">VIP GROUP</h2> */}
         <div className="flex py-2   w-fit mx-auto lg:mx-0  items-center justify-center">
           <Link href={"/"} passHref>
-            <div className="w-36 h-16 relative  ">
+            <div className="w-36 h-16 relative  cursor-pointer ">
               <Image
                 src={imageLogo}
                 width={800}

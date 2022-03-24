@@ -60,7 +60,7 @@ function Contact() {
               <p className=" text-xs font-openSansFive md:text-sm w-11/12 md:w-10/12 lg:w-8/12 mx-auto lg:text-lg">
                 VIP GROUP NEPAL is the company for the people so we would like
                 to hear from you. Write to us about your thoughts or any issues
-                and we will endeavor to reply to your message as soon as
+                and we will endeavour to reply to your message as soon as
                 possible.
               </p>
             </div>
@@ -74,20 +74,20 @@ function Contact() {
               {/* left sections starts here */}
               <div className="lg:border-r-2">
                 <div className="p-4 lg:px-12">
-                  <h1 className="font-openSansSeven text-lg md:text-xl lg:text-2xl">
+                  <h1 className="font-openSansSeven text-lg md:text-xl  lg:text-2xl">
                     Contact Information
                   </h1>
                   <hr />
-                  <div className="flex space-x-4 my-4 font-openSansSix lg:my-6 md:text-xl lg:text-2xl items-center">
+                  <div className="flex space-x-4 my-4 font-openSansFivelg:my-6 md:text-xl  items-center">
                     <IoCall />
                     <p>+977-9857074929</p>
                     <p></p>
                   </div>
-                  <div className="flex  items-center space-x-4 my-4 font-openSansSix  lg:my-6 md:text-xl lg:text-2xl ">
+                  <div className="flex  items-center space-x-4 my-4 font-openSansFive lg:my-6 md:text-xl  ">
                     <IoMdMail />
                     <a href="">info@vipgroupnepal.com</a>
                   </div>
-                  <div className="flex space-x-4 my-4 lg:my-6 font-openSansSix  md:text-xl lg:text-2xl items-center">
+                  <div className="flex space-x-4 my-4 lg:my-6 font-openSansFive md:text-xl  items-center">
                     <BiCurrentLocation />
                     <p>Butwal Rupandehi</p>
                   </div>

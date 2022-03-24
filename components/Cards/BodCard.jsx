@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 function BodCard({ img, title, name }) {
   return (
-    <div className="py-10  ">
+    <div className=" pb-24 ">
       <div className="shadow-sm shadow-gray-500 rounded-lg hover:scale-105      py-8 md:w-8/12 cursor-pointer lg:w-11/12 mx-auto  h-full    ">
         <div className="w-11/12 hover:bg-black rounded-md   hover:opacity-90   mx-auto ">
           <Image
