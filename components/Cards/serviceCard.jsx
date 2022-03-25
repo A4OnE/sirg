@@ -29,7 +29,9 @@ function ServiceCard({ id, img, title, description }) {
           className="rounded-full"
         />
       </div>
-      <p className=" font-openSansSeven">{title}</p>
+      <Link href={`service/${id}`} passHref>
+        <p className=" font-openSansSeven cursor-pointer">{title}</p>
+      </Link>
       <div
         className="
       line-clamp-3
@@ -39,18 +41,20 @@ function ServiceCard({ id, img, title, description }) {
         {description}
       </div>
       <div>
-        <Link href={`service/${id}`} passHref>
-          <button
-            className="
-        btn-outline-gray text-black hover:translate-x-1 font-openSansSix hover:text-blue-900 flex flex-row justify-center   rounded-md items-center      
+        <div className="py-3 sm:py-0 md:py-1">
+          <Link href={`service/${id}`} passHref>
+            <button
+              className="
+        btn-outline-gray text-black hover:translate-x-1  font-openSansSix hover:text-blue-900 flex flex-row justify-center   rounded-md items-center      
         "
-          >
-            Find out more
-            <span>
-              <IoIosArrowForward className="ml-2 " />
-            </span>
-          </button>
-        </Link>
+            >
+              Find out more
+              <span>
+                <IoIosArrowForward className="ml-2 " />
+              </span>
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

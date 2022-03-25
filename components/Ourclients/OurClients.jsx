@@ -19,27 +19,26 @@ function OurClients() {
   return (
     <div>
       {/* head section  */}
-      <div className="text-center ">
-        <h1 className="text-primary font-openSansSeven">
+      <div className="text-center  ">
+        <div className="text-primary py-3 text-xl md:text-3xl lg:text-4xl font-openSansEight">
           We Have Worked With...
-        </h1>
-        <p className="font-medium text-lg font-openSansFive  text-gray-800">
+        </div>
+        <p className=" text-xl font-openSansFive   text-gray-800">
           Our Clients
         </p>
       </div>
 
-      <div className="flex justify-center my-24">
+      <div className="flex justify-center my-10 pb-6">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {/* clients logo section  */}
           {data.map((item) => (
-            <div className="mx-auto" key={item.id}>
+            <div className="mx-auto  " key={item.id}>
               <a href={item.link} target="_blank" rel="noopener noreferrer">
                 <Image
                   src={`${process.env.Url}/images/${item.img}`}
                   alt={item.id}
-                  srcSet=""
                   height={300}
-                  width={300}
+                  width={320}
                   layout="intrinsic"
                   objectPosition="center"
                   quality={30}

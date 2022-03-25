@@ -10,12 +10,13 @@ function Event_Card({ id, title, date, location, img }) {
       <div
         className="h-96 bg-cover"
         style={{
-          backgroundImage: `linear-gradient(0deg, rgba(2,0,36,0.8995973389355743) 20%, rgba(1,85,124,0.6979166666666667) 55%, rgba(0,179,221,0.3029586834733894) 80%, rgba(0,212,255,0) 100%), url(${process.env.Url}/images/${img})`,
+          backgroundImage: `linear-gradient(0deg, rgba(2,0,36,0.8995973389355743) 20%, rgba(1,85,124,0.6979166666666667) 55%, 
+          rgba(0,179,221,0.3029586834733894) 80%, rgba(0,212,255,0) 100%), url(${process.env.Url}/images/${img})`,
         }}
       >
         {/* content section  */}
         <div className="p-4 pt-52">
-          <Link href={"/Event/" + id}>
+          <Link href={"/Event/" + id} passHref>
             <p className="text-2xl font-bold  cursor-pointer text-white line-clamp-2">
               {title}
             </p>

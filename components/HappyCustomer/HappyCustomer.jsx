@@ -55,21 +55,18 @@ const HappyCustomer = () => {
   };
   return (
     <div
-      className="w-10/12
+      className=" bg-gray-100
       fade-anim
   h-fit
-  mt-10
-    md:w-full 
-    lg:w-full lg:mx-10 lg:my-32 
+  mt-10 lg:mt-12
+     w-full lg:mx-10  my-12  md:my-14  pb-5
     
 
     "
     >
-      <div className="ml-8">
-        <div className="flex flex-col mx-auto  text-center w-fit items-start ">
-          <p className=" text-2xl md:text-4xl  text-primary capitalize  md:font-openSansSeven font-openSansFive my-8 ">
-            happy customers
-          </p>
+      <div className="ml-8 ">
+        <div className=" mx-auto  capitalize text-primary text-3xl md:text-4xl  my-8 md:py-12 font-openSansEight text-center w-fit items-start ">
+          happy customers
           {/* <p className="w-20 h-1  my-1 md:my-2 bg-blue-600  " /> */}
         </div>
 
@@ -85,7 +82,7 @@ const HappyCustomer = () => {
           return (
             <div
               key={i}
-              className="container mx-auto  px-4 lg:px-8 grid grid-cols-1 gap-0 m-10
+              className="container mx-auto   px-4 lg:px-8 grid grid-cols-1 gap-0 m-10
       md:grid-cols-1
       lg:grid-cols-3 lg:gap-0 lg:ml-4
       sm:gap-0 sm:text-center
@@ -100,17 +97,20 @@ const HappyCustomer = () => {
 
         "
               >
-                <Image
-                  src={image}
-                  alt="image"
-                  srcSet=""
-                  height={400}
-                  width={400}
-                  layout="intrinsic"
-                  objectPosition="center"
-                  quality={30}
-                  className="rounded-full"
-                />
+                <div className="w-56 md:px-2 sm:w-64 md:w-96 h-fit">
+                  <Image
+                    src={image}
+                    alt="image"
+                    height={200}
+                    width={200}
+                    layout="responsive"
+                    loading="lazy"
+                    objectFit="cover"
+                    objectPosition="center"
+                    quality={30}
+                    className="rounded-full  "
+                  />
+                </div>
                 <div className="flex mt-4">
                   <FaLongArrowAltLeft
                     onClick={() => PrevData(i)}

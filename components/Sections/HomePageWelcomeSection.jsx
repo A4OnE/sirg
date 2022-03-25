@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPlay } from "react-icons/fa";
-import Link from "next/link";
+// import Link from "next/link";
 
 function HomePageWelcomeSection(props) {
   return (
@@ -17,8 +17,8 @@ function HomePageWelcomeSection(props) {
             {" "}
             WELCOME TO VIP GROUP
           </h1>
-          <p className="text-xl font-semibold -mt-2 md:-mt-8">
-            Slogon Goes Here !
+          <p className=" text-xs md:text-xl  animate-pulse  font-openSansFive  -mt-2 md:-mt-8">
+            Connecting the youths to inspire the world !!
           </p>
           <div
             className="flex flex-col items-center my-4 md:my-8 
@@ -27,10 +27,10 @@ function HomePageWelcomeSection(props) {
             <div
               className="bg-white h-10 w-10
               
-              rounded-full p-3 transition cursor-pointer "
+              rounded-full p-3 transition animate-pulse  cursor-pointer "
               onClick={props.play}
             >
-              <FaPlay className="text-primary" />
+              <FaPlay className="text-primary " />
             </div>
           </div>
         </div>

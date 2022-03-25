@@ -2,8 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { BsFillFilePersonFill } from "react-icons/bs";
 import { GoDeviceMobile } from "react-icons/go";
-import { AiOutlineMail } from "react-icons/ai";
-import { AiOutlineMessage } from "react-icons/ai";
+import { IoMdMail } from "react-icons/io";
 import PageTemplate from "../components/Templates/PageTemplate";
 import ContactForm from "../components/form/ContactForm";
 import { IoCall } from "react-icons/io5";
@@ -55,37 +54,40 @@ function Contact() {
       <PageTemplate>
         <div className="font-openSansFive ">
           {/* starting of top part of contact */}
-          <div className="bg-primary h-60 lg:h-64 w-full py-1">
+          <div className="bg-primary h-64 w-full  py-1">
             <div className="text-center text-white ">
               <h1>CONTACT US</h1>
               <p className=" text-xs font-openSansFive md:text-sm w-11/12 md:w-10/12 lg:w-8/12 mx-auto lg:text-lg">
-                VIP GROUP NEPAL is the company for the people so wed like to
-                hear from you. Write to us about your thoughts or any issues and
-                we will endeavor to reply to your message as soon as possible.
+                VIP GROUP NEPAL is the company for the people so we would like
+                to hear from you. Write to us about your thoughts or any issues
+                and we will endeavour to reply to your message as soon as
+                possible.
               </p>
             </div>
           </div>
           {/*ending of  top part of contact */}
 
           {/* contact section div starts */}
-          <div className="w-full lg:w-3/4 mx-auto -mt-24 bg-white shadow-md">
+          <div className="w-full lg:w-3/4 mx-auto -mt-16 lg:-mt-24 bg-white shadow-md">
             {/* grids starts here */}
-            <div className="grid lg:grid-cols-2 gap-4  py-4 lg:py-8 my-8">
+            <div className="grid lg:grid-cols-2 gap-4   py-4 lg:py-8 my-8">
               {/* left sections starts here */}
               <div className="lg:border-r-2">
                 <div className="p-4 lg:px-12">
-                  <h1 className="font-openSansSeven">Contact Information</h1>
+                  <h1 className="font-openSansSeven text-lg md:text-xl  lg:text-2xl">
+                    Contact Information
+                  </h1>
                   <hr />
-                  <div className="flex space-x-4 my-8 font-openSansSix lg:my-12 text-xl lg:text-2xl items-center">
+                  <div className="flex space-x-4 my-4 font-openSansFivelg:my-6 md:text-xl  items-center">
                     <IoCall />
                     <p>+977-9857074929</p>
                     <p></p>
                   </div>
-                  <div className="flex space-x-4 my-8 font-openSansSix  lg:my-12 text-xl lg:text-2xl font-items-center">
-                    <AiOutlineMail />
+                  <div className="flex  items-center space-x-4 my-4 font-openSansFive lg:my-6 md:text-xl  ">
+                    <IoMdMail />
                     <a href="">info@vipgroupnepal.com</a>
                   </div>
-                  <div className="flex space-x-4 my-8 lg:my-12 font-openSansSix  text-xl lg:text-2xl items-center">
+                  <div className="flex space-x-4 my-4 lg:my-6 font-openSansFive md:text-xl  items-center">
                     <BiCurrentLocation />
                     <p>Butwal Rupandehi</p>
                   </div>

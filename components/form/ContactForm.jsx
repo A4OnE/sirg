@@ -36,7 +36,7 @@ function ContactForm() {
   };
   return (
     <div>
-      <h1 className="px-4  capitalize font-openSansSeven py-2">
+      <h1 className="px-4 text-lg  md:text-xl lg:text-2xl   capitalize font-openSansSeven py-2">
         we want to hear from you
       </h1>
       <hr />
@@ -47,10 +47,10 @@ function ContactForm() {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className=" flex flex-col  space-y-2 mt-4">
-          <label htmlFor="name">Full name</label>
           <input
             type="text"
             id="name"
+            placeholder="Full name"
             className="border p-2 shadow"
             {...register("full_name", { required: true })}
           />
@@ -59,9 +59,10 @@ function ContactForm() {
           )}
         </div>
         <div className=" flex flex-col space-y-2 mt-4">
-          <label htmlFor="phone">Phone</label>
+          {/* <label htmlFor="phone">Phone</label> */}
           <input
             type="text"
+            placeholder="Phone"
             className="border p-2 shadow"
             id="phone"
             {...register("phone", { required: true })}
@@ -71,9 +72,10 @@ function ContactForm() {
           )}
         </div>
         <div className=" flex flex-col space-y-2 mt-4">
-          <label htmlFor="email">Email</label>
+          {/* <label htmlFor="email">Email</label> */}
           <input
             type="text"
+            placeholder="Email"
             className="border p-2 shadow"
             id="email"
             {...register("email", { required: true })}
@@ -83,10 +85,11 @@ function ContactForm() {
           )}
         </div>
         <div className=" flex flex-col space-y-2 mt-4">
-          <label>Message</label>
+          {/* <label>Message</label> */}
           <textarea
+            placeholder="Message"
             type="text"
-            rows="8"
+            rows="5"
             className="border p-2 shadow"
             {...register("message", { required: true })}
           />
