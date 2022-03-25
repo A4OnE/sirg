@@ -45,7 +45,7 @@ function BOD({ data }) {
         </div> */}
 
         {/* Bod body section */}
-        <div className="container  mx-auto px-4  lg:px-8">
+        <div className="container  mx-auto px-4 pb-20 lg:px-8">
           <div className="grid lg:grid-cols-4 gap-8">
             {data.map((item) => (
               <BodCard

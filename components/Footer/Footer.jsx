@@ -9,68 +9,75 @@ import { BiCurrentLocation } from "react-icons/bi";
 import { IoMdMail } from "react-icons/io";
 function Footer() {
   return (
-    <div className="bg-gray-800  pt-16 lg:pt-24 pb-10 text-white">
-      <div className="grid sm:grid-cols-12  items-center  mx-4 sm:mx-0 sm:justify-items-center">
-        <div className="col-span-2 sm:col-span-5 z-50  w-full flex  sm:justify-end  ">
-          <div className="p-4 lg:px-12">
-            <p className="font-openSansSix  text-center border-b-2 sm:mx-auto md:mx-0 w-fit text-xs md:text-xl lg:text-2xl">
-              Contact Information
-            </p>
-
-            <div className="flex space-x-2 sm:space-x-4 my-1 font-openSansFour lg:my-3  text-xs md:text-base lg:text-xl items-center">
-              <IoCall />
-              <p>+977-9857074929</p>
+    <div className="bg-gray-800  pt-10 lg:pt-15 pb-10 text-white ">
+      <div className="sm:grid sm:grid-cols-12 items-center lg:items-start  ">
+        <div
+          className=" sm:col-span-12 px-4 py-2 sm:py-4 lg:col-span-2 lg:w- cursor-pointer   relative 
+     "
+        >
+          {" "}
+          <Link href={"/"} passHref>
+            <div className="lg:w-10/12 -mx-8 sm:w-4/12 w-3/5 sm:-my-1">
+              <Image
+                src={imageLogo}
+                width={100}
+                height={50}
+                layout="responsive"
+                alt="images"
+                sizes="100vw"
+                quality={60}
+                objectFit="contain"
+                objectPosition={" center"}
+                className=" bg-gray-800  "
+              />
             </div>
-            <div className="flex space-x-2 sm:space-x-4 my-1 font-openSansFour  lg:my-3  text-xs md:text-base lg:text-xl items-center">
-              <IoMdMail />
-              <a href="">info@vipgroupnepal.com</a>
-            </div>
-            <div className="flex space-x-2 sm:space-x-4 my- lg:my-3 font-openSansFour  text-xs md:text-base lg:text-xl items-center">
-              <BiCurrentLocation />
-              <p>Butwal Rupandehi</p>
-            </div>
+          </Link>
+          <div className="text-left  font-openSansFour  lg:font-openSansFive text-gray-200  md:text-sm text-xs">
+            Connecting the youths to inspire the world !!
           </div>
         </div>
-        <Link href={"/"} passHref>
-          <div
-            className="sm:w-36 lg:w-8/12 cursor-pointer sm:h-80 lg:h-96 relative row-start-3 sm:row-start-1 
-          sm:col-start-6  sm:col-span-2   sm:mx-14  "
-          >
-            <Image
-              src={imageLogo}
-              width={"100%"}
-              height={"80%"}
-              layout="responsive"
-              alt="images"
-              sizes="100vw"
-              quality={60}
-              // objectFit="cover"
-              objectPosition={" center"}
-              className=" bg-gray-800  "
-            />
-          </div>
-        </Link>
 
-        <div className="  w-full flex z-50 justify-start      sm:col-span-5">
-          <div className="flex p-4 flex-col capitalize items-start sm:mx-5 lg:mx-10">
-            <div className="font-openSansSix  my-1  border-b-2 w-fit text-sm md:text-xl lg:text-2xl">
+        <div className=" z-50 lg:col-span-3 col-span-4    ">
+          <div className="px-4 py-2 sm:py-4 lg:px-12 ">
+            <div className="font-openSansFive capitalize my-2  border-b-2 w-fit text-sm md:text-lg lg:text-xl">
               quick links
             </div>
+
             <Link href={"/Projects"} passHref>
-              <div className="flex space-x-4 my-1 lg:my-2 cursor-pointer font-openSansFour text-xs md:text-base lg:text-xl">
+              <div className="flex space-x-2 sm:space-x-4 text-gray-200 my-1 font-openSansThree lg:my-2  text-xs md:text-sm lg:text-lg items-center">
                 Finished Projects
               </div>
             </Link>
             <Link href={"/Projects"} passHref>
-              <div className=" flex space-x-4 my-1  cursor-pointer font-openSansFour text-xs md:text-base lg:text-xl">
+              <div className="flex space-x-2 sm:space-x-4 text-gray-200 my-1 font-openSansThree  lg:my-2  text-xs md:text-sm lg:text-lgitems-center">
                 Running Projects
               </div>
             </Link>
             <Link href={"/Projects"} passHref>
-              <div className="flex space-x-4 my-1 cursor-pointer font-openSansFour text-xs md:text-base lg:text-xl">
+              <div className="flex space-x-2 sm:space-x-4 text-gray-200 my-1  font-openSansThree lg:my-2 text-xs md:text-sm lg:text-lgitems-center">
                 Upcoming Projects
               </div>
             </Link>
+          </div>
+        </div>
+        <div className=" z-50 lg:col-span-5 w-full col-span-5  ">
+          <div className="px-4 py-2 sm:py-4 lg:px-12">
+            <div className="font-openSansFive my-2 text-center  border-b-2  md:mx-0 w-fit text-xs md:text-lg lg:text-xl">
+              Contact Information
+            </div>
+
+            <div className="flex space-x-2 sm:space-x-4 my-1 font-openSansThree lg:my-2 text-gray-200  text-xs md:text-sm lg:text-lg items-center">
+              <IoCall />
+              <p>+977-9857074929</p>
+            </div>
+            <div className="flex space-x-2 sm:space-x-4 my-1 font-openSansThree text-gray-200 lg:my-2  text-xs md:text-sm lg:text-lg items-center">
+              <IoMdMail />
+              <a href="">info@vipgroupnepal.com</a>
+            </div>
+            <div className="flex space-x-2 sm:space-x-4 my-1  text-gray-200 font-openSansThree lg:my-2 text-xs md:text-sm lg:text-lg items-center">
+              <BiCurrentLocation />
+              <p>Butwal Rupandehi</p>
+            </div>
           </div>
         </div>
       </div>

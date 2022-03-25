@@ -7,7 +7,7 @@ import ProjectCard from "../components/Cards/ProjectCard";
 import Link from "next/link";
 import ProjectCategory from "../components/Cards/ProjectCategory";
 import Head from "next/head";
-import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
+import { RiArrowDownSFill, RiArrowRightSFill } from "react-icons/ri";
 import { fadeInDown, fadeInLeft, fadeInRight } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 
@@ -119,7 +119,7 @@ function Projects({ category, project }) {
                     </p>
                     <div>
                       {showCategories ? (
-                        <RiArrowUpSFill className={`text-primary h-7 w-7`} />
+                        <RiArrowRightSFill className={`text-primary h-7 w-7`} />
                       ) : (
                         <RiArrowDownSFill className="h-7 w-7" />
                       )}
