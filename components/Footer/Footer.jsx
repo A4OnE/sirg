@@ -49,12 +49,12 @@ function Footer() {
               </div>
             </Link>
             <Link href={"/Projects"} passHref>
-              <div className="flex space-x-2 sm:space-x-4 text-gray-200 my-1 font-openSansThree  lg:my-2  text-xs md:text-sm lg:text-lgitems-center">
+              <div className="flex space-x-2 sm:space-x-4 text-gray-200 my-1 font-openSansThree lg:my-2  text-xs md:text-sm lg:text-lg items-center">
                 Running Projects
               </div>
             </Link>
             <Link href={"/Projects"} passHref>
-              <div className="flex space-x-2 sm:space-x-4 text-gray-200 my-1  font-openSansThree lg:my-2 text-xs md:text-sm lg:text-lgitems-center">
+              <div className="flex space-x-2 sm:space-x-4 text-gray-200 my-1 font-openSansThree lg:my-2  text-xs md:text-sm lg:text-lg items-center">
                 Upcoming Projects
               </div>
             </Link>
@@ -100,7 +100,7 @@ function Footer() {
       </div>
       {/* social media section ends  */}
       {/* footer final seciton terms and condition starts  */}
-      <div className="opacity-80 text-center text-sm">
+      <div className="opacity-80 text-center text-xs sm:text-sm">
         <div className="flex items-center space-x-4 justify-center">
           <Link href={"/"}>
             <a className="">Terms & Conditions</a>
