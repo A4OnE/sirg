@@ -3,22 +3,13 @@ import Modal from "react-modal";
 import GallerySlider from "../Sliders/GallerySlider";
 import { AiOutlineClose } from "react-icons/ai";
 import axios from "axios";
-
+import Image from "next/image";
+import SliderModel from "../sliderModel/SliderModel";
 function EventGallery({ id }) {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const customStyles = {
     content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      height: "90%",
-      width: "90%",
-      bottom: "auto",
-      padding: "0px",
-      background: "transparent",
-      marginRight: "-50%",
-      border: "none",
-      transform: "translate(-50%, -50%)",
+      backgroundColor: "#383838",
     },
   };
   const [images, setImages] = useState([]);
@@ -36,40 +27,44 @@ function EventGallery({ id }) {
   return (
     <div className="p-4">
       <h2 className="text-gray-800">Event Gallery</h2>
-      <hr className="my-4" />
+      <hr className="my-4 " />
       <div className="grid grid-cols-2 gap-4">
-        {images.map((item) => (
-          <div className="bg-gray-600 h-32 w-full cursor-pointer" key={item.id}>
-            <img
-              src={`${process.env.Url}/images/${item.img}`}
-              alt=""
-              className="w-full h-full object-cover rounded shadow-md "
-              onClick={() => {
-                setIsOpen(true);
-              }}
-            />
-          </div>
-        ))}
+        <div className=" col-span-2 w-6/12 mx-auto ">
+          {images.map((item) => (
+            <div className="  cursor-pointer" key={item.id}>
+              <Image
+                src={`${process.env.Url}/images/${item.img}`}
+                alt="images"
+                height={80}
+                width={100}
+                layout="responsive"
+                objectFit="contain"
+                objectPosition="center"
+                className="rounded-md"
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
       {/* modal section  */}
-      <div>
-        <Modal
-          isOpen={modalIsOpen}
-          style={customStyles}
-          contentLabel="Example Modal"
-          className=""
-        >
-          <button
-            onClick={() => {
-              setIsOpen(false);
-            }}
-            className="absolute font-bold right-1 lg:right-4 top-5 lg:top-5 z-10 bg-white p-1 rounded-full shadow-md"
-          >
-            <AiOutlineClose className="font-bold text-4xl" />
-          </button>
-          <GallerySlider data={images} />
-        </Modal>
-      </div>
+      {modalIsOpen ? (
+        <div className="  ">
+          <SliderModel>
+            <button
+              onClick={() => {
+                setIsOpen(false);
+              }}
+              className="absolute font-bold right-1 lg:right-4 top-5 lg:top-5 z-10 "
+            >
+              <AiOutlineClose className="font-bold text-4xl   translate-y-4 -translate-x-8 lg:translate-y-5 shadow-md bg-white rounded-full  lg:-translate-x-5 p-1 " />
+            </button>
+            <GallerySlider data={images} />
+          </SliderModel>
+        </div>
+      ) : null}
       {/* modal section ends  */}
     </div>
   );

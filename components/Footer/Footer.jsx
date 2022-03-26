@@ -9,7 +9,7 @@ import { BiCurrentLocation } from "react-icons/bi";
 import { IoMdMail } from "react-icons/io";
 function Footer() {
   return (
-    <div className="bg-gray-800  pt-10 lg:pt-15 pb-10 text-white ">
+    <div className="bg-gray-800  relative -z-10 pt-10 lg:pt-15 pb-10 text-white ">
       <div className="sm:grid sm:grid-cols-12 items-center lg:items-start  ">
         <div
           className=" sm:col-span-12 px-4 py-2 sm:py-4 lg:col-span-2 lg:w- cursor-pointer   relative 
@@ -37,7 +37,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className=" z-50 lg:col-span-3 col-span-4    ">
+        <div className="  lg:col-span-3 col-span-4   ">
           <div className="px-4 py-2 sm:py-4 lg:px-12 ">
             <div className="font-openSansFive capitalize my-2  border-b-2 w-fit text-sm md:text-lg lg:text-xl">
               quick links
@@ -60,7 +60,7 @@ function Footer() {
             </Link>
           </div>
         </div>
-        <div className=" z-50 lg:col-span-5 w-full col-span-5  ">
+        <div className="  lg:col-span-5 w-full col-span-5  ">
           <div className="px-4 py-2 sm:py-4 lg:px-12">
             <div className="font-openSansFive my-2 text-center  border-b-2  md:mx-0 w-fit text-xs md:text-lg lg:text-xl">
               Contact Information

@@ -5,7 +5,8 @@ import { MdDateRange } from "react-icons/md";
 import EventGallery from "../../components/Gallery/EventGallery";
 import { useRouter } from "next/router";
 import Head from "next/head";
-
+import { MdKeyboardBackspace } from "react-icons/md";
+import Link from "next/link";
 export async function getServerSideProps(context) {
   // Fetch data from external API
   const { id } = context.query;
@@ -68,6 +69,11 @@ function EventDetails(props) {
           <div className="lg:grid lg:grid-cols-12 gap-8">
             {/* left details section  */}
             <div className="col-span-8">
+              <Link href={"/Events"} passHref>
+                <div className=" py-4 sm:p-4">
+                  <MdKeyboardBackspace className="w-6 sm:w-10 h-6 sm:h-10 text-gray-700 " />
+                </div>
+              </Link>
               <h1 className="text-5xl leading-12">{data[0]?.event_title}</h1>
               {/* location and date section  */}
               <div className="flex items-center space-x-4 font-semibold text-gray-800">
