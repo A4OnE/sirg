@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function ServiHomeCard({ id, img, title, description }) {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
+
   return (
-    <div className=" md:text-center px-1 flex flex-col justify-around ">
+    <div
+      className=" md:text-center px-1 flex flex-col justify-around "
+      data-aos="fade-right"
+    >
       <div className=" ">
         <Image
           src={img}
@@ -17,9 +26,11 @@ function ServiHomeCard({ id, img, title, description }) {
           quality={30}
         />
       </div>
-      <h1 className="text-lg lg:text-2xl font-openSansSix font-normal text-left   flex justify-start items-center ">
-        {title}
-      </h1>
+      <Link href={`service/${id}`} passHref>
+        <h1 className=" cursor-pointer text-lg lg:text-2xl font-openSansSix font-normal text-left   flex justify-start items-center ">
+          {title}
+        </h1>
+      </Link>
       <p className=" line-clamp-5 text-left font-openSansFive text-gray-600">
         {description}
       </p>

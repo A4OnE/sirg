@@ -1,7 +1,8 @@
 import React from "react";
 import BodCard from "../../components/Cards/BodCard";
 import PageTemplate from "../../components/Templates/PageTemplate";
-import Image from "next/image";
+import Link from "next/link";
+import { MdKeyboardBackspace } from "react-icons/md";
 // This gets called on every request
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -16,6 +17,11 @@ function BOD({ data }) {
   return (
     <PageTemplate>
       <div className="container mx-auto px-4   mt-8 lg:px-8">
+        <Link href={"/About"} passHref>
+          <div className=" py-4 sm:p-4">
+            <MdKeyboardBackspace className="w-6 sm:w-10 h-6 sm:h-10 text-gray-700 " />
+          </div>
+        </Link>
         <div>
           <h1 className="text-primary  text-2xl text-center gap-8 my-14 lg:text-4xl md:text-3xl sm:text-2xl tracking-wider font-openSansEight">
             Board of Directors
@@ -39,7 +45,7 @@ function BOD({ data }) {
         </div> */}
 
         {/* Bod body section */}
-        <div className="container  mx-auto px-4  lg:px-8">
+        <div className="container  mx-auto px-4 pb-20 lg:px-8">
           <div className="grid lg:grid-cols-4 gap-8">
             {data.map((item) => (
               <BodCard

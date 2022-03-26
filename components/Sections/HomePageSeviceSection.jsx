@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../AXIOS/Axios-create";
 import ServiHomeCard from "../Cards/ServiHomeCard";
-
 function HomePageSeviceSection() {
   const [Data, setData] = useState([]);
   const getProjects = () => {

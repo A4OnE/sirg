@@ -5,7 +5,9 @@ import { useEffect, useState } from "react";
 import PageTemplate from "../../components/Templates/PageTemplate";
 import Head from "next/head";
 import Image from "next/image";
-// import Image from "next/image";
+import { MdKeyboardBackspace } from "react-icons/md";
+import Link from "next/link";
+
 export async function getServerSideProps(context) {
   // Fetch data from external API
   const { id } = context.query;
@@ -72,10 +74,17 @@ function ServiceDetails(props) {
       <PageTemplate>
         <div className="bg-gray-100">
           <div className="container  px-4 lg:px-8">
+            <Link href={`/Services`} passHref>
+              <div className=" py-4 sm:p-4">
+                <MdKeyboardBackspace className="w-6 sm:w-10 h-6 sm:h-10 text-gray-700 " />
+              </div>
+            </Link>
             <div className="py-1">
               {data.map((item) => (
-                <div className="text-center " key={item.id}>
-                  <h1 className=" font-openSansSeven">{item.service_title}</h1>
+                <div className="sm:text-center  " key={item.id}>
+                  <h1 className=" font-openSansSeven text-base md:text-4xl lg:text-5xl">
+                    {item.service_title}
+                  </h1>
                   <div className="">
                     <Image
                       src={`${process.env.Url}/images/${item.img}`}
@@ -89,7 +98,7 @@ function ServiceDetails(props) {
                       quality={30}
                     />
                   </div>
-                  <div className="   font-openSansSix w-9/12 mx-auto py-6 text-base">
+                  <div className="   font-openSansFive sm:font-openSansSix sm:w-9/12 mx-auto py-6 text-base">
                     {item.service_details}
                   </div>
                 </div>

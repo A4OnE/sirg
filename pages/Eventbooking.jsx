@@ -97,14 +97,15 @@ const Eventbooking = () => {
       </Head>
       <PageTemplate>
         <div className="container mx-auto px-4  lg:px-8">
-          <div className="mx-auto my-24 ">
-            <h1 className="text-primary font-openSansSeven lg:text-4xl text-3xl font-bold tracking-wider text-center mb-4  ">
+          <div className="mx-auto mb-16 sm:mb-24 ">
+            <div className="text-primary text-center text-2xl md:text-5xl font-openSansSeven mt-4 md:mt-7 lg:mt-12 py-1 md:py-2">
               Event Booking
-            </h1>
+            </div>
 
-            <p className="text-gray-500  text-center font-openSansFive text-lg">
+            <p className="text-xs md:text-base text-center font-openSansSix sm:pt-1 text-gray-500">
               You Can Book all of the upcoming event here
             </p>
+            <hr className="mt-8 shadow" />
 
             <div className="lg:grid lg:grid-cols-1 gap-8">
               {Upcommming.map((val, i) => {
@@ -115,7 +116,7 @@ const Eventbooking = () => {
           h-full lg:w-2/3 mx-auto bg-primary  mt-8
             text-white p-4 lg:p-6 shadow-lg"
                   >
-                    <p className=" text-2xl md:text-4xl font-openSansSeven  tracking-wider ">
+                    <p className=" sm:text-2xl md:text-4xl font-openSansSeven  tracking-wider ">
                       {val.event_title}
                     </p>
                     <div className="mt-4 ">

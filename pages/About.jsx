@@ -155,17 +155,19 @@ function About({ data }) {
           </div>
 
           {/* BOD SECTION  */}
-          <div className="">
+          <div id="Bod" className="">
             <h1 className="text-primary font-openSansEight text-center gap-8 my-9 md:text-4xl tracking-wider ">
               Board of Directors
             </h1>
 
             {/* Bod body section */}
             <div className="py-2">
-              <Link href={"/Aboutus/BOD"}>
-                <a className=" text-center font-openSansFive btn-primary rounded-full flex items-center justify-center w-32 mx-auto">
-                  view all <BsFillArrowRightCircleFill className="ml-2" />
-                </a>
+              <Link href={"/Aboutus/BOD"} passHref>
+                <div className="pb-14">
+                  <a className=" text-center cursor-pointer font-openSansFive btn-primary rounded-full flex items-center justify-center w-32 mx-auto">
+                    view all <BsFillArrowRightCircleFill className="ml-2" />
+                  </a>
+                </div>
               </Link>
               <div className="grid lg:grid-cols-3 gap-8">
                 {data.slice(0, 3)?.map((item) => (

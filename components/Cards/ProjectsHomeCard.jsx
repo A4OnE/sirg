@@ -2,6 +2,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import axios from "../../AXIOS/Axios-create";
 import Image from "next/image";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function ProjectsHomeCard({ id }) {
   const [Data, setData] = useState([]);
   const getProjects = () => {
@@ -16,7 +18,9 @@ function ProjectsHomeCard({ id }) {
   useEffect(() => {
     getProjects();
   }, []);
-
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   const data = [
     {
       title: "project one",
@@ -38,7 +42,7 @@ function ProjectsHomeCard({ id }) {
     <div className="bg-gray-50 ">
       <div className={` grid  grid-cols-2   pt-2 `}>
         {/* left section of projects card  */}
-        <div className=" col-span-2 grid  grid-cols-2 mx-auto w-11/12  lg:grid-cols-3   gap-5 lg:gap-8">
+        <div className=" col-span-2 grid  sm:grid-cols-2 mx-auto w-11/12  lg:grid-cols-3   gap-5 lg:gap-8">
           {Data.slice(0, 2).map((item, i) => {
             let image = `${process.env.Url}/images/${item.img}`;
 
@@ -46,7 +50,9 @@ function ProjectsHomeCard({ id }) {
               <div
                 className={` flex flex-col space-y-3 md:space-y-5   my-4 pb-10
            }
+           data-aos=""
           `}
+                data-aos="fade-down"
                 key={i}
                 id={item.id}
               >
@@ -85,7 +91,7 @@ function ProjectsHomeCard({ id }) {
                     </p>
                   </Link>
                 </div>
-                <div className="text-gray-600 font-openSansFive line-clamp-2">
+                <div className="text-gray-600 font-openSansFive line-clamp-4">
                   {item.project_details}
                 </div>
                 <Link href={`/Project/details/${item.id}`} passHref>
@@ -100,8 +106,8 @@ function ProjectsHomeCard({ id }) {
         {/* left section of projects card ends */}
         {/* rigt side of our project section  */}
 
-        <div className={`col-span-2  row-start-1 py-2 `}>
-          <div className="flex flex-col  mx-auto text-center  w-fit  ">
+        <div className={`col-span-2  row-start-1 py-2 `} data-aos="fade-up">
+          <div className="flex flex-col  mx-auto text-center py-4 md:py-0  w-fit  ">
             <p className=" text-2xl md:text-3xl lg:text-4xl  capitalize font-openSansSeven ">
               our projects
             </p>
@@ -110,8 +116,8 @@ function ProjectsHomeCard({ id }) {
             {/* <p className="lg:w-56 md:w-32 w-20 h-1  my-3 lg:my-4 md:bg-blue-600  " /> */}
           </div>
 
-          <div className="  font-openSansFive leading-7 line-clamp-6">
-            <p className="  lg:text-center py-3 lg:py-8 mx-auto w-11/12 lg:w-9/12 leading-8 line-clamp-6 font-openSansFive  md:line-clamp-4 lg:line-clamp-6">
+          <div className="  font-openSansFive ">
+            <p className="  lg:text-center sm:py-3 lg:py-8 mx-auto w-11/12 lg:w-9/12  line-clamp-4 font-openSansFive  md:line-clamp-4 lg:line-clamp-6">
               We have been working on several fields such as event management,
               event organizer, entrepreneurship development, business
               development orientation, motivational seminar, skill based
