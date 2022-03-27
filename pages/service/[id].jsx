@@ -73,9 +73,9 @@ function ServiceDetails(props) {
       </Head>
       <PageTemplate>
         <div className="bg-gray-100">
-          <div className="container  px-4 lg:px-8">
+          <div className="container py-4 px-4 lg:px-8">
             <Link href={`/Services`} passHref>
-              <div className=" py-4 sm:p-4">
+              <div className="  w-fit h-fit hover:scale-105   ">
                 <MdKeyboardBackspace className="w-6 cursor-pointer sm:w-10 h-6 sm:h-10 text-gray-700 " />
               </div>
             </Link>

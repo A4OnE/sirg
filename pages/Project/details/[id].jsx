@@ -62,9 +62,9 @@ function projectdetails({ data }) {
       </Head>
       <PageTemplate>
         <div className="bg-gray-50 ">
-          <div className="container  px-4 lg:px-8">
+          <div className="container py-4 px-4 lg:px-8">
             <Link href={`/Projects`} passHref>
-              <div className="p-4">
+              <div className="  w-fit h-fit hover:scale-105  ">
                 <MdKeyboardBackspace className="w-10 h-10 cursor-pointer text-gray-700 " />
               </div>
             </Link>
