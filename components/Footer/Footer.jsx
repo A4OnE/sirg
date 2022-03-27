@@ -9,15 +9,19 @@ import { BiCurrentLocation } from "react-icons/bi";
 import { IoMdMail } from "react-icons/io";
 function Footer() {
   return (
-    <div className="bg-gray-800  relative -z-10 pt-10 lg:pt-15 pb-10 text-white ">
-      <div className="sm:grid sm:grid-cols-12 items-center lg:items-start  ">
+    <div className="bg-gray-800 absolute -z-10 w-full pt-10 lg:pt-15 pb-10 text-white ">
+      <div className="sm:grid sm:grid-cols-12  items-center lg:items-start  ">
         <div
-          className=" sm:col-span-12 px-4 py-2 sm:py-4 lg:col-span-2 lg:w- cursor-pointer   relative 
+          className=" sm:col-span-12 px-4 py-2 
+          
+          
+
+          sm:py-4 lg:col-span-2  cursor-pointer    
      "
         >
           {" "}
           <Link href={"/"} passHref>
-            <div className="lg:w-10/12 -mx-8 sm:w-4/12 w-3/5 sm:-my-1">
+            <div className="lg:w-10/12 cursor-pointer    -mx-8 sm:w-4/12 w-3/5 sm:-my-1">
               <Image
                 src={imageLogo}
                 width={100}
@@ -28,7 +32,7 @@ function Footer() {
                 quality={60}
                 objectFit="contain"
                 objectPosition={" center"}
-                className=" bg-gray-800  "
+                className=" bg-gray-800 cursor-pointer relative  "
               />
             </div>
           </Link>
@@ -39,22 +43,22 @@ function Footer() {
 
         <div className="  lg:col-span-3 col-span-4   ">
           <div className="px-4 py-2 sm:py-4 lg:px-12 ">
-            <div className="font-openSansFive capitalize my-2  border-b-2 w-fit text-sm md:text-lg lg:text-xl">
+            <div className="font-openSansFive md:font-openSansFive capitalize my-2  border-b-2 w-fit text-xs md:text-lg lg:text-xl">
               quick links
             </div>
 
             <Link href={"/Projects"} passHref>
-              <div className="flex space-x-2 sm:space-x-4 text-gray-200 my-1 font-openSansThree lg:my-2  text-xs md:text-sm lg:text-lg items-center">
+              <div className="flex space-x-2 sm:space-x-4 cursor-pointer text-gray-200 my-1 font-openSansThree lg:my-2  text-xs md:text-sm lg:text-lg items-center">
                 Finished Projects
               </div>
             </Link>
             <Link href={"/Projects"} passHref>
-              <div className="flex space-x-2 sm:space-x-4 text-gray-200 my-1 font-openSansThree lg:my-2  text-xs md:text-sm lg:text-lg items-center">
+              <div className="flex space-x-2 sm:space-x-4 cursor-pointer text-gray-200 my-1 font-openSansThree lg:my-2  text-xs md:text-sm lg:text-lg items-center">
                 Running Projects
               </div>
             </Link>
             <Link href={"/Projects"} passHref>
-              <div className="flex space-x-2 sm:space-x-4 text-gray-200 my-1 font-openSansThree lg:my-2  text-xs md:text-sm lg:text-lg items-center">
+              <div className="flex space-x-2 sm:space-x-4 cursor-pointer text-gray-200 my-1 font-openSansThree lg:my-2  text-xs md:text-sm lg:text-lg items-center">
                 Upcoming Projects
               </div>
             </Link>
@@ -95,17 +99,17 @@ function Footer() {
       </div> */}
       {/* nav section footer ends  */}
       {/* social media section  */}
-      <div className="flex justify-center my-10 text-3xl">
+      <div className="flex justify-center relative z-10 my-10 text-3xl">
         <SocialMedia />
       </div>
       {/* social media section ends  */}
       {/* footer final seciton terms and condition starts  */}
-      <div className="opacity-80 text-center text-xs sm:text-sm">
-        <div className="flex items-center space-x-4 justify-center">
-          <Link href={"/"}>
+      <div className="opacity-60  text-center text-xs sm:text-sm">
+        <div className="flex items-center cursor-pointer space-x-4 justify-center">
+          <Link href={"/"} passHref>
             <a className="">Terms & Conditions</a>
           </Link>
-          <Link href={"/"}>
+          <Link href={"/"} passHref>
             <a className="">Privacy Policy</a>
           </Link>
         </div>

@@ -59,7 +59,7 @@ function EventGallery({ id }) {
               }}
               className="absolute font-bold right-1 lg:right-4 top-5 lg:top-5 z-10 "
             >
-              <AiOutlineClose className="font-bold text-4xl   translate-y-4 -translate-x-8 lg:translate-y-5 shadow-md bg-white rounded-full  lg:-translate-x-5 p-1 " />
+              <AiOutlineClose className="font-bold text-4xl translate-y-24  md:translate-y-20 -translate-x-8 lg:translate-y-5 shadow-md bg-white rounded-full  lg:-translate-x-5 p-1 " />
             </button>
             <GallerySlider data={images} />
           </SliderModel>

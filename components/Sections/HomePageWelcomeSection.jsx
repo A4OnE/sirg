@@ -9,7 +9,9 @@ function HomePageWelcomeSection(props) {
         className="h-screen lg:w-full py-32 text-white bg-cover"
         style={{
           backgroundImage:
-            "linear-gradient(0deg, rgba(2,0,36,0.8995973389355743) 20%, rgba(1,85,124,0.6979166666666667) 55%, rgba(0,179,221,0.3029586834733894) 80%, rgba(0,212,255,0) 100%), url(https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
+            "linear-gradient(0deg, rgba(2,10,20,0.8995973389355743) 20%, rgba(0,2,20,0.6979166666666667) 55%, rgba(1,2,1,0.3029586834733894) 80%, rgba(1,2,3,0.8995973389355743) 100%), url(https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
+
+          // "linear-gradient(0deg, rgba(2,0,36,0.8995973389355743) 20%, rgba(1,85,124,0.6979166666666667) 55%, rgba(0,179,221,0.3029586834733894) 80%, rgba(0,212,255,0) 100%), url(https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
         }}
       >
         <div className="text-center flex flex-col justify-center items-center  h-full ">
