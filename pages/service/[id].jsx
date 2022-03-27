@@ -76,7 +76,7 @@ function ServiceDetails(props) {
           <div className="container  px-4 lg:px-8">
             <Link href={`/Services`} passHref>
               <div className=" py-4 sm:p-4">
-                <MdKeyboardBackspace className="w-6 sm:w-10 h-6 sm:h-10 text-gray-700 " />
+                <MdKeyboardBackspace className="w-6 cursor-pointer sm:w-10 h-6 sm:h-10 text-gray-700 " />
               </div>
             </Link>
             <div className="py-1">

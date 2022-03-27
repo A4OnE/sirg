@@ -104,7 +104,7 @@ function Projects({ category, project }) {
                 {/* category section  */}
                 <div className="lg:col-span-2 my-8 p-4 lg:p-6  ">
                   <div
-                    className="flex bg-white w-56 sm:w-64 items-center space-x-4 shadow-sm p-2 shadow-gray-500  text-xl "
+                    className="flex cursor-pointer bg-white w-56 sm:w-64 items-center space-x-4 shadow-sm p-2 shadow-gray-500  text-xl "
                     onClick={() => setShowCategories(!showCategories)}
                   >
                     <BiCategory

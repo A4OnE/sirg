@@ -18,7 +18,7 @@ export default function Home() {
     // nextVideo.play();
   };
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   }, []);
 
   return (
@@ -80,6 +80,7 @@ export default function Home() {
               style={{
                 zIndex: -1,
                 height: "100%",
+                width: "100%",
               }}
             >
               <source src={"aboutus.mp4"} type="video/mp4" />

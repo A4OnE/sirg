@@ -65,7 +65,7 @@ function projectdetails({ data }) {
           <div className="container  px-4 lg:px-8">
             <Link href={`/Projects`} passHref>
               <div className="p-4">
-                <MdKeyboardBackspace className="w-10 h-10 text-gray-700 " />
+                <MdKeyboardBackspace className="w-10 h-10 cursor-pointer text-gray-700 " />
               </div>
             </Link>
             <div className=" sm:text-center bg-gray-50">
