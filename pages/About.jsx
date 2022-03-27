@@ -96,7 +96,7 @@ function About({ data }) {
                 {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
               </div>
 
-              <p className="w-full my-4 font-openSansFive -tracking-tight leading-5 md:leading-7 text-base md:text-lg">
+              <p className="w-full my-4 font-openSansFive  leading-5 md:leading-7">
                 {staticAbout.aboutUs}
                 {/* VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
                 of dedicated and energetic youth Entreprenuers. Since 2019, we
