@@ -70,8 +70,8 @@ function EventDetails(props) {
             {/* left details section  */}
             <div className="col-span-8">
               <Link href={"/Events"} passHref>
-                <div className=" py-4 sm:p-4">
-                  <MdKeyboardBackspace className="w-6 cursor-pointer sm:w-10 h-6 sm:h-10 text-gray-700 " />
+                <div className="  w-fit h-fit hover:scale-105 ">
+                  <MdKeyboardBackspace className="w-6 cursor-pointer  sm:w-10 h-6 sm:h-10 text-gray-700 " />
                 </div>
               </Link>
               <h1 className="text-5xl leading-12">{data[0]?.event_title}</h1>
