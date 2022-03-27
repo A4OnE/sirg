@@ -6,6 +6,8 @@ import PageTemplate from "../components/Templates/PageTemplate";
 import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
 import OurClients from "../components/Ourclients/OurClients";
 import { staticAbout } from "../components/staticData/StaticData";
+import image from "../images/comp.avif";
+import Image from "next/image";
 // This gets called on every request
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -68,35 +70,38 @@ function About({ data }) {
           <div className=" flex flex-col lg:flex-row w-full mt-16 ">
             <div className="lg:flex-1 mb-8 ">
               <div
-                className=" h-96 w-11/12 mx-auto  
-                lg:h-full lg:m-10 flex justify-center items-center"
+                className="  w-11/12 mx-auto  
+                h-full lg:m-10 "
               >
                 {/* <p className="text-white ">Video modal</p> */}
-                <video
-                  autoPlay={true}
-                  loop
-                  controls
-                  style={{
-                    zIndex: "-1",
-                    height: "100%",
-                  }}
-                >
-                  <source src={"aboutus.mp4"} type="video/mp4" />
-                </video>
+                <Image
+                  src={image}
+                  alt="images"
+                  height={70}
+                  width={100}
+                  layout="responsive"
+                  objectFit="contain"
+                  objectPosition="center"
+                  placeholder="blur"
+                  // blurDataURL={`${process.env.Url}/images/${item.img}`}
+                  blurDataURL={`${process.env.Url}/images/${image}`}
+                  quality={70}
+                />
+
                 {/* <ReactPlayer  url={require('../images/aboutus.mp4')} /> */}
               </div>
             </div>
             {/* right section  */}
-            <div className="flex-1 mt-8 mx-5   px-2 ">
+            <div className="flex-1  md:mt-10 mx-5   px-2 ">
               {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
               <div className="flex flex-col mx-auto  lg:mx-0 text-center  w-fit items-start  ">
-                <p className=" text-3xl md:text-4xl font-openSansEight  text-primary capitalize font-bold ">
+                <p className=" text-2xl md:text-4xl md:pt-10 lg:pt-0 font-openSansEight  text-primary capitalize font-bold ">
                   who we are?{" "}
                 </p>
                 {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
               </div>
 
-              <p className="w-full my-4 font-openSansFive -tracking-tight leading-5 md:leading-7 text-base md:text-lg">
+              <p className="w-full my-4 font-openSansFive  leading-5 md:leading-7">
                 {staticAbout.aboutUs}
                 {/* VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
                 of dedicated and energetic youth Entreprenuers. Since 2019, we
