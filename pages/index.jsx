@@ -10,6 +10,7 @@ import { staticAbout } from "../components/staticData/StaticData";
 import { useRef, useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 export default function Home() {
   const nextVideo = useRef(null);
   const [show, setshow] = useState(false);
@@ -18,7 +19,7 @@ export default function Home() {
     // nextVideo.play();
   };
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ once: true, duration: 500 });
   }, []);
 
   return (
