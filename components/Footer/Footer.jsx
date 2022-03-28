@@ -36,6 +36,7 @@ function Footer() {
           <div className="text-left  font-openSansFour w-full lg:mx-8 lg:font-openSansFive text-gray-200  md:text-sm text-xs">
             Connecting the youths to inspire the world !!
           </div>
+          {/* <div></div> */}
         </div>
 
         <div className="  lg:col-span-3 col-span-4    ">
