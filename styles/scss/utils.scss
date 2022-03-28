@@ -240,3 +240,17 @@ body::-webkit-scrollbar-thumb {
 .width {
   min-width: 100%;
 }
+// scroll to top ko button ko css included gareko
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 50px;
+  background: $primaryColor;
+  color: white;
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0 5px 10px #ccc;
+  z-index: 100;
+}

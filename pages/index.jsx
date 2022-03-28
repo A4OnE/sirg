@@ -18,7 +18,10 @@ export default function Home() {
     // nextVideo.play();
   };
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ once: true, duration: 500 });
+  }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   return (

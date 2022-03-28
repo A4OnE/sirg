@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavItems from "./Navigations.json";
 import { FaBars } from "react-icons/fa";
 import Link from "next/link";
@@ -8,6 +8,8 @@ import { GrFormClose } from "react-icons/gr";
 import { useRouter } from "next/router";
 import { fadeInLeft, fadeInRight } from "react-animations";
 import Radium, { StyleRoot } from "radium";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Nav() {
   const router = useRouter();
@@ -17,6 +19,9 @@ function Nav() {
       animationName: Radium.keyframes(fadeInLeft, "animate__fadeInLeft"),
     },
   };
+  useEffect(() => {
+    Aos.init({ once: true, duration: 300 });
+  }, []);
   // const fadeLeftt = {
   //   fadeInLeft: {
   //     animation: "x 1s",
@@ -39,7 +44,10 @@ function Nav() {
   const [clicked, setClicked] = useState("");
 
   return (
-    <div className=" h-full bg-white   text-primary z-20 sticky top-0  left-0  shadow-md">
+    <div
+      data-aos="fade-left"
+      className=" h-full bg-white   text-primary z-20 sticky top-0  left-0  shadow-md"
+    >
       <div
         className=" container mx-auto px-4 lg:px-8 
         
