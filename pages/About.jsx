@@ -92,7 +92,7 @@ function About({ data }) {
               </div>
             </div>
             {/* right section  */}
-            <div className="flex-1  md:mt-10 mx-5   px-2 ">
+            <div className="flex-1  md:mt-10 mx-5 w-full  px-2 ">
               {/* <p className="text-base text-gray-400 my-2 mt-0 ">About us</p> */}
               <div className="flex flex-col mx-auto  lg:mx-0 text-center  w-fit items-start  ">
                 <p className=" text-2xl md:text-4xl md:pt-10 lg:pt-0 font-openSansEight  text-primary capitalize font-bold ">
@@ -101,7 +101,7 @@ function About({ data }) {
                 {/* <p className="w-20 md:w-32 lg:w-40 h-1  my-1 md:my-2 bg-blue-600  " /> */}
               </div>
 
-              <p className="w-full my-4 font-openSansFive  leading-5 md:leading-7">
+              <p className=" w-full my-4 font-openSansFive  leading-5 md:leading-7">
                 {staticAbout.aboutUs}
                 {/* VIP Group Pvt. Ltd (Visionary Idealist Personnel) is a company
                 of dedicated and energetic youth Entreprenuers. Since 2019, we

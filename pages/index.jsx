@@ -10,7 +10,6 @@ import { staticAbout } from "../components/staticData/StaticData";
 import { useRef, useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-
 export default function Home() {
   const nextVideo = useRef(null);
   const [show, setshow] = useState(false);
@@ -20,6 +19,9 @@ export default function Home() {
   };
   useEffect(() => {
     Aos.init({ once: true, duration: 500 });
+  }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   return (

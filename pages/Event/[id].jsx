@@ -71,17 +71,19 @@ function EventDetails(props) {
             <div className="col-span-8">
               <Link href={"/Events"} passHref>
                 <div className="  w-fit h-fit hover:scale-105 ">
-                  <MdKeyboardBackspace className="w-6 cursor-pointer  sm:w-10 h-6 sm:h-10 text-gray-700 " />
+                  <MdKeyboardBackspace className="w-8 h-8 cursor-pointer  sm:w-10  sm:h-10 text-gray-700 " />
                 </div>
               </Link>
-              <h1 className="text-5xl leading-12">{data[0]?.event_title}</h1>
+              <h1 className=" text-xs sm:text-xl md:text-5xl leading-12 text-left ">
+                {data[0]?.event_title}
+              </h1>
               {/* location and date section  */}
-              <div className="flex items-center space-x-4 font-semibold text-gray-800">
+              <div className="flex text-xs sm:text-base items-center  space-x-4 font-semibold text-gray-800">
                 <div className="flex items-center space-x-2">
                   <IoLocation />
                   <p>{data[0]?.event_location}</p>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="  flex items-center space-x-2">
                   <MdDateRange />
                   <p>{data[0]?.event_date}</p>
                 </div>
@@ -96,11 +98,11 @@ function EventDetails(props) {
                 alt=""
               /> */}
                 <div
-                  className="h-128 w-full my-8 object-cover"
+                  className=" h-44 sm:h-96  md:h-128 w-full my-8 object-cover"
                   style={{
                     backgroundImage: `url(${process.env.Url}/images/${data[0]?.img})`,
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
+                    backgroundSize: "contain",
                     backgroundPosition: "center",
                   }}
                 ></div>
