@@ -18,7 +18,7 @@ function Footer() {
         >
           {" "}
           <Link href={"/"} passHref>
-            <div className="lg:w-11/12  cursor-pointer      -mx-8 lg:-mx-1 sm:w-4/12 w-3/5 sm:-my-1">
+            <div className="lg:w-11/12  cursor-pointer      -mx-8 lg:-mx-0 sm:w-4/12 w-3/5 sm:-my-1">
               <Image
                 src={imageLogo}
                 width={100}
@@ -33,7 +33,7 @@ function Footer() {
               />
             </div>
           </Link>
-          <div className="text-left  font-openSansFour w-full lg:mx-7 lg:font-openSansFive text-gray-200  md:text-sm text-xs">
+          <div className="text-left  font-openSansFour w-full lg:mx-8 lg:font-openSansFive text-gray-200  md:text-sm text-xs">
             Connecting the youths to inspire the world !!
           </div>
         </div>
