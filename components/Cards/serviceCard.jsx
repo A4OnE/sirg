@@ -34,7 +34,7 @@ function ServiceCard({ id, img, title, description }) {
         <div
           className="
       line-clamp-3
-       font-openSansFive
+       font-openSansFour
       "
         >
           {description}
