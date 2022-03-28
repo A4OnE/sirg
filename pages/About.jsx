@@ -6,7 +6,7 @@ import PageTemplate from "../components/Templates/PageTemplate";
 import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
 import OurClients from "../components/Ourclients/OurClients";
 import { staticAbout } from "../components/staticData/StaticData";
-import image from "../images/comp.avif";
+import image from "../images/vip.jpg";
 import Image from "next/image";
 // This gets called on every request
 export async function getServerSideProps() {
