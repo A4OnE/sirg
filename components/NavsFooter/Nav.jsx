@@ -49,11 +49,10 @@ function Nav() {
         className=" container mx-auto px-4 lg:px-8 
         
        text-whit flex items-center  lg:justify-between "
-        data-aos="fade-left"
       >
         {mobileNav ? (
           <GrFormClose
-            className={`text-xl block  shadow-md border bg-white  translate-x-52  translate-y-  md:translate-x-64 z-50 rounded-full ${
+            className={`text-xl block z-50   shadow-md border bg-white  translate-x-52  translate-y-  md:translate-x-64  rounded-full ${
               mobileNav
                 ? "transform hover:rotate-180 duration-500 delay-200 animate-ulse ease-in-out"
                 : null
@@ -91,7 +90,10 @@ function Nav() {
           </Link>
         </div>
 
-        <div className="hidden  lg:flex flex-col lg:flex-row  items-center space-x-6">
+        <div
+          className="hidden  lg:flex flex-col lg:flex-row  items-center space-x-6"
+          data-aos="fade-left"
+        >
           {NavItems.map((item, i) => {
             if (!item.subNav) {
               return (
@@ -137,7 +139,7 @@ function Nav() {
       {/* mobile nav section */}
       <div
         className={`${mobileNav ? "fixed  " : "  hidden"}  lg:hidden  flex-col  
-        text-whit  top-0  transparent left-0 h-screen z-40 w-96 sm:w-full
+        text-whit  top-0  transparent left-0 h-screen z-40 w-full sm:w-full
         grid grid-cols-2 sm:grid-cols-3
         
               `}
