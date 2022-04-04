@@ -6,7 +6,7 @@ import PageTemplate from "../components/Templates/PageTemplate";
 import HappyCustomer from "../components/HappyCustomer/HappyCustomer";
 import OurClients from "../components/Ourclients/OurClients";
 import { staticAbout } from "../components/staticData/StaticData";
-import image from "../images/vip.jpg";
+import img from "../images/vip.jpg";
 import Image from "next/image";
 // This gets called on every request
 export async function getServerSideProps() {
@@ -67,14 +67,27 @@ function About({ data }) {
         <div className="container mx-auto px-4 lg:px-8">
           {/* About us introduction */}
 
-          <div className=" flex flex-col lg:flex-row w-full mt-16 ">
-            <div className="lg:flex-1 mb-8 ">
+          <div className=" flex flex-col  lg:flex-row w-full mt-16 ">
+            <div className="lg:flex-1 mb-8 h-full">
+              {/* <div
+                className="   
+                h-fit  "
+              > */}
               <div
-                className="  w-11/12 mx-auto  
-                h-full lg:m-10 "
+                className="h-96 w-full bg-cover bg-no-repeat  cursor-pointer"
+                //       style={{
+                //         backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.8995973389355743) 10%, rgba(0,0,0,0.6979166666666667) 25%,
+                // rgba(0,0,0,0.3029586834733894) 80%, rgba(0,0,0,0) 100%), url(${process.env.Url}/images/${img})`,
+                //       }}
+                style={{
+                  backgroundImage:
+                    "linear-gradient(0deg, rgba(2,10,20,0.8995973389355743) 20%, rgba(0,2,20,0.6979166666666667) 55%, rgba(1,2,1,0.3029586834733894) 80%, rgba(1,2,3,0.8995973389355743) 100%), url(https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
+
+                  // "linear-gradient(0deg, rgba(2,0,36,0.8995973389355743) 20%, rgba(1,85,124,0.6979166666666667) 55%, rgba(0,179,221,0.3029586834733894) 80%, rgba(0,212,255,0) 100%), url(https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
+                }}
               >
                 {/* <p className="text-white ">Video modal</p> */}
-                <Image
+                {/* <Image
                   src={image}
                   alt="images"
                   height={70}
@@ -86,7 +99,8 @@ function About({ data }) {
                   // blurDataURL={`${process.env.Url}/images/${item.img}`}
                   blurDataURL={`${process.env.Url}/images/${image}`}
                   quality={70}
-                />
+                  className="  bg-gradient-to-r from-gray-400 w-fit h-full to-gray-600"
+                /> */}
 
                 {/* <ReactPlayer  url={require('../images/aboutus.mp4')} /> */}
               </div>

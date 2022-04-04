@@ -76,9 +76,9 @@ function Nav() {
             <div className="w-36 h-16 relative  cursor-pointer ">
               <Image
                 src={imageLogo}
-                width={800}
-                height={80}
-                layout="fill"
+                width={200}
+                height={100}
+                layout="responsive"
                 alt="images"
                 sizes="min-width(600px) 50vh"
                 quality={30}

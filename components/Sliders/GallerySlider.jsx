@@ -67,7 +67,7 @@ function GallerySlider({ data, index }) {
                     placeholder="blur"
                     blurDataURL={`${process.env.Url}/images/${item.img}`}
                     quality={40}
-                    objectPosition="center"
+                    objectPosition="fit"
                     alt={item.img}
                     layout="responsive"
                     className=" "

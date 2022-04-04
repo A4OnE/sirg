@@ -18,7 +18,7 @@ function Footer() {
         >
           {" "}
           <Link href={"/"} passHref>
-            <div className="lg:w-11/12  cursor-pointer      -mx-8 lg:-mx-0 sm:w-4/12 w-3/5 sm:-my-1">
+            <div className="lg:w-full  cursor-pointer      -mx-8 lg:-mx-0 sm:w-4/12 w-3/5 sm:-my-1">
               <Image
                 src={imageLogo}
                 width={100}
